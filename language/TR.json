@@ -360,7 +360,10 @@
         "ttp": {
             "TTP_DESC": "Yazıyı sade resme dönüştürür.",
             "ATTP_DESC": "Yazıyı renkli stickera dönüştürür.",
-            "NEED_WORD": "*Kelime Girmelisin!*"
+            "NEED_WORD": "*Kelime Girmelisin!*",
+            "FIRE_DESC": "Yazıyı alevli resme çevirir.",
+            "NEON_DESC": "Yazıyı neon resme çevirir.",
+            "AVENGERS_DESC": "Yazıyı Endgame logosuna çevirir."
         },
         "wallpaper": {
             "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
