@@ -30,7 +30,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
         if (message.reply_message !== false) {
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/Media/gif/Edited_20210227_152650.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Edited_20210227_152650.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "Founder Tarafından Banlandın!" }
             )
@@ -43,7 +43,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
             });
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/Media/gif/Edited_20210227_152650.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Edited_20210227_152650.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "Founder Tarafından Banlandın!" }
             )
@@ -96,7 +96,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
             }
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/Media/gif/giphy (2).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (2).mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Founder Tarafından Admin Yapıldın!```" }
             )
@@ -115,7 +115,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/Media/gif/giphy (2).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (2).mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Founder Tarafından Admin Yapıldın!```" }
             )
@@ -165,7 +165,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
             }
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/Media/gif/giphy (3).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (3).mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Founder Tarafından Yetkin Düşürüldü!```" }
             )
@@ -183,7 +183,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
             });
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/Media/gif/giphy (3).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (3).mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Founder Tarafından Yetkin Düşürüldü!```" }
             )
