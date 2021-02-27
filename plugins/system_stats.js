@@ -27,6 +27,14 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
             { mimetype: Mimetype.gif, caption: "```WhatsAsena Founder Thiccy İçin Çalışıyor!```\n\n*Version:* ```0.22.7 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*Node Version:* ```1.2.7```" }
         )
     }
+    else if (Config.ALIVEMSG == 'SELO') {
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210228-WA0022.mp4"),
+            MessageType.video, 
+            { mimetype: Mimetype.mpeg, caption: "```WhatsAsena Founder Selo İçin Çalışıyor!```\n\n*Version:* 0.22.7 - Dev\n*Grade:* Founder\n*AIPackages:* Xteam / Eva / DeepAI / WhatsAsena / RTDA\n*Node Version:* 1.2.7" }
+        )
+    }
     else {
         await message.client.sendMessage(message.jid,Config.ALIVEMSG + '\n*Powered by WhatsAsena*', MessageType.text);
     }
