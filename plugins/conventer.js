@@ -48,7 +48,7 @@ Asena.addCommand({pattern: 'imagesticker', fromMe: true, desc: Lang.STİCKER_DES
         .fromFormat('webp_pipe')
         .save('output.jpg')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
+            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made for Founder'});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
