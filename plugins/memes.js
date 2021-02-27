@@ -45,7 +45,7 @@ Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC}, (
         bottomText: bottomText,
     }, async function(err) {
         if(err) throw new Error(err)
-        await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
+        await message.client.sendMessage(message.jid, fs.readFileSync('asena-meme.png'), MessageType.image, {filename: 'asena-meme.png', mimetype: Mimetype.png, caption: 'Made for Founder'});
         await info.delete();    
     });
 }));
