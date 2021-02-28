@@ -363,7 +363,10 @@
             "NEED_WORD": "*Kelime Girmelisin!*",
             "FIRE_DESC": "Yazıyı alevli resme çevirir.",
             "NEON_DESC": "Yazıyı neon resme çevirir.",
-            "AVENGERS_DESC": "Yazıyı Endgame logosuna çevirir."
+            "AVENGERS_DESC": "Yazıyı Endgame logosuna çevirir.",
+            "LEAF_DESC": "Yazıyı bitki layerı ile birleştirir.",
+            "HARRY_DESC": "Yazıyı Harry Potter stiline çevirir.",
+            "METAL_DESC": "Yazıyı metal görünümlü fotoğrafa çevirir."
         },
         "wallpaper": {
             "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
