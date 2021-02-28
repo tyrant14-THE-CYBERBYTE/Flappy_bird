@@ -366,7 +366,8 @@
             "AVENGERS_DESC": "Yazıyı Endgame logosuna çevirir.",
             "LEAF_DESC": "Yazıyı bitki layerı ile birleştirir.",
             "HARRY_DESC": "Yazıyı Harry Potter stiline çevirir.",
-            "METAL_DESC": "Yazıyı metal görünümlü fotoğrafa çevirir."
+            "METAL_DESC": "Yazıyı metal görünümlü fotoğrafa çevirir.",
+            "ANIME_DESC": "Yazıyı anime kızının tuttuğu pankartın içine yazar."
         },
         "wallpaper": {
             "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
