@@ -60,7 +60,7 @@ Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, 
                 await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg})
             }
         }
-    }
+
     else {
 
         var location = await message.client.downloadAndSaveMediaMessage({
