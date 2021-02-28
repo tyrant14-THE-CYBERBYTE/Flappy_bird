@@ -367,7 +367,9 @@
             "LEAF_DESC": "Yazıyı bitki layerı ile birleştirir.",
             "HARRY_DESC": "Yazıyı Harry Potter stiline çevirir.",
             "METAL_DESC": "Yazıyı metal görünümlü fotoğrafa çevirir.",
-            "ANIME_DESC": "Yazıyı anime kızının tuttuğu pankartın içine yazar."
+            "ANIME_DESC": "Yazıyı anime kızının tuttuğu pankartın içine yazar.",
+            "TRUMP_DESC": "Yazıyı trump’ın tweetine çevirir.",
+            "CHANGE_DESC": "Yazıyı change my mind posterine çevirir."
         },
         "wallpaper": {
             "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
