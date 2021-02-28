@@ -42,7 +42,7 @@ Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, 
                 await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg})
             }
         }
-    }
+
     else if (message.reply_message.image === false && message.reply_message.video) return await message.sendMessage('```Need Media!```');
 
     var location = await message.client.downloadAndSaveMediaMessage({
