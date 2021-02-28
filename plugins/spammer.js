@@ -39,10 +39,11 @@ Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, 
         .on('end', async () => {
             if (totalMaxSpamCount !== 0) {
                 for (let index = 0; index < totalMaxSpamCount; index++) {
-                await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg})
+                    await message.client.sendMessage(message.jid,fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg})
+                }
             }
         }
-
+    }
     else if (message.reply_message.image === false && message.reply_message.video) return await message.sendMessage('```Need Media!```');
 
     var location = await message.client.downloadAndSaveMediaMessage({
@@ -57,10 +58,11 @@ Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, 
         .on('end', async () => {
             if (totalMaxSpamCount !== 0) {
                 for (let index = 0; index < totalMaxSpamCount; index++) {
-                await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg})
+                    await message.client.sendMessage(message.jid,fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg})
+                }
             }
         }
-
+    }
     else {
 
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -75,10 +77,13 @@ Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, 
             .on('end', async () => {
                 if (totalMaxSpamCount !== 0) {
                     for (let index = 0; index < totalMaxSpamCount; index++) {
-                    await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio})
-                }
-            }   
-});
+                        await message.client.sendMessage(message.jid,fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio})
+                    }
+                }   
+            }
+        }
+    }
+}));
 
 Asena.addCommand({ pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC }, (async (message, match) => {
 
