@@ -10,7 +10,7 @@ const Asena = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 const {LydiaDB} = require('./sql/lydia');
-const { LydiaAI } = require("./index");
+const { LydiaAI } = require("coffehouse");
 
 const Language = require('../language');
 const Lang = Language.getString('lydia');
@@ -105,7 +105,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             await message.sendTyping();
 
             var mesaj = await session.think_thought(message.message);
-            await message.client.sendMessage(message.jid,mesaj.data.payload.output, MessageType.text, {quoted: message.data});
+            await message.client.sendMessage(message.jid,mesaj.data.output, MessageType.text, {quoted: message.data});
         }
     }
 }));
