@@ -415,6 +415,10 @@
             "PUBLIC": "Herkese açık",
             "HIDDEN": "Gizli",
             "NOT_FOUND": "Kullanıcı bulunmadı: "
+        },
+        "vef": {
+            "VEF": "Türkçe ses efektlerini bulur.",
+            "VEF_NEED": "Efekt ismi girmen gerekiyor!"
         }
     }
 }
