@@ -104,8 +104,14 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
         if (isLydiaEnabled) {
             await message.sendTyping();
 
-            var mesaj = await session.think_thought(message.message);
-            await message.client.sendMessage(message.jid,mesaj.data.output, MessageType.text, {quoted: message.data});
+            async think_thought(message) {
+                var data = await session._client.think_thought(message.message);
+                if (data.data.payload === undefined) {
+                    return data.data.results;
+                } else {
+                     await message.client.sendMessage(message.jid,data.data.payload.output, MessageType.text, {quoted: message.data});
+                }
+            }
         }
     }
 }));
