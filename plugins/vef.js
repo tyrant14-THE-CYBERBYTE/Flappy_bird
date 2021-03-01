@@ -14,7 +14,7 @@ Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: Lang.VEF}, (async (m
 
     if (match[1] === "") return await message.sendMessage(Lang.VEF_NEED);
 
-    if (match[1] === "noluyo" && match[1] === "noluyo lan" && match[1] === "noluyo dayı") {
+    if (match[1] === 'noluyo' || match[1] === 'noluyo lan' || match[1] === 'noluyo dayı') {
 
         await message.client.sendMessage(
             message.jid, 
