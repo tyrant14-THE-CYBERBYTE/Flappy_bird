@@ -7,6 +7,9 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 
+const Language = require('../language');
+const Lang = Language.getString('vef');
+
 Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: Lang.VEF}, (async (message, match) => {
 
     if (message.reply_message === false) return await message.sendMessage(Lang.VEF_NEED);
