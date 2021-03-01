@@ -10,7 +10,7 @@ const Asena = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 const {LydiaDB} = require('./sql/lydia');
-const { LydiaAI } = require("coffehouse");
+const {LydiaAI} = require('coffeehouse');
 
 const Language = require('../language');
 const Lang = Language.getString('lydia');
