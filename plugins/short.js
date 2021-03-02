@@ -4,6 +4,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 Asena.addCommand({pattern: 'url', fromMe: true}, (async (message, match) => {
     if (match[1] == '') return await message.client.sendMessage(message.jid, 'URL Gerekli!', MessageType.text);
 
+    import shortenUrl from "@kulkul/tinyurl-client";
     shortenUrl(`${match[1]}`).then((result) => {
         await message.client.sendMessage(message.jid,'Kısa Link:*' + result); // https://tinyurl.com/<slug>
     });
