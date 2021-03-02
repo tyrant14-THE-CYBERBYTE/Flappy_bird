@@ -23,10 +23,46 @@ Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: Lang.VEF}, (async (m
            { mimetype: Mimetype.mp4Audio, ptt: true}
         )
     }
+    else if (match[1] === 'yavas' || match[1] === 'yavaş' || match[1] === 'yavas git') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5900017439466326353.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
+    else if (match[1] === 'yasam' || match[1] === 'yasam masam' || match[1] === 'yaşam') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5888542571046635589.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
+    else if (match[1] === 'hadsiz' || match[1] === 'hadsız' || match[1] === 'degerli zaman' || match[1] === 'degerli zamanimi') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5888542571046635588.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
+    else if (match[1] === 'onun bunun' || match[1] === 'bende türküm' || match[1] === 'bende turkum' || match[1] === 'lan onun bunun') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5888542571046635579.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
     else {
         await message.client.sendMessage(
             message.jid, 
-            'Bulunamadı',
+            '```Bulunamadı! Varolan Liste:```\n\n$onun bunun / bende türküm\n$hadsiz / hadsız\n$yasam / yasam masam\n$yavas / yavas git\n$noluyo / noluyo lan',
             MessageType.text
         )
     }
