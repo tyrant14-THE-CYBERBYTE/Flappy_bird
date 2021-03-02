@@ -24,7 +24,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
             message.jid, 
             fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210209-WA0058.mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.gif, caption: "```WhatsAsena Founder Thiccy İçin Çalışıyor!```\n\n*Version:* ```0.22.7 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*Node Version:* ```1.2.7```" }
+            { mimetype: Mimetype.gif, caption: "```WhatsAsena Founder Thiccy İçin Çalışıyor!```\n\n*Version:* ```0.23.4 - Dev```\n*Grade:* ```Founder```\n*AI Packages:* ```Xteam / Eva / DeepAI / WhatsAsena / RTDA```\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.2```" }
         )
     }
     else if (Config.ALIVEMSG == 'SELO') {
@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
             message.jid, 
             fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210228-WA0022.mp4"),
             MessageType.video, 
-            { mimetype: Mimetype.mpeg, caption: "```WhatsAsena Founder Selo İçin Çalışıyor!```\n\n*Version:* 0.22.7 - Dev\n*Grade:* Founder\n*AIPackages:* Xteam / Eva / DeepAI / WhatsAsena / RTDA\n*Node Version:* 1.2.7" }
+            { mimetype: Mimetype.mpeg, caption: "```WhatsAsena Founder Selo İçin Çalışıyor!```\n\n*Version:* 0.23.7 - Dev\n*Grade:* Founder\n*AIPackages:* Xteam / Eva / DeepAI / WhatsAsena / RTDA\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.2```" }
         )
     }
     else {
