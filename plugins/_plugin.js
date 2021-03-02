@@ -43,7 +43,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
     var response = await got(url);
     if (response.statusCode == 200) {
         // plugin adı
-        var plugin_name = response.body.match(/addCommand\({.*pattern: ["'](.*)["'].*})/);
+        var plugin_name = response.body.match(/addCommand\({.*pattern: ["'](.*)["'].*}/);
         if (plugin_name.length >= 1) {
             plugin_name = "__" + plugin_name[1];
         } else {
