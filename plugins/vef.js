@@ -59,10 +59,46 @@ Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: Lang.VEF}, (async (m
            { mimetype: Mimetype.mp4Audio, ptt: true}
         )
     }
+    else if (match[1] === 'kardeslik' || match[1] === 'kardes' || match[1] === 'aykut kardes' || match[1] === 'kardeslik varken') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5888542571046635559.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
+    else if (match[1] === 'yalan' || match[1] === 'namik kemal' || match[1] === 'namik' || match[1] === 'namık') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5888542571046635537.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
+    else if (match[1] === 'bursa' || match[1] === 'bursa cocugu' || match[1] === 'bursa çocuğu' || match[1] === 'heryerde') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5877665063858342094.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
+    else if (match[1] === 'etmiyem' || match[1] === 'hakkimi' || match[1] === 'hakkımı' || match[1] === 'helal') {
+
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5888542571046635579.mp3"),
+            MessageType.audio, 
+           { mimetype: Mimetype.mp4Audio, ptt: true}
+        )
+    }
     else {
         await message.client.sendMessage(
             message.jid, 
-            '```Bulunamadı! Varolan Liste:```\n\n$onun bunun / bende türküm\n$hadsiz / hadsız\n$yasam / yasam masam\n$yavas / yavas git\n$noluyo / noluyo lan',
+            '```Bulunamadı! Varolan Liste:```\n\n$onun bunun / bende türküm\n$hadsiz / hadsız\n$yasam / yasam masam\n$yavas / yavas git\n$noluyo / noluyo lan\n$kardeslik / kardes\n$yalan / namik kemal\n$bursa cocugu / bursa\n$hakkimi / helal',
             MessageType.text
         )
     }
