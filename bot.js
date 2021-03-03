@@ -159,7 +159,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
     });
 
-    conn.on('chat-update', async () => {
+    conn.on('group-update', async () => {
         console.log('🆕 Chat Updated!')
     });
 
