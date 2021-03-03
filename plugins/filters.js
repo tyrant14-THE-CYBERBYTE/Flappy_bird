@@ -51,13 +51,13 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (a
 
 
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
-    var filtreler = await FilterDb.getFilter(message.jid);
+    var filtreler = await FilterDb.getFilter(message.jid, {sendEphemeral: 'chat'});
     if (!filtreler) return; 
     filtreler.map(
         async (filter) => {
             pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
             if (pattern.test(message.message)) {
-                await message.client.sendMessage(message.jid,filter.dataValues.text, MessageType.text, {quoted: message.data});
+                await message.client.sendMessage(message.jid,filter.dataValues.text, MessageType.text, {quoted: message.data, sendEphemeral: 'chat'});
             }
         }
     );
