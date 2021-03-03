@@ -51,7 +51,7 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC}, (a
 
 
 Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
-    var filtreler = await FilterDb.getFilter(message.jid});
+    var filtreler = await FilterDb.getFilter(message.jid);
     if (!filtreler) return; 
     filtreler.map(
         async (filter) => {
