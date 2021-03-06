@@ -181,7 +181,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
-                await conn.sendMessage(msg.key.remoteJid, fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VN20210306_123803.mp4"), MessageType.video, {mimetype: Mimetype.mpeg, caption: gb.message);
+                await conn.sendMessage(msg.key.remoteJid, fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VN20210306_123803.mp4"), MessageType.video, {mimetype: Mimetype.mpeg, caption: gb.message});
             }
             return;
         }
