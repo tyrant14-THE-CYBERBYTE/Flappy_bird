@@ -182,6 +182,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
                 await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+
+                await new Promise(r => setTimeout(r, 400));
+
+                await conn.sendMessage(msg.key.remoteJid, fs.readFileSync("/root/WhatsAsenaDuplicated/media/ses/4_5778381886879434926.ogg"), MessageType.audio, {mimetype: Mimetype.mp4Audio});
             }
             return;
         }
