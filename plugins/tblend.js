@@ -41,7 +41,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Dodge TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        
+        }
         else if (match[1] === 'or') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -61,7 +61,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Or TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'multiply') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -81,7 +81,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Multiply TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'grainmerge') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -101,7 +101,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Grainmerge TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'and') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -121,7 +121,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - And TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'burn') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -141,7 +141,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Burn TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'difference') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -161,7 +161,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Difference TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'grainextract') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -181,7 +181,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Grainextract TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'divide') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -201,7 +201,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Divide TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'xor') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -221,7 +221,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Xor TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'hardmix') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -241,7 +241,7 @@ if (Config.WORKTYPE == 'private') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Hardmix TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'negation') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -295,7 +295,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Dodge TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        
+        }
         else if (match[1] === 'or') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -315,7 +315,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Or TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'multiply') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -335,7 +335,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Multiply TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'grainmerge') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -355,7 +355,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Grainmerge TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'and') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -375,7 +375,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - And TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'burn') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -395,7 +395,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Burn TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'difference') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -415,7 +415,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Difference TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'grainextract') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -435,7 +435,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Grainextract TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'divide') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -455,7 +455,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Divide TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'xor') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -475,7 +475,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Xor TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'hardmix') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
@@ -495,7 +495,7 @@ else if (Config.WORKTYPE == 'public') {
                     await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena - Hardmix TBlend'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-
+        }
         else if (match[1] === 'negation') {
 
             var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
