@@ -15,9 +15,9 @@ Asena.addCommand({pattern: 'ara ?(.*)', fromMe: true}, (async (message, match) =
       limit: 10 
     };
  
-    scraper.search(options, async(err, url, meta) {
+    scraper.search(options, async(err, url, meta)) {
         // This is called for each result
         if(err) throw err;
         await message.client.sendMessage(message.jid, url + '\n\n' + meta.title + '\n\n' + meta.meta, MessageType.text);
-    });
+    }
 }));
