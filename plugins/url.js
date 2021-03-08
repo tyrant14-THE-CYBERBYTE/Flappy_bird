@@ -9,7 +9,7 @@ Asena.addCommand({pattern: 'short ?(.*)', fromMe: true}, (async (message, match)
 
     TinyURL.shorten(`${match[1]}`).then(async(res) {
         await message.client.sendMessage(message.jid, res, MessageType.text);
-    }, function(err) {
+    }, async(err) {
         await message.client.sendMessage(message.jid, err, MessageType.text);
     });
 }));
