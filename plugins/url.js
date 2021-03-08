@@ -7,7 +7,7 @@ Asena.addCommand({pattern: 'short ?(.*)', fromMe: true}, (async (message, match)
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,'Link Gir!', MessageType.text);
 
-    adfly.short(`${match[1]}`, (async(url){
+    adfly.short(`${match[1]}`, (async(url) => {
         await message.client.sendMessage(message.jid, '*Kısa Link:*' + url, MessageType.text);
     }));
 }));
