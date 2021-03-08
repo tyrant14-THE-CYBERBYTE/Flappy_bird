@@ -1,7 +1,7 @@
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
-const Scraper = require('google-search-scraper');
+const Sea = require('search-engine-client');
 const TinyURL = require('tinyurl');
 
 const De = "Uzun linkleri kısaltır."
@@ -23,11 +23,7 @@ Asena.addCommand({pattern: 'search ?(.*)', fromMe: true, desc: Sr}, (async (mess
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,'```Aranacak Kelime Girmelisin!```', MessageType.text);
  
-    Scraper.search({query: `${match[1]}`, limit: 8}, async(err, url, meta) => {
-
-      if(err)
-        await message.client.sendMessage(message.jid, '*#### Hata! ####*\n' + err, MessageType.text);
-
-        await message.client.sendMessage(message.jid, `*${match[1]} İçin Arama Sonuçları:*\n\n` + url, MessageType.text);
+    Sea.google(`${match[1]}`).then(async(result) => {
+        await message.client.sendMessage(message.jid,result, MessageType.text);
     });
 }));
