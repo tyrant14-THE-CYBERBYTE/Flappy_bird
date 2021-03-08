@@ -32,6 +32,6 @@ Asena.addCommand({pattern: 'search ?(.*)', fromMe: true, desc: Sr}, (async (mess
     scraper.search(options, async(err, url, meta) => {
       // This is called for each result
       if(err) throw err;
-      await message.client.sendMessage(message.jid, url + meta.title + meta.meta + meta.desc, MessageType.text);
+      await message.client.sendMessage(message.jid, `*${match[1]} İçin Arama Sonuçları:*\n\n` + url, MessageType.text);
     });
 }));
