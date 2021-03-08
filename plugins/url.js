@@ -25,7 +25,7 @@ Asena.addCommand({pattern: 'search ?(.*)', fromMe: true, desc: Sr}, (async (mess
 
 
     var options = {
-      query: `{$match[1]}`,
+      query: `${match[1]}`,
       limit: 10
     };
  
