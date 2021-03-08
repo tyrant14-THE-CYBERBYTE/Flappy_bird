@@ -23,7 +23,7 @@ Asena.addCommand({pattern: 'search ?(.*)', fromMe: true, desc: Sr}, (async (mess
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,'```Aranacak Kelime Girmelisin!```', MessageType.text);
  
-    Scraper.search(query: `${match[1]}`, limit: 8, async(err, url, meta) => {
+    Scraper.search({query: `${match[1]}`, limit: 8}, async(err, url, meta) => {
 
       if(err)
         await message.client.sendMessage(message.jid, '*#### Hata! ####*\n' + err, MessageType.text);
