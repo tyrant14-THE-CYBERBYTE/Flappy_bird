@@ -1,7 +1,7 @@
 const Asena = require('../events')
 const { MessageType, Mimetype} = require('@adiwajshing/baileys')
 const axios = require('axios')
-const sd = "Youtubedan video indirir."
+const sd = "Instagramdan video indirir."
 
 Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (message, match) => {
 
