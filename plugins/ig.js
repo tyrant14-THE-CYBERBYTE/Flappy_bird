@@ -20,7 +20,7 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
           duration,
         } = response.data.result
 
-        const video = await axios.get(video, {
+        const BUFF = await axios.get(video, {
           responseType: 'arraybuffer',
         })
 
@@ -30,7 +30,7 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
         *Yorum:* ${comment},
         *Uzunluk:* ${duration}`
 
-        await message.sendMessage(Buffer.from(video.data), MessageType.video, {
+        await message.sendMessage(Buffer.from(BUFF.data), MessageType.video, {
           caption: msg,
         })
       })
