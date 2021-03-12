@@ -22,5 +22,5 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
         *Uzunluk:* ${duration}`
 
         await message.sendMessage(Buffer.from(igdat.data), MessageType.video, { caption: msg })
-    }
+    })
 }));
