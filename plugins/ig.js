@@ -9,20 +9,11 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
 
     if (!userName) return await message.client.sendMessage(message.jid, '```URL Gir!```')
 
-    await axios
-      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
-      .then(async (response) => {
-        const {
-          like,
-          comment,
-          full_name,
-          video,
-          duration,
-        } = response.data.result
+    await axios.get(`https://videfikri.com/api/igdl/?url=${userName}`).then(async (response) => {
 
-        const BUFF = await axios.get(video, {
-          responseType: 'arraybuffer',
-        })
+        const {like, comment, full_name, video, duration } = response.data.result
+
+        const igdat = await axios.get(video, {responseType: 'arraybuffer'})
 
         const msg = `
         *İsmi:* ${full_name},
@@ -30,12 +21,6 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
         *Yorum:* ${comment},
         *Uzunluk:* ${duration}`
 
-        await message.sendMessage(Buffer.from(BUFF.data), MessageType.video, {
-          caption: msg,
-        })
-      })
-      .catch(
-        async (err) => await message.sendMessage('```Bulunamadı!```\n```Link:```' + userName)),
-      )
-  },
-)
+        await message.sendMessage(Buffer.from(igdat.data), MessageType.video, { caption: msg })
+    }
+}));
