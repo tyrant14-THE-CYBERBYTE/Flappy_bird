@@ -70,13 +70,13 @@ Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: gt }, async (mes
           joined_on,
         } = response.data.result
 
-        const gidat = await axios.get(profile_pic, 
+        const githubscrap = await axios.get(profile_pic, 
           {responseType: 'arraybuffer',
         })
 
-        const msg = `*Kullanıcı Adı:* ${username} \n*İsmi:* ${full_name} \n*Takipçi:* ${followers} \n*Takip Edilen:* ${following} \n*Biyografi:* ${biography} \n*Açık Repolar:* ${public_repository} \n*Açık Gistler:* ${public_gists} \n*Konumu:* ${location} \n*Email:* ${email} \n*Blog:* ${blog} \n*Şirket:* ${company} \n*Kiralanabilir mi?:* ${hireable ? hb : yb} \n*Katılma Tarihi:* ${joined_on} \n*Son Güncelleme Tarihi:* ${last_updated}`
+        const msg = `*Kullanıcı Adı:* ${username} \n*İsmi:* ${full_name} \n*Takipçi:* ${followers} \n*Takip Edilen:* ${following} \n*Biyografi:* ${biografi} \n*Açık Repolar:* ${public_repository} \n*Açık Gistler:* ${public_gists} \n*Konumu:* ${location} \n*Email:* ${email} \n*Blog:* ${blog} \n*Şirket:* ${company} \n*Kiralanabilir mi?:* ${hireable} \n*Katılma Tarihi:* ${joined_on} \n*Son Güncelleme Tarihi:* ${last_updated} \n*Profil Bağlantısı:* ${profile_url}`
 
-        await message.sendMessage(Buffer.from(gidat.data), MessageType.image, { 
+        await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
           caption: msg,
         })
       })
