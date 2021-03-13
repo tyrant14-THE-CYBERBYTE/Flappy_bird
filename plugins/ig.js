@@ -84,7 +84,7 @@ Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: gt }, async (mes
 
             await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
               caption: msg,
-
+        }
         else {
 
             await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
