@@ -35,6 +35,14 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
             { mimetype: Mimetype.mpeg, caption: "```WhatsAsena Founder Selo İçin Çalışıyor!```\n\n*Version:* 0.23.7 - Dev\n*Grade:* Founder\n*AIPackages:* Xteam / Eva / DeepAI / WhatsAsena / RTDA\n*DeepAI Version:* ```1.0.17```\n*XTeam Verison:* ```4.2```" }
         )
     }
+    else if (Config.ALIVEMSG == 'EMO') {
+        await message.client.sendMessage(
+            message.jid, 
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/IMG-20210314-WA0037.jpg"),
+            MessageType.image, 
+            { mimetype: Mimetype.jpg, caption: "" }
+        )
+    }
     else {
         await message.client.sendMessage(message.jid,Config.ALIVEMSG + '\n*Powered by WhatsAsena*', MessageType.text);
     }
