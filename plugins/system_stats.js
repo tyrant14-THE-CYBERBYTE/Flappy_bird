@@ -38,9 +38,9 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
     else if (Config.ALIVEMSG == 'EMO') {
         await message.client.sendMessage(
             message.jid, 
-            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/IMG-20210314-WA0037.jpg"),
-            MessageType.image, 
-            { mimetype: Mimetype.jpg, caption: "" }
+            fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/ezgif-7-0bd4f49fd28c.mp4"),
+            MessageType.video, 
+            { mimetype: Mimetype.mpeg, caption: "```Bu Kalp Birtek Sana Atıyor 🖤```" }
         )
     }
     else {
