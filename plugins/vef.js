@@ -7,12 +7,13 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 
-const Language = require('../language');
-const Lang = Language.getString('vef');
+//Desc
+const vefdesc = "Türkçe ses efektlerini gönderir."
+const vefneed = "*Herhangi bir efekt ismi girmen gerekiyor*"
 
-Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: Lang.VEF}, (async (message, match) => {
+Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: vefdesc}, (async (message, match) => {
 
-    if (match[1] === "") return await message.sendMessage(Lang.VEF_NEED);
+    if (match[1] === "") return await message.client.sendMessage(message.jid, vefneed, MessageType.text);
 
     if (match[1] === 'noluyo' || match[1] === 'noluyo lan' || match[1] === 'noluyo dayı') {
 
