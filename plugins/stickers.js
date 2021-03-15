@@ -63,7 +63,7 @@ Asena.addCommand({pattern: 'mp4roll', fromMe: true, desc: TRM}, (async (message,
 
     let eff = "amplify=radius=7";
 
-    execFile('ffmpeg', ['-i', location, '-vf', eff, 'output.mp4'], async err => {
+    execFile('ffmpeg', ['-i', location, '-filter:v', eff, 'output.mp4'], async err => {
         if (err) {
             throw err;
         }
