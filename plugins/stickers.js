@@ -66,7 +66,7 @@ Asena.addCommand({pattern: 'mp4sticker', fromMe: true, desc: TRM}, (async (messa
             throw err;
         }
         
-        await message.sendMessage(fs.readFileSync('./output.mp4'), MessageType.video {mimetype: Mimetype.mpeg, caption: 'Made for Founder'});
+        await message.sendMessage(fs.readFileSync('./output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made for Founder'});
     });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
