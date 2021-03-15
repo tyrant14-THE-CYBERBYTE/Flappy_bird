@@ -4,7 +4,7 @@ const { MessageType, Mimetype} = require('@adiwajshing/baileys');
 const TRd = "Ğ gönderir."
 const TRf = "F gönderir."
 
-Asena.addCommand({ pattern: 'ğ$ ?(.*)', fromMe: true, desc: TRd }, async (message, match) => {
+Asena.addCommand({ pattern: 'ğ ?(.*)$', fromMe: true, desc: TRd }, async (message, match) => {
 
     const gsay = match[1]
 
@@ -18,7 +18,7 @@ Asena.addCommand({ pattern: 'ğ$ ?(.*)', fromMe: true, desc: TRd }, async (messa
 
 });
 
-Asena.addCommand({ pattern: 'f$ ?(.*)', fromMe: true, desc: TRf }, async (message, match) => {
+Asena.addCommand({ pattern: 'f ?(.*)$', fromMe: true, desc: TRf }, async (message, match) => {
 
     const fsay = match[1]
 
