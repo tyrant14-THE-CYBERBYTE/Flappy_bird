@@ -6,6 +6,7 @@ ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
 RUN npm install
 
+
 FROM jrottenberg/ffmpeg:4.3.2-alpine312
 
 CMD ["node", "bot.js"]
