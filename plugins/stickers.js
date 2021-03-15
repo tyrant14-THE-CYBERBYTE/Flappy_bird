@@ -61,7 +61,9 @@ Asena.addCommand({pattern: 'mp4roll', fromMe: true, desc: TRM}, (async (message,
         message: message.reply_message.data.quotedMessage
     });
 
-    execFile(ffmpeg, [location, '-vf', 'amplify=radius=7', 'output.mp4'], async err => {
+    let eff = "amplify=radius=7";
+
+    execFile('ffmpeg', ['-i', location, '-vf', eff, 'output.mp4'], async err => {
         if (err) {
             throw err;
         }
