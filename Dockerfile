@@ -1,4 +1,4 @@
-FROM lyfe0010/bottus:latest
+FROM lyfe00011/bottus:latest
 
 RUN git clone https://github.com/Xenon67/WhatsAsenaDuplicated /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
