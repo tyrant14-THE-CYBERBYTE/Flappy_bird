@@ -9,8 +9,10 @@ Asena.addCommand({ pattern: 'ğ ?(.*)', fromMe: true, desc: desc }, async (messa
 
     if (gsay === '') {
         await message.client.sendMessage(message.jid, '────────────────\n─██████████████─\n─██░░░░░░░░░░██─\n─██░░██████████─\n─██░░██─────────\n─██░░██─────────\n─██░░██──██████─\n─██░░██──██░░██─\n─██░░██──██░░██─\n─██░░██████░░██─\n─██░░░░░░░░░░██─\n─██████████████─\n────────────────', MessageType.text);
+    }
     else {
-        await message.client.sendMessage(message.jid, 'Ğ', MessageType.text);
+        await message.client.sendMessage(message.jid, '────────────────\n─██████████████─\n─██░░░░░░░░░░██─\n─██░░██████████─\n─██░░██─────────\n─██░░██─────────\n─██░░██──██████─\n─██░░██──██░░██─\n─██░░██──██░░██─\n─██░░██████░░██─\n─██░░░░░░░░░░██─\n─██████████████─\n────────────────.replace(/─/g, "${gsay}")', MessageType.text);
+
     }
 })); 
       
