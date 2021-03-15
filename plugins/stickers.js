@@ -7,12 +7,13 @@ WhatsAsena - Yusuf Usta
 */
 
 const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
+const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
 
+const TRM = "Animasyonlu stickeri videoya çevirir."
 const Language = require('../language');
 const Lang = Language.getString('sticker');
 
@@ -45,5 +46,27 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
         });
+    return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+}));
+
+Asena.addCommand({pattern: 'mp4sticker', fromMe: true, desc: TRM}, (async (message, match) => {    
+
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
+    var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
+    var location = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+
+    execFile(cwebp, [location, '-o', 'output.mp4'], async err => {
+        if (err) {
+            throw err;
+        }
+        
+        await message.sendMessage(fs.readFileSync('./output.mp4'), MessageType.video {mimetype: Mimetype.mpeg, caption: 'Made for Founder'});
+    });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
