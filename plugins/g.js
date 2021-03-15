@@ -18,7 +18,7 @@ Asena.addCommand({ pattern: 'ğ$ ?(.*)', fromMe: true, desc: TRd }, async (messa
 
 });
 
-Asena.addCommand({ pattern: 'f$ ?(.*)', fromMe: true, desc: TRd }, async (message, match) => {
+Asena.addCommand({ pattern: 'f$ ?(.*)', fromMe: true, desc: TRf }, async (message, match) => {
 
     const fsay = match[1]
 
