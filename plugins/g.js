@@ -9,10 +9,10 @@ Asena.addCommand({ pattern: 'ğ ?(.*)', fromMe: true, desc: TRd }, async (messag
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, '────────────────\n─██████████████─\n─██░░░░░░░░░░██─\n─██░░██████████─\n─██░░██─────────\n─██░░██─────────\n─██░░██──██████─\n─██░░██──██░░██─\n─██░░██──██░░██─\n─██░░██████░░██─\n─██░░░░░░░░░░██─\n─██████████████─\n────────────────', MessageType.text);
 
-    var str = "────────────────\n─██████████████─\n─██░░░░░░░░░░██─\n─██░░██████████─\n─██░░██─────────\n─██░░██─────────\n─██░░██──██████─\n─██░░██──██░░██─\n─██░░██──██░░██─\n─██░░██████░░██─\n─██░░░░░░░░░░██─\n─██████████████─\n────────────────"
+    var str = "────────────────\n─██████████████─\n─██░░░░░░░░░░██─\n─██░░██████████─\n─██░░██─────────\n─██░░██─────────\n─██░░██──██████─\n─██░░██──██░░██─\n─██░░██──██░░██─\n─██░░██████░░██─\n─██░░░░░░░░░░██─\n─██████████████─\n────────────────";
   
-    var res = str.replace(/─/g, `${gsay}`).replace(/█/g, `${gsay}`).replace(/░/g, `${gsay}` async (zg) {
+    var res = str.replace(/─/g, `${gsay}`).replace(/█/g, `${gsay}`).replace(/░/g, `${gsay}`);
         
-        return await message.client.sendMessage(message.jid, zg, MessageType.text);
-    });
+    return await message.client.sendMessage(message.jid, res, MessageType.text);
+
 });
