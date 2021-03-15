@@ -49,7 +49,7 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
 
-Asena.addCommand({pattern: 'mp4sticker', fromMe: true, desc: TRM}, (async (message, match) => {    
+Asena.addCommand({pattern: 'mp4roll', fromMe: true, desc: TRM}, (async (message, match) => {    
 
     if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
     var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
@@ -61,7 +61,7 @@ Asena.addCommand({pattern: 'mp4sticker', fromMe: true, desc: TRM}, (async (messa
         message: message.reply_message.data.quotedMessage
     });
 
-    execFile(cwebp, [location, '-o', 'output.mp4'], async err => {
+    execFile(ffmpeg, [location, '-vf', 'amplify=radius=7', 'output.mp4'], async err => {
         if (err) {
             throw err;
         }
