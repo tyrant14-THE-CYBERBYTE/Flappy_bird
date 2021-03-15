@@ -6,10 +6,22 @@ Instagram: www.instagram.com/kyrie.baran
 const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
+const con = require('../config')
 
 //Desc
-const vefdesc = "Türkçe ses efektlerini gönderir."
-const vefneed = "*Herhangi bir efekt ismi girmen gerekiyor*"
+if (con.LANG === 'TR') {
+    const vefdesc = "Türkçe ses efektlerini gönderir."
+    const vefneed = "*Herhangi bir efekt ismi girmen gerekiyor*"
+}    
+else if (con.LANG ===  'HI') {
+    const vefdesc = "तुर्की ध्वनि प्रभाव भेजता है"
+    const vefneed = "*आपको कोई प्रभाव नाम दर्ज करना होगा*"
+}    
+else {
+    const vefdesc = "Sends Turkish sound effects."
+    const vefneed = "*You need to enter any effect name*"    
+}
+
 
 Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: vefdesc}, (async (message, match) => {
 
