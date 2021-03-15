@@ -10,7 +10,7 @@ Asena.addCommand({ pattern: 'ğ ?(.*)', fromMe: true, desc: TRd }, async (messag
 
     else {
 
-        await message.client.sendMessage(message.jid, resp.replace(/─/g, "${match[1]}").replace(/█/g, "${match[1]}").replace(/░/g, "${match[1]}"));
+        await message.client.sendMessage(message.jid, resp.replace(/─/g, `${match[1]}`).replace(/█/g, `${match[1]}`).replace(/░/g, `${match[1]}`));
     
     }
 });
