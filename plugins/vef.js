@@ -9,23 +9,13 @@ const fs = require('fs');
 const con = require('../config')
 
 //Desc
-if (con.LANG === 'TR') {
-    const vefdesc = "Türkçe ses efektlerini gönderir."
-    const vefneed = "*Herhangi bir efekt ismi girmen gerekiyor*"
-}    
-else if (con.LANG ===  'HI') {
-    const vefdesc = "तुर्की ध्वनि प्रभाव भेजता है"
-    const vefneed = "*आपको कोई प्रभाव नाम दर्ज करना होगा*"
-}    
-else {
-    const vefdesc = "Sends Turkish sound effects."
-    const vefneed = "*You need to enter any effect name*"    
-}
+const TRvefdesc = "Türkçe ses efektlerini gönderir."
+const TRvefneed = "*Herhangi bir efekt ismi girmen gerekiyor*"
 
 
-Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: vefdesc}, (async (message, match) => {
+Asena.addCommand({pattern: 'vef ?(.*)', fromMe: true, desc: TRvefdesc}, (async (message, match) => {
 
-    if (match[1] === "") return await message.client.sendMessage(message.jid, vefneed, MessageType.text);
+    if (match[1] === "") return await message.client.sendMessage(message.jid, TRvefneed, MessageType.text);
 
     if (match[1] === 'noluyo' || match[1] === 'noluyo lan' || match[1] === 'noluyo dayı') {
 
