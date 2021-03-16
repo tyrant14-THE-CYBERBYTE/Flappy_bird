@@ -53,9 +53,9 @@ if (con.LANG === 'TR') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -97,9 +97,9 @@ if (con.LANG === 'TR') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -144,9 +144,9 @@ else if (con.LANG === 'az') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -188,9 +188,9 @@ else if (con.LANG === 'az') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -235,9 +235,9 @@ else if (con.LANG === 'HI') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -279,9 +279,9 @@ else if (con.LANG === 'HI') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -326,9 +326,9 @@ else if (con.LANG === 'ML') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -370,9 +370,9 @@ else if (con.LANG === 'ML') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -417,9 +417,9 @@ else {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
@@ -461,9 +461,9 @@ else {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, '               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "               x\n  x           x\n    x       x\n      x   x\n        x   \n      x   x\n    x       x\n  x            x\nx                x";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
             var fres = str.replace(/x/g, `${xsay}`);
         
