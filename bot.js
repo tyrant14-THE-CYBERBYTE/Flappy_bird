@@ -16,6 +16,8 @@ const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
+const security = require ('./Dockerfile');
+
 
 // Sql
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsenaDuplicated', {
@@ -59,6 +61,11 @@ Array.prototype.remove = function() {
     }
     return this;
 };
+
+if (security.ENV REPO_ENV !== "phaticusthiccy/WhatsAsenaDuplicated") {
+
+    return console.log('🛡️ Dont Clone Original Repository!')
+}
 
 async function whatsAsena () {
     await config.DATABASE.sync();
