@@ -31,6 +31,7 @@
     "cwebp-bin": "^6.1.1",
     "tinyurl": "^1.1.7",
     "adf.ly": "^1.2.0",
+    "genius-lyrics-api": "^3.0.6",
     "search-engine-client": "^1.2.6",
     "dotenv": "^8.2.0",
     "exchange-rates-api": "^1.0.2",
