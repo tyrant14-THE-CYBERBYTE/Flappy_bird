@@ -4,7 +4,6 @@ RUN git clone https://github.com/Xenon67/WhatsAsenaDuplicated /root/WhatsAsenaDu
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 ENV REPO_ENV="test/WhatsAsenaDuplicated"
-COPY /root/whatsasena/node.sh /usr/local/bin/node.sh
 
 RUN npm install supervisor -g
 RUN npm install
