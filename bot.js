@@ -62,7 +62,7 @@ Array.prototype.remove = function() {
     return this;
 };
 
-if (security.ENV REPO_ENV !== "phaticusthiccy/WhatsAsenaDuplicated") {
+if (security.`${ENV REPO_ENV}` !== "phaticusthiccy/WhatsAsenaDuplicated") {
 
     return console.log('🛡️ Dont Clone Original Repository!')
 }
