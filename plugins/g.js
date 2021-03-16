@@ -53,11 +53,11 @@ if (con.LANG === 'TR') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -97,11 +97,11 @@ if (con.LANG === 'TR') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -144,11 +144,11 @@ else if (con.LANG === 'az') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -192,7 +192,7 @@ else if (con.LANG === 'az') {
 
             var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -235,11 +235,11 @@ else if (con.LANG === 'HI') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -279,11 +279,11 @@ else if (con.LANG === 'HI') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -326,11 +326,11 @@ else if (con.LANG === 'ML') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -370,11 +370,11 @@ else if (con.LANG === 'ML') {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -417,11 +417,11 @@ else {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
@@ -461,11 +461,11 @@ else {
 
             const xsay = match[1]
 
-            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
+            if (match[1] === '') return await message.client.sendMessage(message.jid, 'X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X', MessageType.text);
 
-            var str = "X               X\n  X           X\n    X       X\n      X   X\n        X\n      X   X\n    X       X\n  X           X\nX               X";
+            var str = "X               X\n  X           X\n    X       X\n      X   X\n         X\n      X   X\n    X       X\n  X           X\nX               X";
   
-            var fres = str.replace(/x/g, `${xsay}`);
+            var fres = str.replace(/X/g, `${xsay}`);
         
             return await message.client.sendMessage(message.jid, fres, MessageType.text);
 
