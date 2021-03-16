@@ -22,7 +22,7 @@ Asena.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: De}, (async (messa
     });
 }));
 
-Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: De}, (async (message, match) => {
+Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: ly}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,'```Sarkı İsmi Girmelisin!```', MessageType.text);
 
@@ -33,7 +33,7 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: De}, (async (messa
     };
 
     getSong(options).then(async(song) => {
-        await message.client.sendMessage(message.jid, {url: `${song.albumArt}`} , MessageType.image, {caption: `*Şarkı ID:* ${song.id} \n*Şarkı Linki:* ${song.url} \n*Sözleri:* ${song.lyrics}`});
+        await message.client.sendMessage(message.jid, {url: `${song.albumArt}`} , MessageType.image, {caption: `*Şarkı ID:* ${song.id} \n*Şarkı Linki:* ${song.url} \n*Sözleri:*\n\n${song.lyrics}`});
 
     });
 }));
