@@ -3,7 +3,7 @@ const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Sea = require('search-engine-client');
 const TinyURL = require('tinyurl');
-const {getLyrics, getSong} = require ('genius-lyrics-api');
+const {getLyrics, getSong} = require('genius-lyrics-api');
 const key = "nQKziyUfA84InGMTgFf12_LtuCEgwwg1FoBdCz5rJR9-ue5tBfAGOv2LCpnesWgQ"
 
 const De = "Uzun linkleri kısaltır."
