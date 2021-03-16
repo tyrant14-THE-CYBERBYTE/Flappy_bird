@@ -29,6 +29,7 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: ly}, (async (messa
     const options = {
 	    apiKey: key,
 	    title: `${match[1]}`,
+            artist: 'WhatsAsena',
 	    optimizeQuery: true
     };
 
