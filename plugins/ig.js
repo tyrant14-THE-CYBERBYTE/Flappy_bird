@@ -5,6 +5,8 @@ const sd = "Instagramdan video indirir."
 const gt = "Github profilini gösterir."
 const hb = "Kiralanamaz"
 const yb = "Kiralanabilir"
+const tvig = "IGTV üzerinden video indirir."
+const ph = "Instagramdan fotoğraf indirir."
 
 
 Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (message, match) => {
@@ -32,6 +34,75 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
         const msg = `*İsmi:* ${full_name} \n*Beğeni:* ${like} \n*Yorum:* ${comment} \n*Uzunluk:* ${duration}`
 
         await message.sendMessage(Buffer.from(igdat.data), MessageType.video, { 
+          caption: msg,
+        })
+      })
+      .catch(
+        async (err) => await message.client.sendMessage(message.jid, 'Bulunamadı'),
+      )
+  },
+)
+
+Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (userName === '') return await message.client.sendMessage(message.jid, '```URL Gir!```')
+
+    await axios
+      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
+      .then(async (response) => {
+
+        const {
+          like, 
+          comment, 
+          full_name, 
+          video,
+        } = response.data.result
+
+        const phig = await axios.get(video, 
+          {responseType: 'arraybuffer',
+        })
+
+        const msg = `*İsmi:* ${full_name} \n*Beğeni:* ${like} \n*Yorum:* ${comment}`
+
+        await message.sendMessage(Buffer.from(igdat.data), MessageType.image, { 
+          caption: msg,
+        })
+      })
+      .catch(
+        async (err) => await message.client.sendMessage(message.jid, 'Bulunamadı'),
+      )
+  },
+)
+
+Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (userName === '') return await message.client.sendMessage(message.jid, '```URL Gir!```')
+
+    await axios
+      .get(`https://videfikri.com/api/igtv/?url=${userName}`)
+      .then(async (response) => {
+
+        const {
+          like, 
+          comment, 
+          username,
+          full_name, 
+          caption,
+          video_url, 
+          duration,
+        } = response.data.result
+
+        const tvdat = await axios.get(video_url, 
+          {responseType: 'arraybuffer',
+        })
+
+        const msg = `*Kullanıcı Adı:* ${username} \n*İsmi:* ${full_name} \n*Beğeni:* ${like} \n*Yorum:* ${comment} \n*Açıklama:* ${caption} \n*Uzunluk:* ${duration}`
+
+        await message.sendMessage(Buffer.from(tvdat.data), MessageType.video, { 
           caption: msg,
         })
       })
