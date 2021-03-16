@@ -87,7 +87,7 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (mes
       .then(async (response) => {
 
         const {
-          like, 
+          likes, 
           comment, 
           username,
           full_name, 
@@ -100,7 +100,7 @@ Asena.addCommand({ pattern: 'igtv ?(.*)', fromMe: true, desc: tvig }, async (mes
           {responseType: 'arraybuffer',
         })
 
-        const msg = `*Kullanıcı Adı:* ${username} \n*İsmi:* ${full_name} \n*Beğeni:* ${like} \n*Yorum:* ${comment} \n*Açıklama:* ${caption} \n*Uzunluk:* ${duration}`
+        const msg = `*Kullanıcı Adı:* ${username} \n*İsmi:* ${full_name} \n*Beğeni:* ${likes} \n*Yorum:* ${comment} \n*Açıklama:* ${caption} \n*Uzunluk:* ${duration}`
 
         await message.sendMessage(Buffer.from(tvdat.data), MessageType.video, { 
           caption: msg,
