@@ -34,7 +34,10 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: ly}, (async (messa
     };
 
     getSong(options).then(async(song) => {
-        await message.client.sendMessage(message.jid, {url: `${song.albumArt}`} , MessageType.image, {caption: `*Şarkı ID:* ${song.id} \n*Şarkı Linki:* ${song.url} \n*Sözleri:*\n\n${song.lyrics}`});
+
+        const pp = `${song.albumArt}`
+
+        await message.client.sendMessage(message.jid, pp, MessageType.image, {caption: `*Şarkı ID:* ${song.id} \n*Şarkı Linki:* ${song.url} \n*Sözleri:*\n\n${song.lyrics}`});
 
     });
 }));
