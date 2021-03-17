@@ -16,7 +16,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     await axios
-      .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
+      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`)
       .then(async (response) => {
         const {
           user.full_name,
