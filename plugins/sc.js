@@ -49,3 +49,41 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
       )
   },
 )
+
+Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+
+    const userName = match[1]
+
+    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+
+    await message.sendMessage(infoMessage(Lang.LOADING))
+
+    await axios
+      .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=e67bd1bafe81b611`)
+      .then(async (response) => {
+        const {
+          uploaded_at,
+          caption,
+          url_nwm,
+          title,
+          created_at,
+          user,
+          stats,
+          music,
+        } = response.data.result
+
+        const profileBuffer = await axios.get(url_nwm, {
+          responseType: 'arraybuffer',
+        })
+
+        const msg = `*Başlık:* ${title} \n*Açıklama:* ${caption} \n*Kullanıcı Adı:* ${user.username} \n*İsim:* ${user.name} \n*Beğeni:* ${stats.likes} \n*Yorum:* ${stats.comments} \n*İzlenmeler:* ${stats.play} \n*Paylaşımlar:* ${stats.shares} \n*Müzik:* ${music.title} \n*Müzik Sahibi:* ${music.author} `
+
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+          caption: msg,
+        })
+      })
+      .catch(
+        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
+      )
+  },
+)
