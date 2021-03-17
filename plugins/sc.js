@@ -50,13 +50,13 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
   },
 )
 
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+const ttom = "Tiktokdan video indirir."
+
+Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, async (message, match) => {
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
-
-    await message.sendMessage(infoMessage(Lang.LOADING))
+    if (!userName) return await message.sendMessage('Link Girmelisin!')
 
     await axios
       .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=e67bd1bafe81b611`)
@@ -78,12 +78,12 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, usage: Lang.USAGE, des
 
         const msg = `*Başlık:* ${title} \n*Açıklama:* ${caption} \n*Kullanıcı Adı:* ${user.username} \n*İsim:* ${user.name} \n*Beğeni:* ${stats.likes} \n*Yorum:* ${stats.comments} \n*İzlenmeler:* ${stats.play} \n*Paylaşımlar:* ${stats.shares} \n*Müzik:* ${music.title} \n*Müzik Sahibi:* ${music.author} `
 
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
         })
       })
       .catch(
-        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
+        async (err) => await message.sendMessage('Yüklenemedi! ' + userName)),
       )
   },
 )
