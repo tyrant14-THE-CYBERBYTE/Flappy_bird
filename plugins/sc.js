@@ -15,12 +15,12 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     await axios
-      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`)
-      .then(async (response) => {
+      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`, {
         proxy: {
           host: '176.113.73.96',
           port: 3128
-        }
+        })
+      .then(async (response) => {
 
         const {
           full_name,
