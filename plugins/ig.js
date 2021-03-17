@@ -50,23 +50,22 @@ Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (me
     if (userName === '') return await message.client.sendMessage(message.jid, '```URL Gir!```')
 
     await axios
-      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
+      .get(`https://api.zeks.xyz/api/ig?url=${userName}&apikey=apivinz`)
       .then(async (response) => {
 
         const {
-          like, 
-          comment, 
-          full_name, 
-          video,
+          owner,
+          caption,
+          url, 
         } = response.data.result
 
-        const phig = await axios.get(video, 
+        const phig = await axios.get(url, 
           {responseType: 'arraybuffer',
         })
 
-        const msg = `*İsmi:* ${full_name} \n*Beğeni:* ${like} \n*Yorum:* ${comment}`
+        const msg = `*Kullanıcı Adı:* ${owner} \n*Açıklama:* ${caption}`
 
-        await message.sendMessage(Buffer.from(igdat.data), MessageType.image, { 
+        await message.sendMessage(Buffer.from(phig.data), MessageType.image, { 
           caption: msg,
         })
       })
