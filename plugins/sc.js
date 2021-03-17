@@ -17,6 +17,11 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     await axios
       .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`)
       .then(async (response) => {
+        proxy: {
+          host: '176.113.73.96',
+          port: 3128
+        }
+
         const {
           full_name,
           username,
@@ -34,8 +39,12 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
           contact_phone_number,
           public_email,
         } = response.data.result.user
-
+        
         const profileBuffer = await axios.get(profile_pic_url, {
+          proxy: {
+            host: '176.113.73.96',
+            port: 3128
+          },
           responseType: 'arraybuffer',
         })
 
