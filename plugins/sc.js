@@ -19,28 +19,28 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
       .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`)
       .then(async (response) => {
         const {
-          user.full_name,
-          user.username,
-          user.biography,
-          user.follower_count,
-          user.following_count,
-          user.following_tag_count,
-          user.is_verified,
-          user.is_private,
-          user.hd_profile_pic_url_info,
-          user.media_count,
-          user.total_igtv_videos,
-          user.is_business,
-          user.is_call_to_action_enabled,
-          user.contact_phone_number,
-          user.public_email,
-        } = response.data.result
+          full_name,
+          username,
+          biography,
+          follower_count,
+          following_count,
+          following_tag_count,
+          is_verified,
+          is_private,
+          hd_profile_pic_url_info,
+          media_count,
+          total_igtv_videos,
+          is_business,
+          is_call_to_action_enabled,
+          contact_phone_number,
+          public_email,
+        } = response.data.result.user
 
         const profileBuffer = await axios.get(user.hd_profile_pic_url_info, {
           responseType: 'arraybuffer',
         })
 
-        const msg = `*${Lang.NAME}*: ${user.full_name} \n*${Lang.USERNAME}*: ${user.username} \n*${Lang.BIO}*: ${user.biography} \n*${Lang.FOLLOWERS}*: ${user.follower_count} \n*${Lang.FOLLOWS}*: ${user.following_count} \n*Takip Edilen Tag Sayısı:* ${user.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${user.is_verified == false ? "Doğrulanmamış 🚫" : "Doğrulanmamış ☑️"} \n*${Lang.ACCOUNT}*: ${user.is_private == true ? Lang.HIDDEN : Lang.PUBLIC} \n*Post Sayısı:* ${user.media_count} \n*IGTV Video Sayısı:* ${user.total_igtv_videos} \n*İşletme Hesabı mı?:* ${user.is_business == false ? "Hayır" : "Evet"} \n*Kategori:* ${user.category} \n*Aramalara Açık mı?:* ${user.is_call_to_action_enabled == false ? "Kapalı" : "Açık"} \n*Telefon Numarası:* ${user.contact_phone_number} \n*Mail Adresi:* ${user.public_email} `,
+        const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${follower_count} \n*${Lang.FOLLOWS}*: ${following_count} \n*Takip Edilen Tag Sayısı:* ${following_tag_count} \n*Doğrulanmış Hesap mı?:* ${is_verified == false ? "Doğrulanmamış 🚫" : "Doğrulanmamış ☑️"} \n*${Lang.ACCOUNT}*: ${is_private == true ? Lang.HIDDEN : Lang.PUBLIC} \n*Post Sayısı:* ${media_count} \n*IGTV Video Sayısı:* ${total_igtv_videos} \n*İşletme Hesabı mı?:* ${is_business == false ? "Hayır" : "Evet"} \n*Kategori:* ${category} \n*Aramalara Açık mı?:* ${is_call_to_action_enabled == false ? "Kapalı" : "Açık"} \n*Telefon Numarası:* ${contact_phone_number} \n*Mail Adresi:* ${public_email} `,
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg,
