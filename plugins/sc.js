@@ -19,7 +19,8 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
         proxy: {
           host: '176.113.73.96',
           port: 3128
-        })
+        }
+      )
       .then(async (response) => {
 
         const {
