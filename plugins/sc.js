@@ -16,10 +16,8 @@ const Lang = Language.getString('instagram')
         var resp = await axios
           .get(`https://api.xteam.xyz/dl/igstalk?nama=${match[1]}&APIKEY=e67bd1bafe81b611`)
         
-        var respoimage = await axios.get(`${resp.hd_profile_pic_url_info}`, { responseType: 'arraybuffer' })
-
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
-          caption: `*${Lang.NAME}*: ${resp.full_name} \n*${Lang.USERNAME}*: ${resp.username} \n*${Lang.BIO}*: ${resp.biography} \n*${Lang.FOLLOWERS}*: ${resp.follower_count} \n*${Lang.FOLLOWS}*: ${resp.following_count} \n*Takip Edilen Tag Sayısı:* ${resp.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${resp.is_verified == false ? "Doğrulanmamış 🚫" : "Doğrulanmamış ☑️"} \n*${Lang.ACCOUNT}*: ${resp.is_private == true ? Lang.HIDDEN : Lang.PUBLIC} \n*Post Sayısı:* ${resp.media_count} \n*IGTV Video Sayısı:* ${resp.total_igtv_videos} \n*İşletme Hesabı mı?:* ${resp.is_business == false ? "Hayır" : "Evet"} \n*Kategori:* ${resp.category} \n*Aramalara Açık mı?:* ${resp.is_call_to_action_enabled == false ? "Kapalı" : "Açık"} \n*Telefon Numarası:* ${resp.contact_phone_number} \n*Mail Adresi:* ${resp.public_email} `,
+        await message.sendMessage(Buffer.from(`${user.hd_profile_pic_url_info.url}.data`), MessageType.image, {
+          caption: `*${Lang.NAME}*: ${resp.user.full_name} \n*${Lang.USERNAME}*: ${resp.user.username} \n*${Lang.BIO}*: ${resp.user.biography} \n*${Lang.FOLLOWERS}*: ${resp.user.follower_count} \n*${Lang.FOLLOWS}*: ${resp.user.following_count} \n*Takip Edilen Tag Sayısı:* ${resp.user.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${resp.user.is_verified == false ? "Doğrulanmamış 🚫" : "Doğrulanmamış ☑️"} \n*${Lang.ACCOUNT}*: ${resp.user.is_private == true ? Lang.HIDDEN : Lang.PUBLIC} \n*Post Sayısı:* ${resp.user.media_count} \n*IGTV Video Sayısı:* ${resp.user.total_igtv_videos} \n*İşletme Hesabı mı?:* ${resp.user.is_business == false ? "Hayır" : "Evet"} \n*Kategori:* ${resp.user.category} \n*Aramalara Açık mı?:* ${resp.user.is_call_to_action_enabled == false ? "Kapalı" : "Açık"} \n*Telefon Numarası:* ${resp.user.contact_phone_number} \n*Mail Adresi:* ${resp.user.public_email} `,
           })
           .catch(
             async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + `${match[1]}`)),
