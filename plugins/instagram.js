@@ -35,7 +35,7 @@ if (cn.WORKTYPE == 'private') {
 
         const userName = match[1]
 
-        if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+        if (userName === '') return await message.sendMessage(errorMessage(Lang.NEED_WORD))
 
         await message.sendMessage(infoMessage(Lang.LOADING))
 
