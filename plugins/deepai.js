@@ -55,7 +55,7 @@ Asena.addCommand({pattern: 'colorai', fromMe: true, deleteCommand: false, dontAd
 
 }));
 
-Asena.addCommand({pattern: 'videocolorai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'videocolorai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('```Need Video!```');
 
     var downloading = await message.client.sendMessage(message.jid,'Colorizing.. 🎨',MessageType.text);
