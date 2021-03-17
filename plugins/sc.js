@@ -83,7 +83,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, async (me
         })
       })
       .catch(
-        async (err) => await message.sendMessage('Yüklenemedi! ' + userName)),
+        async (err) => await message.sendMessage('Yüklenemedi! ' + userName),
       )
   },
 )
