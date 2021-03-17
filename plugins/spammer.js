@@ -8,7 +8,7 @@ const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const Language = require('../language');
 const Lang = Language.getString('spammer');
 
-let totalMaxSpamCount = 50
+let totalMaxSpamCount = 5000
 
 
 Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, (async (message, match) => {
@@ -20,7 +20,7 @@ Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, 
 
     if (totalMaxSpamCount !== 0) {
         for (let index = 0; index < totalMaxSpamCount; index++) {
-            await message.sendMessage(match[1])
+            await message.client.sendMessage(message.jid, `${match[1]}`, MessageType.text)
         }
     }
 
