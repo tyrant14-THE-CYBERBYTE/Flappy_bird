@@ -13,40 +13,18 @@ const Lang = Language.getString('instagram')
 
         await message.sendMessage(infoMessage(Lang.LOADING))
 
-        await axios
+        var resp = await axios
           .get(`https://api.xteam.xyz/dl/igstalk?nama=${match[1]}&APIKEY=e67bd1bafe81b611`)
-          .then(async (response) => {
-            const {
-              hd_profile_pic_url_info,
-              username,
-              biography,
-              follower_count,
-              following_count,
-              full_name,
-              is_verified,
-              following_tag_count,
-              media_count,
-              total_igtv_videos,
-              contact_phone_number,
-              is_call_to_action_enabled,
-              is_business,
-              is_private,
-              category,
-              public_email,
-            } = response.data.result
+        
+        var respoimage = await axios.get(`${resp.hd_profile_pic_url_info}`, { responseType: 'arraybuffer' })
 
-            const profileBuffer = await axios.get(hd_profile_pic_url_info, {
-              responseType: 'arraybuffer',
-            })
+        var scda = await axios.get(`*${Lang.NAME}*: ${resp.full_name} \n*${Lang.USERNAME}*: ${resp.username} \n*${Lang.BIO}*: ${resp.biography} \n*${Lang.FOLLOWERS}*: ${resp.follower_count} \n*${Lang.FOLLOWS}*: ${resp.following_count} \n*Takip Edilen Tag Sayısı:* ${resp.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${resp.is_verified == false ? "Doğrulanmamış 🚫" : "Doğrulanmamış ☑️"} \n*${Lang.ACCOUNT}*: ${resp.is_private == true ? Lang.HIDDEN : Lang.PUBLIC} \n*Post Sayısı:* ${resp.media_count} \n*IGTV Video Sayısı:* ${resp.total_igtv_videos} \n*İşletme Hesabı mı?:* ${resp.is_business == false ? "Hayır" : "Evet"} \n*Kategori:* ${resp.category} \n*Aramalara Açık mı?:* ${resp.is_call_to_action_enabled == false ? "Kapalı" : "Açık"} \n*Telefon Numarası:* ${resp.contact_phone_number} \n*Mail Adresi:* ${resp.public_email} `, { responseType: 'arraybuffer' })
 
-            const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${follower_count} \n*${Lang.FOLLOWS}*: ${following_count} \n*Takip Edilen Tag Sayısı:* ${following_tag_count} \n*Doğrulanmış Hesap mı?:* ${is_verified == false ? "Doğrulanmamış 🚫" : "Doğrulanmamış ☑️"} \n*${Lang.ACCOUNT}*: ${is_private == true ? Lang.HIDDEN : Lang.PUBLIC} \n*Post Sayısı:* ${media_count} \n*IGTV Video Sayısı:* ${total_igtv_videos} \n*İşletme Hesabı mı?:* ${is_business == false ? "Hayır" : "Evet"} \n*Kategori:* ${category} \n*Aramalara Açık mı?:* ${is_call_to_action_enabled == false ? "Kapalı" : "Açık"} \n*Telefon Numarası:* ${contact_phone_number} \n*Mail Adresi:* ${public_email} `
-
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-              caption: msg,
-            })
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {
+          caption: scda,
           })
           .catch(
-            async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
+            async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + `${match[1]}`)),
           )
       },
     )
