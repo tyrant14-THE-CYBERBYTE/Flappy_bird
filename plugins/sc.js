@@ -15,12 +15,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     await axios
-      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`, {
-        proxy: {
-          host: '176.113.73.96',
-          port: 3128
-        }
-      )
+      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`, { proxy: { host: '176.113.73.96', port: 3128 }})
       .then(async (response) => {
 
         const {
@@ -41,13 +36,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
           public_email,
         } = response.data.result.user
         
-        const profileBuffer = await axios.get(profile_pic_url, {
-          proxy: {
-            host: '176.113.73.96',
-            port: 3128
-          },
-          responseType: 'arraybuffer',
-        })
+        const profileBuffer = await axios.get(profile_pic_url, { proxy: {host: '176.113.73.96', port: 3128 }}, { responseType: 'arraybuffer'})
 
         const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${follower_count} \n*${Lang.FOLLOWS}*: ${following_count} \n*Takip Edilen Tag Sayısı:* ${following_tag_count} \n*Doğrulanmış Hesap mı?:* ${is_verified} \n*${Lang.ACCOUNT}*: ${is_private} \n*Post Sayısı:* ${media_count} \n*IGTV Video Sayısı:* ${total_igtv_videos} \n*İşletme Hesabı mı?:* ${is_business} \n*Kategori:* ${category} \n*Aramalara Açık mı?:* ${is_call_to_action_enabled} \n*Telefon Numarası:* ${contact_phone_number} \n*Mail Adresi:* ${public_email} `
 
