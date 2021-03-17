@@ -35,15 +35,12 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
           public_email,
         } = response.data.result.user
 
-        const profileBuffer = await axios.get(profile_pic_url, {
-          responseType: 'arraybuffer',
-        })
+        
 
         const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${follower_count} \n*${Lang.FOLLOWS}*: ${following_count} \n*Takip Edilen Tag Sayısı:* ${following_tag_count} \n*Doğrulanmış Hesap mı?:* ${is_verified} \n*${Lang.ACCOUNT}*: ${is_private} \n*Post Sayısı:* ${media_count} \n*IGTV Video Sayısı:* ${total_igtv_videos} \n*İşletme Hesabı mı?:* ${is_business} \n*Kategori:* ${category} \n*Aramalara Açık mı?:* ${is_call_to_action_enabled} \n*Telefon Numarası:* ${contact_phone_number} \n*Mail Adresi:* ${public_email} `
 
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-          caption: msg,
-        })
+        await message.sendMessage(msg, MessageType.text
+        )
       })
       .catch(
         async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
