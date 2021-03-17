@@ -40,7 +40,7 @@ Asena.addCommand({ pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC }
     
     return await message.client.sendMessage(message.jid,Lang.STOP_SPAM, MessageType.text);
 
-    console.log(baseURI)
+    console.log(baseURI);
     await heroku.delete(baseURI + '/dynos').catch(async (error) => {
         await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
