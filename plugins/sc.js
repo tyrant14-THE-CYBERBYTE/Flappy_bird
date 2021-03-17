@@ -27,7 +27,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
           following_tag_count,
           is_verified,
           is_private,
-          hd_profile_pic_url_info,
+          profile_pic_url,
           media_count,
           total_igtv_videos,
           is_business,
@@ -36,7 +36,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
           public_email,
         } = response.data.result.user
 
-        const profileBuffer = await axios.get(user.hd_profile_pic_url_info.url, {
+        const profileBuffer = await axios.get(profile_pic_url, {
           responseType: 'arraybuffer',
         })
 
