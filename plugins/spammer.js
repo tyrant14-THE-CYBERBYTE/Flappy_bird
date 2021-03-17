@@ -30,6 +30,6 @@ Asena.addCommand({ pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC }, 
 Asena.addCommand({ pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC }, (async (message, match) => {
 
     totalMaxSpamCount = 0
-    await message.client.sendMessage(message.jid,Lang.STOP_SPAM, MessageType.text);
+    return await message.client.sendMessage(message.jid,Lang.STOP_SPAM, MessageType.text);
 
 }));
