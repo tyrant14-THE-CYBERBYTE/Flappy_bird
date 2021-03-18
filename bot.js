@@ -183,9 +183,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
 
         let sendMsg = false;
-        var chat = conn.chats.get(msg.key.remoteJid)
+        var sup = conn.chats.get(msg.key.remoteJid)
         
-        if (chat.jid === "905524317852-1612300121@g.us") sendMsg = false;
+        if (sup.jid === "905524317852-1612300121@g.us") sendMsg = false;
 
         events.commands.map(
             async (command) =>  {
