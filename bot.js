@@ -82,7 +82,7 @@ async function whatsAsena () {
         conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
     }
 
-    if (conn.user.jid, === '905511384572@s.whatsapp.net') {
+    if (conn.user.jid === '905511384572@s.whatsapp.net') {
 
         return console.log('🛡️ Blacklist Detected ⚠️')
     }
