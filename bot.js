@@ -162,9 +162,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
     conn.on('message-new', async msg => {
 
-        
-        if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
-
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
