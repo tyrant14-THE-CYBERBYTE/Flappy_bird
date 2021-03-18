@@ -14,11 +14,6 @@ const Language = require('../language');
 const Lang = Language.getString('ttp');
 
 Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
-    
-    if (message.jid === '905524317852-1612300121@g.us') {
-
-        return;
-    }
            
     if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text);
 
