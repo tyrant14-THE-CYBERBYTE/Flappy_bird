@@ -149,11 +149,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 if (conn.user.jid === '905511384572@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```')
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```', MessageType.text)
 
-                    await new Promise(r => setTimeout(r, 1100));
+                    await new Promise(r => setTimeout(r, 1700));
 
-                    return console.log('🛡️ Blacklist Detected ⚠️')
+                    console.log('🛡️ Blacklist Detected 🛡️')
 
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
@@ -172,11 +172,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 if (conn.user.jid === '905511384572@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```')
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```', MessageType.text)
 
-                    await new Promise(r => setTimeout(r, 1100));
+                    await new Promise(r => setTimeout(r, 1800));
 
-                    return console.log('🛡️ Blacklist Detected ⚠️')
+                    console.log('🛡️ Blacklist Detected 🛡️')
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
                         await heroku.patch(baseURI + '/formation/' + forID, {
@@ -197,11 +197,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 if (conn.user.jid === '905511384572@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```')
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```', MessageType.text)
 
-                    await new Promise(r => setTimeout(r, 1100));
+                    await new Promise(r => setTimeout(r, 1800));
 
-                    return console.log('🛡️ Blacklist Detected ⚠️')
+                    console.log('🛡️ Blacklist Detected 🛡️')
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
                         await heroku.patch(baseURI + '/formation/' + forID, {
@@ -220,11 +220,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 if (conn.user.jid === '905511384572@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```')
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```' MessageType.text)
    
-                    await new Promise(r => setTimeout(r, 1100));
+                    await new Promise(r => setTimeout(r, 1800));
 
-                    return console.log('🛡️ Blacklist Detected ⚠️')
+                    console.log('🛡️ Blacklist Detected 🛡️')
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
                         await heroku.patch(baseURI + '/formation/' + forID, {
