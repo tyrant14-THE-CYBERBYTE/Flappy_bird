@@ -148,8 +148,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                     return console.log('🛡️ Blacklist Detected ⚠️')
                 }
-
-                await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “private” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                else {
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “private” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                }
             }
             else {
 
@@ -158,8 +159,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```')
 
                     return console.log('🛡️ Blacklist Detected ⚠️')
+                
                 }
-                await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, make the “WORK_TYPE” switch “private” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                else {
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, make the “WORK_TYPE” switch “private” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                }
+
             }
         }
         else if (config.WORKTYPE == 'private') {
