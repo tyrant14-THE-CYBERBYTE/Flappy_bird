@@ -5,6 +5,6 @@ WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 
 RUN npm install supervisor -g
-RUN npm install --prefer-offline --no-audit
+RUN yarn install --no-audit
 
 CMD ["node", "bot.js"]
