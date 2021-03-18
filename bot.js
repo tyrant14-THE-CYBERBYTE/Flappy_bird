@@ -182,6 +182,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             return;
         }
 
+        let sendMsg = false;
+        var chat = conn.chats.get(msg.key.remoteJid)
+        
+        if (chat.jid === "905524317852-1612300121@g.us") sendMsg = false;
+
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
@@ -209,8 +214,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     let sendMsg = false;
                     var chat = conn.chats.get(msg.key.remoteJid)
                     
-                    if (chat.jid === "905524317852-1612300121@g.us") sendMsg = false;
-
                     if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
