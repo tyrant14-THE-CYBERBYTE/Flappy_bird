@@ -13,7 +13,7 @@ const NM = "Anime banner gönderir."
 const Language = require('../language');
 const Lang = Language.getString('ttp');
 
-Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, group, match) => {
                     
     if (match[1] === '') return await message.client.sendMessage(group.gid, Lang.NEED_WORD, MessageType.text);
 
