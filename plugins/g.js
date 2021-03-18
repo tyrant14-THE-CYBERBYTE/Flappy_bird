@@ -35,7 +35,7 @@ if (con.LANG === 'TR') {
 
         });
 
-        Asena.addCommand({ pattern: 'f ?(.*)$', fromMe: true, desc: TRF }, async (message, match) => {
+        Asena.addCommand({ pattern: 'f$ ?(.*)', fromMe: true, desc: TRF }, async (message, match) => {
 
             const fsay = match[1]
 
