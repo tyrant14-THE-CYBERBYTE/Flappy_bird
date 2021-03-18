@@ -23,6 +23,9 @@ const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
 
+let baseURI = '/apps/' + config.HEROKU.APP_NAME;
+
+
 // Sql
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsenaDuplicated', {
     info: {
