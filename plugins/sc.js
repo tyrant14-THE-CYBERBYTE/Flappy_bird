@@ -1,6 +1,7 @@
 const Asena = require('../events')
 const { MessageType } = require('@adiwajshing/baileys')
 const axios = require('axios')
+const got = require("got");
 
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
@@ -14,22 +15,12 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
 
     await message.sendMessage(infoMessage(Lang.LOADING))
 
-    await axios
-      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`)
-      .then(async (response) => {
-
-        const {
-          full_name,
-          username,
-          biography,
-          hd_profile_pic_url_info,
-          contact_phone_number,
-          public_email,
-        } = response.data.result
+    const respo = await got(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`).then(async ok => {
+        const resp = JSON.parse(ok.body);
         
-        const profileBuffer = await axios.get(user.profile_pic_url.url, { responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(resp.result.user.profile_pic_url.url, { responseType: 'arraybuffer'})
 
-        const msg = `*${Lang.NAME}*: ${user.full_name} \n*${Lang.USERNAME}*: ${user.username} \n*${Lang.BIO}*: ${user.biography} \n*Kategori:* ${user.category} \n*Telefon Numarası:* ${user.contact_phone_number} \n*Mail Adresi:* ${user.public_email} `
+        const msg = `*${Lang.NAME}*: ${resp.result.user.full_name} \n*${Lang.USERNAME}*: ${resp.result.user.username} \n*${Lang.BIO}*: ${resp.result.user.biography} \n*${Lang.FOLLOWERS}*: ${resp.result.user.follower_count} \n*${Lang.FOLLOWS}*: ${resp.result.user.following_count} \n*Takip Edilen Tag Sayısı:* ${resp.result.user.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${resp.result.user.is_verified} \n*${Lang.ACCOUNT}*: ${resp.result.user.is_private} \n*Post Sayısı:* ${resp.result.user.media_count} \n*IGTV Video Sayısı:* ${resp.result.user.total_igtv_videos} \n*İşletme Hesabı mı?:* ${resp.result.user.is_business} \n*Kategori:* ${resp.result.user.category} \n*Aramalara Açık mı?:* ${resp.result.user.is_call_to_action_enabled} \n*Telefon Numarası:* ${resp.result.user.contact_phone_number} \n*Mail Adresi:* ${resp.result.user.public_email} `
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg,
