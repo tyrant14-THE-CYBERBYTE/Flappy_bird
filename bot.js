@@ -12,6 +12,9 @@ const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
 
+const simpleGit = require('simple-git');
+const git = simpleGit();
+
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./whatsasena/');
@@ -169,6 +172,27 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
                 else {
                     await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “private” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+
+                    await git.fetch();
+                    var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+                    if (commits.total === 0) {
+                        await message.client.sendMessage(
+                            message.jid,
+                            Lang.UPDATE, MessageType.text
+                        );    
+                    } else {
+                        var degisiklikler = Lang.NEW_UPDATE;
+                        commits['all'].map(
+                            (commit) => {
+                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                            }
+                        );
+        
+                        await message.client.sendMessage(
+                            message.jid,
+                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
+                        ); 
+                    }
                 }
             }
             else {
@@ -191,6 +215,27 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
                 else {
                     await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, make the “WORK_TYPE” switch “private” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+
+                    await git.fetch();
+                    var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+                    if (commits.total === 0) {
+                        await message.client.sendMessage(
+                            message.jid,
+                            Lang.UPDATE, MessageType.text
+                        );    
+                    } else {
+                        var degisiklikler = Lang.NEW_UPDATE;
+                        commits['all'].map(
+                            (commit) => {
+                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                            }
+                        );
+        
+                        await message.client.sendMessage(
+                            message.jid,
+                            'Type *.update now* for Update The Bot.\n\n' + degisiklikler + '```', MessageType.text
+                        ); 
+                    }
                 }
 
             }
@@ -217,6 +262,27 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 else {
 
                     await conn.sendMessage(conn.user.jid, '*WhatsAsena Private Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “public” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+
+                    await git.fetch();
+                    var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+                    if (commits.total === 0) {
+                        await message.client.sendMessage(
+                            message.jid,
+                            Lang.UPDATE, MessageType.text
+                        );    
+                    } else {
+                        var degisiklikler = Lang.NEW_UPDATE;
+                        commits['all'].map(
+                            (commit) => {
+                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                            }
+                        );
+        
+                        await message.client.sendMessage(
+                            message.jid,
+                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
+                        ); 
+                    }
                 }
             }
             else {
@@ -240,6 +306,27 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 else {
 
                     await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Private! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, make the “WORK_TYPE” switch “public” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+
+                    await git.fetch();
+                    var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+                    if (commits.total === 0) {
+                        await message.client.sendMessage(
+                            message.jid,
+                            Lang.UPDATE, MessageType.text
+                        );    
+                    } else {
+                        var degisiklikler = Lang.NEW_UPDATE;
+                        commits['all'].map(
+                            (commit) => {
+                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                            }
+                        );
+        
+                        await message.client.sendMessage(
+                            message.jid,
+                            'Type *.update now* For The Update Bot.\n\n' + degisiklikler + '```', MessageType.text
+                        ); 
+                    }
                 }
             }
         }
