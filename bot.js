@@ -190,7 +190,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             }
                         );
         
-                        await message.client.sendMessage(
+                        await conn.sendMessage(
                             message.jid,
                             'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
@@ -233,7 +233,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             }
                         );
         
-                        await message.client.sendMessage(
+                        await conn.sendMessage(
                             message.jid,
                             'Type *.update now* for Update The Bot.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
@@ -280,7 +280,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             }
                         );
         
-                        await message.client.sendMessage(
+                        await conn.sendMessage(
                             message.jid,
                             'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
@@ -324,7 +324,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             }
                         );
         
-                        await message.client.sendMessage(
+                        await conn.sendMessage(
                             message.jid,
                             'Type *.update now* For The Update Bot.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
