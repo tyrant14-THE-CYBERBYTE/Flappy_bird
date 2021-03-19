@@ -27,18 +27,18 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
           following_tag_count,
           is_verified,
           is_private,
-          profile_pic_url,
+          hd_profile_pic_url_info,
           media_count,
           total_igtv_videos,
           is_business,
           is_call_to_action_enabled,
           contact_phone_number,
           public_email,
-        } = response.data.result.user
+        } = response.data.result
         
-        const profileBuffer = await axios.get(profile_pic_url, { proxy: {host: '176.113.73.96', port: 3128 }}, { responseType: 'arraybuffer'})
+        const profileBuffer = await axios.get(user.profile_pic_url.url, { responseType: 'arraybuffer'})
 
-        const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${follower_count} \n*${Lang.FOLLOWS}*: ${following_count} \n*Takip Edilen Tag Sayısı:* ${following_tag_count} \n*Doğrulanmış Hesap mı?:* ${is_verified} \n*${Lang.ACCOUNT}*: ${is_private} \n*Post Sayısı:* ${media_count} \n*IGTV Video Sayısı:* ${total_igtv_videos} \n*İşletme Hesabı mı?:* ${is_business} \n*Kategori:* ${category} \n*Aramalara Açık mı?:* ${is_call_to_action_enabled} \n*Telefon Numarası:* ${contact_phone_number} \n*Mail Adresi:* ${public_email} `
+        const msg = `*${Lang.NAME}*: ${user.full_name} \n*${Lang.USERNAME}*: ${user.username} \n*${Lang.BIO}*: ${user.biography} \n*${Lang.FOLLOWERS}*: ${user.follower_count} \n*${Lang.FOLLOWS}*: ${user.following_count} \n*Takip Edilen Tag Sayısı:* ${user.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${user.is_verified} \n*${Lang.ACCOUNT}*: ${user.is_private} \n*Post Sayısı:* ${user.media_count} \n*IGTV Video Sayısı:* ${user.total_igtv_videos} \n*İşletme Hesabı mı?:* ${user.is_business} \n*Kategori:* ${user.category} \n*Aramalara Açık mı?:* ${user.is_call_to_action_enabled} \n*Telefon Numarası:* ${user.contact_phone_number} \n*Mail Adresi:* ${user.public_email} `
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg,
