@@ -28,7 +28,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
-const Language = require('../language');
+const Language = require('./language');
 const Lang = Language.getString('updater');
 
 // Sql
