@@ -15,30 +15,21 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     await axios
-      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`, { proxy: { host: '176.113.73.96', port: 3128 }})
+      .get(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`)
       .then(async (response) => {
 
         const {
           full_name,
           username,
           biography,
-          follower_count,
-          following_count,
-          following_tag_count,
-          is_verified,
-          is_private,
           hd_profile_pic_url_info,
-          media_count,
-          total_igtv_videos,
-          is_business,
-          is_call_to_action_enabled,
           contact_phone_number,
           public_email,
         } = response.data.result
         
         const profileBuffer = await axios.get(user.profile_pic_url.url, { responseType: 'arraybuffer'})
 
-        const msg = `*${Lang.NAME}*: ${user.full_name} \n*${Lang.USERNAME}*: ${user.username} \n*${Lang.BIO}*: ${user.biography} \n*${Lang.FOLLOWERS}*: ${user.follower_count} \n*${Lang.FOLLOWS}*: ${user.following_count} \n*Takip Edilen Tag Sayısı:* ${user.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${user.is_verified} \n*${Lang.ACCOUNT}*: ${user.is_private} \n*Post Sayısı:* ${user.media_count} \n*IGTV Video Sayısı:* ${user.total_igtv_videos} \n*İşletme Hesabı mı?:* ${user.is_business} \n*Kategori:* ${user.category} \n*Aramalara Açık mı?:* ${user.is_call_to_action_enabled} \n*Telefon Numarası:* ${user.contact_phone_number} \n*Mail Adresi:* ${user.public_email} `
+        const msg = `*${Lang.NAME}*: ${user.full_name} \n*${Lang.USERNAME}*: ${user.username} \n*${Lang.BIO}*: ${user.biography} \n*Kategori:* ${user.category} \n*Telefon Numarası:* ${user.contact_phone_number} \n*Mail Adresi:* ${user.public_email} `
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
           caption: msg,
