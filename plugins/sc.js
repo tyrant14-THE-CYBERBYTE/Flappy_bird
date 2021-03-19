@@ -16,6 +16,10 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     const respo = await got(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`).then(async ok => {
+
+        headers: {
+            "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
+        }
         const resp = JSON.parse(ok.body);
         
         const profileBuffer = await axios.get(resp.result.user.profile_pic_url.url, { responseType: 'arraybuffer'})
