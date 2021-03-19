@@ -2,6 +2,7 @@ const Asena = require('../events')
 const { MessageType } = require('@adiwajshing/baileys')
 const axios = require('axios')
 const got = require("got");
+const Heroku = require('heroku-client');
 
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
@@ -17,7 +18,7 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
 
     const respo = await got(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`).then(async ok => {
 
-        headers: {
+        headers = {
             "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
         }
         const resp = JSON.parse(ok.body);
