@@ -178,8 +178,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
                     if (commits.total === 0) {
-                        await message.client.sendMessage(
-                            message.jid,
+                        await conn.sendMessage(
+                            conn.user.jid,
                             Lang.UPDATE, MessageType.text
                         );    
                     } else {
@@ -191,7 +191,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         );
         
                         await conn.sendMessage(
-                            message.jid,
+                            conn.user.jid,
                             'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
@@ -221,8 +221,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
                     if (commits.total === 0) {
-                        await message.client.sendMessage(
-                            message.jid,
+                        await conn.sendMessage(
+                            conn.user.jid,
                             Lang.UPDATE, MessageType.text
                         );    
                     } else {
@@ -234,7 +234,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         );
         
                         await conn.sendMessage(
-                            message.jid,
+                            conn.user.jid,
                             'Type *.update now* for Update The Bot.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
@@ -268,8 +268,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
                     if (commits.total === 0) {
-                        await message.client.sendMessage(
-                            message.jid,
+                        await conn.sendMessage(
+                            conn.user.jid,
                             Lang.UPDATE, MessageType.text
                         );    
                     } else {
@@ -281,7 +281,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         );
         
                         await conn.sendMessage(
-                            message.jid,
+                            conn.user.jid,
                             'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
@@ -312,8 +312,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
                     if (commits.total === 0) {
-                        await message.client.sendMessage(
-                            message.jid,
+                        await conn.sendMessage(
+                            conn.user.jid,
                             Lang.UPDATE, MessageType.text
                         );    
                     } else {
@@ -325,7 +325,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         );
         
                         await conn.sendMessage(
-                            message.jid,
+                            conn.user.jid,
                             'Type *.update now* For The Update Bot.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
