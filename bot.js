@@ -482,7 +482,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             whats = new Message(conn.jid, msg);
                         }
 
-                        if (command.deleteCommand && msg.key.fromMe && msg.key.remoteJid) {
+                        if (command.deleteCommand && msg.key.fromMe) {
                             await whats.delete(); 
                         }
 
