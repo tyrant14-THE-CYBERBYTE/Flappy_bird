@@ -338,9 +338,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
 
+                varkey = WORK_TYPE
+                varValue = private
+
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: private
+                        [varKey]: varValue
                     }
                 })
             }
