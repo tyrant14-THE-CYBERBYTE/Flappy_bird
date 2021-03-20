@@ -404,8 +404,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
             }
         }
-        if (config.ASENA_SESSION !== config.ASENA_SESSION.includes('-')) return console.log('ASENA_SESSION Anahtarın Yanlış!')
-
+        
     });
 
     
@@ -473,15 +472,16 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         }
                         
                         var match = text_msg.match(command.pattern);
+                        var chat = conn.chats.get(msg.key.remoteJid)
                         
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
-                            whats = new Image(conn, msg);
+                            whats = new Image(chat, msg);
                         } else if (command.on !== undefined && (command.on === 'video' )
                         && msg.message.videoMessage !== null) {
-                            whats = new Video(conn, msg);
+                            whats = new Video(chat, msg);
                         } else {
-                            whats = new Message(conn, msg);
+                            whats = new Message(chat, msg);
                         }
 
                         if (command.deleteCommand && msg.key.fromMe) {
