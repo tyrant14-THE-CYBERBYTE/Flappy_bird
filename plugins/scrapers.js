@@ -199,3 +199,33 @@ Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (asy
         message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
     });
 }));
+const stor = "Plugin mağazasında arama yapar."
+
+Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (message, match) => { 
+
+    if (match[1] === '') {
+
+        await message.client.sendMessage(
+            message.jid,
+            '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
+            MessageType.text
+        );
+        await new Promise(r => setTimeout(r, 1800));
+
+        await message.client.sendMessage(
+            message.jid,
+            't.me/unofficialplugin _Kanalına Eklenen Son Pluginler:_\n\n' +
+            'Gaymeter V2\n\n➡️ Platform: #WhatsApp\nℹ️ Desc: 🇹🇷 Gaymeter\'in 2. versiyonudur.  🇬🇧 Version 2 of Gaymeter. 🇮🇳 Gaymeter का संस्करण 2.\n\n▶️ Type: #Eğlence #Fun\n✅ Owner: @phaticusthiccy\n\n💻 Usage: .gaymeter\n🌍 Languages: TR - EN - HI\n⚠️ Warning: 🇹🇷 Kullanmadan önce eski plugini silin! 🇬🇧 Delete old plugin before using new version.\n🔗 Link: https:\/\/gist.github.com\/phaticusthiccy\/ea823fff6a8504ef4ad857129939f555\n\n' +
+            'Ğ - F - X Word\n\n➡️ Platform: #WhatsApp\nℹ️ Desc: 🇹🇷 Telegramdaki .ğ ve .f komutunun yanında .x komutu bulunduran plugin. 🇬🇧 Plugin containing the .x command next to the .ğ and .f command from TG Asena. 🇮🇳 प्लग इन में .ğ कमांड के बगल में .x कमांड और TG असैना की .f कमांड होती है। 🇼🇸 ടിജി അസേനയിൽ നിന്നുള്ള .ğ, .f കമാൻഡിനടുത്തുള്ള .x കമാൻഡ് അടങ്ങിയിരിക്കുന്ന പ്ലഗിൻ.\n\n▶️ Type: #Eğlence #Fun\n✅ Owner: @phaticusthiccy\n\n💻 Usage: .ğ \/ .f \/ .x\n🌍 Languages: TR - EN - HI - ML\n🔗 Link: https:\/\/gist.github.com\/phaticusthiccy\/cd93c24c122731b6ea9a5dbdd58b470a \n\n' +
+            'Dice Game V3\n\n➡️ Platform: #WhatsApp\nℹ️ Desc: 🇹🇷 Zar oyununun 3. versiyonudur. 🇬🇧 Version 3 of Dice Game. 🇮🇳 Dice Game का संस्करण 3.\n\n▶️ Type: #Eğlence #Fun\n✅ Owner: @phaticusthiccy\n\n💻 Usage: .roll\n🌍 Languages: TR - EN - HI\n⚠️ Warning: 🇹🇷 Kullanmadan önce eski plugini silin! 🇬🇧 Delete old plugin before using new version.\n🔗 Link: https:\/\/gist.github.com\/phaticusthiccy\/23e6c2cc12db52fd54ccc397b1bd4227 \n\n' +
+            '_Yüklemek için_ ```.install <plugin linki>``` _komutunu kullanın._',
+            MessageType.text
+        );
+    else {
+        await message.client.sendMessage(
+            message.jid,
+            'Hmm',
+            MessageType.text
+        );
+    }
+}));
