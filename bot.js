@@ -11,16 +11,14 @@ const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
-
-const simpleGit = require('simple-git');
-const git = simpleGit();
-
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
+const simpleGit = require('simple-git');
+const git = simpleGit();
 
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
@@ -157,7 +155,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Tespit Edildi!``` \n```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
 
                     await new Promise(r => setTimeout(r, 1700));
 
@@ -186,13 +184,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                             }
                         );
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
+                            '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -201,7 +199,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
 
                     await new Promise(r => setTimeout(r, 1800));
 
@@ -229,25 +227,24 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                             }
                         );
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            'Type *.update now* for Update The Bot.\n\n' + degisiklikler + '```', MessageType.text
+                            '```Type``` *.update now* ```For Update The Bot.```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
-
             }
         }
         else if (config.WORKTYPE == 'private') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid === '90@s.whatsapp.net') {
+                if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n ```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
 
                     await new Promise(r => setTimeout(r, 1800));
 
@@ -276,13 +273,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                             }
                         );
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
+                            '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -291,7 +288,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```WhatsAsenayı Daha Fazla Kullanamazsın!```', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
    
                     await new Promise(r => setTimeout(r, 1800));
 
@@ -320,24 +317,98 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         var degisiklikler = Lang.NEW_UPDATE;
                         commits['all'].map(
                             (commit) => {
-                                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                             }
                         );
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            'Type *.update now* For The Update Bot.\n\n' + degisiklikler + '```', MessageType.text
+                            '```Type``` *.update now* ```For The Update Bot.```\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
             }
         }
+        else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
+
+            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: private
+                    }
+                })
+            }
+            else {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: private
+                    }
+                })
+            }
+        }
+        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
+
+            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: public
+                    }
+                })
+            }
+            else {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: public
+                    }
+                })
+            }
+        }
         else {
-            return console.log('Wrong WORK_TYPE key! Please use “private” or “public”')
+
+            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+
+                return await conn.sendMessage(
+                    conn.user.jid,
+                    '_Girdiğin WORK_TYPE Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar WORK_TYPE:private``` _Yada_ ```.setvar WORK_TYPE:public``` _Komutunu Kullanın!_', MessageType.text
+                );
+            }
+            else {
+
+                return await conn.sendMessage(
+                    conn.user.jid,
+                    '_The WORK_TYPE Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
+                );
+            }
         }
     });
 
+    
     conn.on('message-new', async msg => {
+        if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
 
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
@@ -354,15 +425,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
-                await conn.sendMessage(msg.key.remoteJid, fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VN20210306_123803.mp4"), MessageType.video, {mimetype: Mimetype.mpeg, caption: gb.message});
+                await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
             }
             return;
         }
-
-        let sendMsg = false;
-        var sup = conn.chats.get(msg.key.remoteJid)
-        
-        if (sup.jid === "905524317852-1612300121@g.us") sendMsg = false;
 
         events.commands.map(
             async (command) =>  {
@@ -390,7 +456,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                     let sendMsg = false;
                     var chat = conn.chats.get(msg.key.remoteJid)
-                    
+                        
                     if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
@@ -437,9 +503,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '\n*WhatsAsena an error has occurred!*'+
                                     '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
                                     '\n_You can write to our Telegram group for help._' +
+                                    '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ' +
                                     '\n_This message should have gone to your number (saved messages)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
-                                    , MessageType.text);
+                                    , MessageType.text, {detectLinks: false});
                             }
                         }
                     }
