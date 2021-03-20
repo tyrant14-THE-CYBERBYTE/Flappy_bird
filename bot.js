@@ -477,12 +477,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             whats = new Image(conn, msg.remoteJid);
                         } else if (command.on !== undefined && (command.on === 'video' )
                         && msg.message.videoMessage !== null) {
-                            whats = new Video(conn, msg.remoteJid);
+                            whats = new Video(conn, msg.key.remoteJid);
                         } else {
-                            whats = new Message(conn, msg.remoteJid);
+                            whats = new Message(conn, msg.key.remoteJid);
                         }
 
-                        if (command.deleteCommand && msg.key.fromMe) {
+                        if (command.deleteCommand && msg.key.fromMe && msg.key.remoteJid) {
                             await whats.delete(); 
                         }
 
