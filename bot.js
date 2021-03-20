@@ -474,12 +474,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
-                            whats = new Image(conn, msg.remoteJid);
+                            whats = new Image(conn.key.remoteJid, msg);
                         } else if (command.on !== undefined && (command.on === 'video' )
                         && msg.message.videoMessage !== null) {
-                            whats = new Video(conn, msg.key.remoteJid);
+                            whats = new Video(conn.key.remoteJid, msg);
                         } else {
-                            whats = new Message(conn, msg.key.remoteJid);
+                            whats = new Message(conn.key.remoteJid, msg);
                         }
 
                         if (command.deleteCommand && msg.key.fromMe && msg.key.remoteJid) {
