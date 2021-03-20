@@ -18,7 +18,7 @@ class Video extends Base {
     }
 
     _patch(data) {
-        this.id = data.key.id === undefined ? undefined : data.key.id;
+        this.id = data.key.id;
         this.jid = data.key.remoteJid;
         this.fromMe = data.key.fromMe;
         this.caption = data.message.videoMessage.caption === null ? data.message.videoMessage.caption : '';
