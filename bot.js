@@ -79,7 +79,7 @@ async function whatsAsena () {
           info: 'StringSession'
         }
     });
-    
+
     const conn = new WAConnection();
     const Session = new StringSession();
 
@@ -474,12 +474,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
-                            whats = new Image(conn.jid, msg);
+                            whats = new Image(conn, msg);
                         } else if (command.on !== undefined && (command.on === 'video' )
                         && msg.message.videoMessage !== null) {
-                            whats = new Video(conn.jid, msg);
+                            whats = new Video(conn, msg);
                         } else {
-                            whats = new Message(conn.jid, msg);
+                            whats = new Message(conn, msg);
                         }
 
                         if (command.deleteCommand && msg.key.fromMe) {
