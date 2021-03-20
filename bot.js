@@ -348,7 +348,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
                 );
 
                 await heroku.patch(baseURI + '/config-vars', {
@@ -377,7 +377,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
                 );
 
                 await heroku.patch(baseURI + '/config-vars', {
