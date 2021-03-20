@@ -19,7 +19,6 @@ class Message extends Base {
     _patch(data) {
         this.id = data.key.id === undefined ? undefined : data.key.id;
         this.jid = data.key.remoteJid;
-        this.gid = data.key.groupJid;
         this.fromMe = data.key.fromMe;
         this.message = data.message.extendedTextMessage === null ? data.message.conversation : data.message.extendedTextMessage.text;
         this.unreadCount = data.unreadCount;
