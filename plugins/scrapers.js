@@ -221,6 +221,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             '_Yüklemek için_ ```.install <plugin linki>``` _komutunu kullanın._',
             MessageType.text
         );
+    }
     else {
         await message.client.sendMessage(
             message.jid,
