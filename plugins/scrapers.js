@@ -203,30 +203,60 @@ const stor = "Plugin mağazasında arama yapar."
 
 Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (message, match) => { 
 
-    if (match[1] === '') {
+    if (config.LANG == 'TR' || config.LANG == 'AZ') {
+        if (match[1] === '') {
 
-        await message.client.sendMessage(
-            message.jid,
-            '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
-            MessageType.text
-        );
-        await new Promise(r => setTimeout(r, 1800));
+            await message.client.sendMessage(
+                message.jid,
+                '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
+                MessageType.text
+            );
+            await new Promise(r => setTimeout(r, 1800));
 
-        await message.client.sendMessage(
-            message.jid,
-            't.me/unofficialplugin _Kanalına Eklenen Son Pluginler:_\n\n' +
-            '*Gaymeter V2*\n\n➡️ *Platform:* #WhatsApp\nℹ️ Desc: _🇹🇷 Gaymeter\'in 2. versiyonudur.  🇬🇧 Version 2 of Gaymeter. 🇮🇳 Gaymeter का संस्करण 2._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.gaymeter```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇹🇷 _Kullanmadan önce eski plugini silin! 🇬🇧 Delete old plugin before using new version._\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/ea823fff6a8504ef4ad857129939f555\n\n====================\n\n' +
-            '*Ğ - F - X Word*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* _🇹🇷 Telegramdaki .ğ ve .f komutunun yanında .x komutu bulunduran plugin. 🇬🇧 Plugin containing the .x command next to the .ğ and .f command from TG Asena. 🇮🇳 प्लग इन में .ğ कमांड के बगल में .x कमांड और TG असैना की .f कमांड होती है। 🇼🇸 ടിജി അസേനയിൽ നിന്നുള്ള .ğ, .f കമാൻഡിനടുത്തുള്ള .x കമാൻഡ് അടങ്ങിയിരിക്കുന്ന പ്ലഗിൻ._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.ğ \/ .f \/ .x```\n🌍 *Languages:* _TR - EN - HI - ML_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/cd93c24c122731b6ea9a5dbdd58b470a \n\n====================\n\n' +
-            '*Dice Game V3*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* 🇹🇷 _Zar oyununun 3. versiyonudur. 🇬🇧 Version 3 of Dice Game. 🇮🇳 Dice Game का संस्करण 3._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.roll```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇹🇷 _Kullanmadan önce eski plugini silin! 🇬🇧 Delete old plugin before using new version._\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/23e6c2cc12db52fd54ccc397b1bd4227 \n\n====================\n\n' +
-            '_Yüklemek için_ ```.install <plugin linki>``` _komutunu kullanın._',
-            MessageType.text, {detectLinks: true}
-        );
+            await message.client.sendMessage(
+                message.jid,
+                't.me/unofficialplugin _Kanalına Eklenen Son Pluginler:_\n\n' +
+                '*Gaymeter V2*\n\n➡️ *Platform:* #WhatsApp\nℹ️ Desc: _🇹🇷 Gaymeter\'in 2. versiyonudur._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.gaymeter```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇹🇷 _Kullanmadan önce eski plugini silin!_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/ea823fff6a8504ef4ad857129939f555\n\n====================\n\n' +
+                '*Ğ - F - X Word*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* _🇹🇷 Telegramdaki .ğ ve .f komutunun yanında .x komutu bulunduran plugin._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.ğ \/ .f \/ .x```\n🌍 *Languages:* _TR - EN - HI - ML_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/cd93c24c122731b6ea9a5dbdd58b470a \n\n====================\n\n' +
+                '*Dice Game V3*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* 🇹🇷 _Zar oyununun 3. versiyonudur._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.roll```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇹🇷 _Kullanmadan önce eski plugini silin!_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/23e6c2cc12db52fd54ccc397b1bd4227 \n\n====================\n\n' +
+                '_Yüklemek için_ ```.install <plugin linki>``` _Komutunu Kullanın._',
+                MessageType.text, {detectLinks: false}
+            );
+        }
+        else {
+            await message.client.sendMessage(
+                message.jid,
+                'Hmm',
+                MessageType.text
+            );
+        }
     }
     else {
-        await message.client.sendMessage(
-            message.jid,
-            'Hmm',
-            MessageType.text
-        );
+        if (match[1] === '') {
+
+            await message.client.sendMessage(
+                message.jid,
+                '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
+                MessageType.text
+            );
+            await new Promise(r => setTimeout(r, 1800));
+
+            await message.client.sendMessage(
+                message.jid,
+                't.me/unofficialplugin _Kanalına Eklenen Son Pluginler:_\n\n' +
+                '*Gaymeter V2*\n\n➡️ *Platform:* #WhatsApp\nℹ️ Desc: _🇬🇧 Version 2 of Gaymeter._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.gaymeter```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇬🇧 _Delete old plugin before using new version._\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/ea823fff6a8504ef4ad857129939f555\n\n====================\n\n' +
+                '*Ğ - F - X Word*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* _🇬🇧 Plugin containing the .x command next to the .ğ and .f command from TG Asena._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.ğ \/ .f \/ .x```\n🌍 *Languages:* _TR - EN - HI - ML_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/cd93c24c122731b6ea9a5dbdd58b470a \n\n====================\n\n' +
+                '*Dice Game V3*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* 🇬🇧 _Version 3 of Dice Game._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.roll```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* _🇬🇧 Delete old plugin before using new version._\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/23e6c2cc12db52fd54ccc397b1bd4227 \n\n====================\n\n' +
+                '_Use_ ```.install <plugin name>``` _To Install External Plugins._',
+                MessageType.text, {detectLinks: false}
+            );
+        }
+        else {
+            await message.client.sendMessage(
+                message.jid,
+                'Hmm',
+                MessageType.text
+            );
+        }
     }
 }));
