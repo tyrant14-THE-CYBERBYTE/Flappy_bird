@@ -52,7 +52,6 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, async (me
           uploaded_at,
           caption,
           url_nwm,
-          title,
           created_at,
           user,
           stats,
@@ -63,7 +62,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, async (me
           responseType: 'arraybuffer',
         })
 
-        const msg = `*Başlık:* ${title} \n*Açıklama:* ${caption} \n*Kullanıcı Adı:* ${user.username} \n*İsim:* ${user.name} \n*Beğeni:* ${stats.likes} \n*Yorum:* ${stats.comments} \n*İzlenmeler:* ${stats.play} \n*Paylaşımlar:* ${stats.shares} \n*Müzik:* ${music.title} \n*Müzik Sahibi:* ${music.author} `
+        const msg = `*Açıklama:* ${caption} \n*Kullanıcı Adı:* https://www.tiktok.com/@${user.username} \n*İsim:* ${user.name} \n*Beğeni:* ${stats.likes} \n*Yorum:* ${stats.comments} \n*İzlenmeler:* ${stats.play} \n*Paylaşımlar:* ${stats.shares} \n*Müzik:* ${music.title} \n*Müzik Sahibi:* ${music.author} `
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
           caption: msg,
