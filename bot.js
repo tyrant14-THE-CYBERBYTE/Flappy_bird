@@ -353,7 +353,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: private
+                        ['WORK_TYPE']: private
                     }
                 })
             }
@@ -369,7 +369,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: public
+                        ['WORK_TYPE']: public
                     }
                 })
             }
@@ -382,7 +382,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: public
+                        ['WORK_TYPE']: public
                     }
                 })
             }
