@@ -472,16 +472,16 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         }
                         
                         var match = text_msg.match(command.pattern);
-                        var chat = conn.chats.get(msg.key.remoteJid)
+                        
                         
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
-                            whats = new Image(chat, msg);
+                            whats = new Image(conn, msg);
                         } else if (command.on !== undefined && (command.on === 'video' )
                         && msg.message.videoMessage !== null) {
-                            whats = new Video(chat, msg);
+                            whats = new Video(conn, msg);
                         } else {
-                            whats = new Message(chat, msg);
+                            whats = new Message(conn, msg);
                         }
 
                         if (command.deleteCommand && msg.key.fromMe) {
