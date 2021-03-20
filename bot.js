@@ -404,7 +404,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
             }
         }
-        if (!config.ASENA_SESSION.includes('-')) retrun console.log('ASENA_SESSION Anahtarın Yanlış!')
+        if (!config.ASENA_SESSION.includes('-')) return console.log('ASENA_SESSION Anahtarın Yanlış!')
 
     });
 
