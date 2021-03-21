@@ -2,7 +2,8 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
-
+const solenolyrics= require("solenolyrics"); 
+ 
 const TinyURL = require('tinyurl');
 
 const De = "Uzun linkleri kısaltır."
