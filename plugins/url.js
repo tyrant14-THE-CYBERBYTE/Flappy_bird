@@ -28,7 +28,8 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: del}, (async (mess
     if (match[1] === '') return await message.client.sendMessage(message.jid,def, MessageType.text);
 
     var aut = await solenolyrics.requestLyricsFor(`${match[1]}`); 
-    
-    await message.client.sendMessage(message.jid, `*İşte ${match[1]} Adlı Şarkı İçin Şarkı Sözleri:*\n\n` + aut, MessageType.text);
+    var son = await solenolyrics.requestAuthorFor();
+
+    await message.client.sendMessage(message.jid, `*İşte ${match[1]} Adlı Şarkı İçin Şarkı Sözleri:*\n*Şarkı Sahibi: ` + son + '\n\n' + aut, MessageType.text);
 
 }));
