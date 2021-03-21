@@ -29,7 +29,9 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: del}, (async (mess
 
     var aut = await solenolyrics.requestLyricsFor(`${match[1]}`); 
     var son = await solenolyrics.requestAuthorFor(`${match[1]}`);
+    var cov = await solenolyrics.requestIconFor(`${match[1]}`);
+    var tit = await solenolyrics.requestTitleFor(`${match[1]}`);
 
-    await message.client.sendMessage(message.jid, `*İşte ${match[1]} Adlı Şarkı İçin Şarkı Sözleri:*\n*Şarkı Sahibi: ` + son + '\n\n' + aut, MessageType.text);
+    await message.client.sendMessage(Buffer.from(cov.data),  MessageType.image, {caption: '*Aratılan Şarkı:*' + '```' + `${match[1]}` + '```\n*Bulunan Şarkı:* ' + tit + '\n*Şarkı Sahibi:* ' + son + '\n*Şarkı Sözleri:*\n\n' + aut });
 
 }));
