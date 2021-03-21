@@ -32,6 +32,8 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: del}, (async (mess
     var cov = await solenolyrics.requestIconFor(`${match[1]}`);
     var tit = await solenolyrics.requestTitleFor(`${match[1]}`);
 
-    await message.client.sendMessage(Buffer.from(cov.data),  MessageType.image, {caption: '*Aratılan Şarkı:*' + '```' + `${match[1]}` + '```\n*Bulunan Şarkı:* ' + tit + '\n*Şarkı Sahibi:* ' + son + '\n*Şarkı Sözleri:*\n\n' + aut });
+    var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
+
+    await message.client.sendMessage(Buffer.from(buffer.data),  MessageType.image, {caption: '*Aratılan Şarkı:*' + '```' + `${match[1]}` + '```\n*Bulunan Şarkı:* ' + tit + '\n*Şarkı Sahibi:* ' + son + '\n*Şarkı Sözleri:*\n\n' + aut });
 
 }));
