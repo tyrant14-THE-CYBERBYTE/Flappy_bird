@@ -392,6 +392,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
+        else if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') {
+            return;
+        }
         else {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
