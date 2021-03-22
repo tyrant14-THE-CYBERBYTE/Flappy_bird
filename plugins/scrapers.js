@@ -239,7 +239,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
 
             await message.client.sendMessage(
                 message.jid,
-                '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
+                '_Searching for the Latest Plugins in the Store.._',
                 MessageType.text
             );
             await new Promise(r => setTimeout(r, 1800));
