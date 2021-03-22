@@ -131,6 +131,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 if (response.statusCode == 200) {
                     fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
                     require('./plugins/' + plugin.dataValues.name + '.js');
+                }
+                else {
+                    return console.redBright.bold('⚠️ Yüklenen Plugin Silinmiş veya Bozuk! Lütfen Database Reset Atın! \n Check: https://t.me/asenaremaster/19107?single')
                 }     
             }
         });
@@ -405,17 +408,125 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
 
-        if (config.SEND_READ == 'true' && config.SEND_READ !== 'false') {
-            return;
-        }
-        else if (config.SEND_READ == 'false' && config.SEND_READ !== 'true') {
-            return;
+        // ==================== CONFIG SCANNER ==================== //
+        if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
+      
+            if (config.SEND_READ == 'true' && config.SEND_READ !== 'false') {
+                return;
+            }
+            else if (config.SEND_READ == 'false' && config.SEND_READ !== 'true') {
+                return;
+            }
+            else {
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_Girdiğin_ *SEND_READ* Anahtarı Bulunamadı!_ \n_Senin için_ ```true``` _olarak ayarlıyorum._' , MessageType.text
+                );
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['SEND_READ']: 'true'
+                    }
+                })
+            }
         }
         else {
-            return await conn.sendMessage(
-                conn.user.jid,
-                '_Girdiğin_ *SEND_READ* Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar SEND_READ:true``` _Yada_ ```.setvar SEND_READ:false``` _Komutunu Kullanın!_', MessageType.text
-            );
+            if (config.SEND_READ == 'true' && config.SEND_READ !== 'false') {
+                return;
+            }
+            else if (config.SEND_READ == 'false' && config.SEND_READ !== 'true') {
+                return;
+            }
+            else {
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_The_ *SEND_READ* _Key You Entered Was Not Found!_ \n_I am setting to_ ```true``` _for you._', MessageType.text
+                );
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['SEND_READ']: 'true'
+                    }
+                })
+            }
+        }
+        
+        if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
+      
+            if (config.DEBUG == 'true' && config.DEBUG !== 'false') {
+                return;
+            }
+            else if (config.DEBUG == 'false' && config.DEBUG !== 'true') {
+                return;
+            }
+            else {
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_Girdiğin_ *DEBUG* Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
+                );
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['DEBUG']: 'false'
+                    }
+                })
+            }
+        }
+        else {
+            if (config.DEBUG == 'true' && config.DEBUG !== 'false') {
+                return;
+             
+            else if (config.DEBUG == 'false' && config.DEBUG !== 'true') {
+                return;
+            }
+            else {
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_The_ *DEBUG* _Key You Entered Was Not Found!_ \n_I am setting to_ ```false``` _for you._', MessageType.text
+                );
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['DEBUG']: 'false'
+                    }
+                })
+            }
+        }
+        
+        if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
+      
+            if (config.NO_ONLINE == 'true' && config.NO_ONLINE !== 'false') {
+                return;
+            }
+            else if (config.NO_ONLINE == 'false' && config.NO_ONLINE !== 'true') {
+                return;
+            }
+            else {
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_Girdiğin_ *NO_ONLINE* Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
+                );
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['NO_ONLINE']: 'false'
+                    }
+                })
+            }
+        }
+        else {
+            if (config.NO_ONLINE == 'true' && config.NO_ONLINE !== 'false') {
+                return;
+            }
+            else if (config.NO_ONLINE == 'false' && config.NO_ONLINE !== 'true') {
+                return;
+            }
+            else {
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_The_ *NO_ONLINE* _Key You Entered Was Not Found!_ \n_I am setting to_ ```false``` _for you._', MessageType.text
+                );
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['NO_ONLINE']: 'false'
+                    }
+                })
+            }
         }
     });
 
