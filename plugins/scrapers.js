@@ -225,7 +225,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
                     `${store.plug3tr} \n\n *==============================* \n\n`,
                     MessageType.text
                 );
-            }
+            });
         }
         else {
             await message.client.sendMessage(
@@ -256,7 +256,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
                     `${store.plug3en} \n\n *==============================*`,
                     MessageType.text
                 );
-            }
+            });
         }
         else {
             await message.client.sendMessage(
