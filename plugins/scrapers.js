@@ -10,7 +10,7 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
-const plugin = require('axios');
+const StoreDB = require('axios');
 //============================== CURRENCY =============================================
 const { exchangeRates } = require('exchange-rates-api');
 const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
@@ -214,17 +214,16 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType : 'arraybuffer'})
+            var store = StoreDB.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType : 'arraybuffer'});
 
             await message.client.sendMessage(
                 message.jid,
                 '```İşte Mağazaya Yüklenen Son Pluginler:``` \n\n *==============================* \n\n' +
                 `${store.plug1tr} \n\n *==============================* \n\n` +
                 `${store.plug2tr} \n\n *==============================* \n\n` +
-                `${store.plug3tr} \n\n *==============================* \n\n`
+                `${store.plug3tr} \n\n *==============================* \n\n`,
                 MessageType.text
             );
-                
         }
         else {
             await message.client.sendMessage(
@@ -244,14 +243,14 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType ; 'arraybuffer'})
+            var store = StoreDB.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType : 'arraybuffer'});
 
             await message.client.sendMessage(
                 message.jid,
                 '```Here are the Latest Plugins Uploaded to the Store:``` \n\n *==============================* \n\n' +
                 `${store.plug1en} \n\n *==============================* \n\n` +
                 `${store.plug2en} \n\n *==============================* \n\n` +
-                `${store.plug3en} \n\n *==============================*`
+                `${store.plug3en} \n\n *==============================*`,
                 MessageType.text
             );
         }
