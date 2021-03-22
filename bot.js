@@ -153,10 +153,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         await new Promise(r => setTimeout(r, 1100));
         
-        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') 
-        if (config.SEND_READ == 'true' || config.SEND_READ == 'false')
-        if (config.DEBUG == 'true' || config.DEBUG == 'false')
-        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false')
+        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') return;
+        if (config.SEND_READ == 'true' || config.SEND_READ == 'false') return;
+        if (config.DEBUG == 'true' || config.DEBUG == 'false') return;
+        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') return;
 
         if (config.WORKTYPE !== 'private' && config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
 
@@ -164,7 +164,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                    '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
 
                 await new Promise(r => setTimeout(r, 800));
@@ -179,7 +179,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
+                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 800));
 
@@ -196,7 +196,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                    '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 800));
 
@@ -210,7 +210,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
+                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 800));
 
@@ -241,13 +241,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
         await new Promise(r => setTimeout(r, 800));
 
-        if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
+        if (config.LANG == 'TR' || config.LANG == 'AZ' ) {
       
             if (config.SEND_READ !== 'true' && config.SEND_READ !== 'false') {
                
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_Girdiğin_ *SEND_READ* Anahtarı Bulunamadı!_ \n_Senin için_ ```true``` _olarak ayarlıyorum._' , MessageType.text
+                    '_Girdiğin_ *SEND_READ* _Anahtarı Bulunamadı!_ \n_Senin için_ ```true``` _olarak ayarlıyorum._' , MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 800));
 
@@ -273,12 +273,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
         await new Promise(r => setTimeout(r, 800));
 
-        if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
+        if (config.LANG == 'TR' || config.LANG == 'AZ' ) {
       
             if (config.DEBUG !== 'true' || config.DEBUG !== 'false') {
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_Girdiğin_ *DEBUG* Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
+                    '_Girdiğin_ *DEBUG* _Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 800));
 
@@ -293,7 +293,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             if (config.DEBUG !== 'true' || config.DEBUG !== 'false') {
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_The_ *DEBUG* Key You Entered Was Not Found!_ \n_I am setting_ ```false``` _for you.' , MessageType.text
+                    '_The_ *DEBUG* _Key You Entered Was Not Found!_ \n_I am setting_ ```false``` _for you.' , MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 800));
 
@@ -305,13 +305,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
         
-        if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
+        if (config.LANG == 'TR' || config.LANG == 'AZ' ) {
       
             if (config.NO_ONLINE !== 'true' && config.NO_ONLINE !== 'false') {
                 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_Girdiğin_ *NO_ONLINE* Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
+                    '_Girdiğin_ *NO_ONLINE* _Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 800));
 
