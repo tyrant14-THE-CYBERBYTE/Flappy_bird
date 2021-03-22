@@ -267,7 +267,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
-
         await new Promise(r => setTimeout(r, 800));
 
         if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
