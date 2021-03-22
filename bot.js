@@ -404,7 +404,19 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
             }
         }
-        
+
+        if (config.SEND_READ == 'true' && config.SEND_READ !== 'false') {
+            return;
+        }
+        else if (config.SEND_READ == 'false' && config.SEND_READ !== 'true') {
+            return;
+        }
+        else {
+            return await conn.sendMessage(
+                conn.user.jid,
+                '_Girdiğin_ *SEND_READ* Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar SEND_READ:true``` _Yada_ ```.setvar SEND_READ:false``` _Komutunu Kullanın!_', MessageType.text
+            );
+        }
     });
 
     
