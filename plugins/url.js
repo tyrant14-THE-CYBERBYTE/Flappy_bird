@@ -34,6 +34,6 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: del}, (async (mess
 
     var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
 
-    await message.client.sendMessage(Buffer.from(buffer.data),  MessageType.image, {caption: '*Aratılan Şarkı:*' + '```' + `${match[1]}` + '```\n*Bulunan Şarkı:* ' + tit + '\n*Şarkı Sahibi:* ' + son + '\n*Şarkı Sözleri:*\n\n' + aut });
+    await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: '*Aratılan Şarkı:*' + '```' + `${match[1]}` + '```\n*Bulunan Şarkı:* ' + tit + '\n*Şarkı Sahibi:* ' + son + '\n*Şarkı Sözleri:*\n\n' + aut });
 
 }));
