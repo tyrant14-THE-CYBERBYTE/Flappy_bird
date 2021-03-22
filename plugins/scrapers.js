@@ -10,6 +10,7 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
+const plugin = require('axios');
 //============================== CURRENCY =============================================
 const { exchangeRates } = require('exchange-rates-api');
 const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
@@ -213,15 +214,17 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
+            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType = 'arraybuffer'})
+
             await message.client.sendMessage(
-                message.jid,
-                't.me/unofficialplugin _Kanalına Eklenen Son Pluginler:_\n\n' +
-                '*Gaymeter V2*\n\n➡️ *Platform:* #WhatsApp\nℹ️ Desc: _🇹🇷 Gaymeter\'in 2. versiyonudur._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.gaymeter```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇹🇷 _Kullanmadan önce eski plugini silin!_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/ea823fff6a8504ef4ad857129939f555\n\n====================\n\n' +
-                '*Ğ - F - X Word*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* _🇹🇷 Telegramdaki .ğ ve .f komutunun yanında .x komutu bulunduran plugin._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.ğ \/ .f \/ .x```\n🌍 *Languages:* _TR - EN - HI - ML_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/cd93c24c122731b6ea9a5dbdd58b470a \n\n====================\n\n' +
-                '*Dice Game V3*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* 🇹🇷 _Zar oyununun 3. versiyonudur._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.roll```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇹🇷 _Kullanmadan önce eski plugini silin!_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/23e6c2cc12db52fd54ccc397b1bd4227 \n\n====================\n\n' +
-                '_Yüklemek için_ ```.install <plugin linki>``` _Komutunu Kullanın._',
-                MessageType.text, {detectLinks: false}
+                messagy.jid,
+                '```İşte Mağazaya Yüklenen Son Pluginler:``` \n\n *==============================* \n\n' +
+                `${store.plug1tr} \n\n *==============================* \n\n` +
+                `${store.plug2tr} \n\n *==============================* \n\n` +
+                `${store.plug3tr} \n\n *==============================* \n\n`
+                MessageType.text
             );
+                
         }
         else {
             await message.client.sendMessage(
@@ -241,14 +244,15 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
+            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType = 'arraybuffer'})
+
             await message.client.sendMessage(
-                message.jid,
-                't.me/unofficialplugin _Kanalına Eklenen Son Pluginler:_\n\n' +
-                '*Gaymeter V2*\n\n➡️ *Platform:* #WhatsApp\nℹ️ Desc: _🇬🇧 Version 2 of Gaymeter._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.gaymeter```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* 🇬🇧 _Delete old plugin before using new version._\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/ea823fff6a8504ef4ad857129939f555\n\n====================\n\n' +
-                '*Ğ - F - X Word*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* _🇬🇧 Plugin containing the .x command next to the .ğ and .f command from TG Asena._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.ğ \/ .f \/ .x```\n🌍 *Languages:* _TR - EN - HI - ML_\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/cd93c24c122731b6ea9a5dbdd58b470a \n\n====================\n\n' +
-                '*Dice Game V3*\n\n➡️ *Platform:* #WhatsApp\nℹ️ *Desc:* 🇬🇧 _Version 3 of Dice Game._\n\n▶️ *Type:* #Eğlence #Fun\n✅ *Owner:* @phaticusthiccy\n\n💻 *Usage:* ```.roll```\n🌍 *Languages:* _TR - EN - HI_\n⚠️ *Warning:* _🇬🇧 Delete old plugin before using new version._\n🔗 *Link:* https:\/\/gist.github.com\/phaticusthiccy\/23e6c2cc12db52fd54ccc397b1bd4227 \n\n====================\n\n' +
-                '_Use_ ```.install <plugin name>``` _To Install External Plugins._',
-                MessageType.text, {detectLinks: false}
+                messagy.jid,
+                '```Here are the Latest Plugins Uploaded to the Store:``` \n\n *==============================* \n\n' +
+                `${store.plug1en} \n\n *==============================* \n\n` +
+                `${store.plug2en} \n\n *==============================* \n\n` +
+                `${store.plug3en} \n\n *==============================*`
+                MessageType.text
             );
         }
         else {
