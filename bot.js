@@ -152,6 +152,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             chalk.green.bold('✅ Plugins Installed!')
         );
         await new Promise(r => setTimeout(r, 1100));
+        
+        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') 
+        if (config.SEND_READ == 'true' || config.SEND_READ == 'false')
+        if (config.DEBUG == 'true' || config.DEBUG == 'false')
+        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false')
 
         if (config.WORKTYPE !== 'private' && config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
 
