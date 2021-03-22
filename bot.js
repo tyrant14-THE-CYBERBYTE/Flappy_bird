@@ -332,6 +332,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
             }
         }
+        await new Promise(r => setTimeout(r, 1100));
 
         // ==================== CONFIG SCANNER ====================
         if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
@@ -342,6 +343,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
+
+                await new Promise(r => setTimeout(r, 800));
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
@@ -355,6 +358,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_It Looks Like You Want to Switch to Private Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
@@ -371,6 +375,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
@@ -384,6 +389,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_It Looks Like You Want to Switch to Public Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
@@ -426,6 +432,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_Girdiğin_ *SEND_READ* Anahtarı Bulunamadı!_ \n_Senin için_ ```true``` _olarak ayarlıyorum._' , MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
+
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['SEND_READ']: 'true'
@@ -445,6 +453,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_The_ *SEND_READ* _Key You Entered Was Not Found!_ \n_I am setting to_ ```true``` _for you._', MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
+
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['SEND_READ']: 'true'
@@ -466,6 +476,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_Girdiğin_ *DEBUG* Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
+
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['DEBUG']: 'false'
@@ -485,6 +497,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_The_ *DEBUG* _Key You Entered Was Not Found!_ \n_I am setting to_ ```false``` _for you._', MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
+
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['DEBUG']: 'false'
@@ -506,6 +520,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_Girdiğin_ *NO_ONLINE* Anahtarı Bulunamadı!_ \n_Senin için_ ```false``` _olarak ayarlıyorum._' , MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
+
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['NO_ONLINE']: 'false'
@@ -525,6 +541,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_The_ *NO_ONLINE* _Key You Entered Was Not Found!_ \n_I am setting to_ ```false``` _for you._', MessageType.text
                 );
+                await new Promise(r => setTimeout(r, 800));
+
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['NO_ONLINE']: 'false'
