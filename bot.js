@@ -133,7 +133,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     require('./plugins/' + plugin.dataValues.name + '.js');
                 }
                 else {
-                    return console.redBright.bold('⚠️ Yüklenen Plugin Silinmiş veya Bozuk! Lütfen Database Reset Atın! \n Check: https://t.me/asenaremaster/19107?single')
+                    return console.log(chalk.redBright.bold('⚠️ Yüklenen Plugin Silinmiş veya Bozuk! Lütfen Database Reset Atın! \n Check: https://t.me/asenaremaster/19107?single'));
                 }     
             }
         });
@@ -193,7 +193,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
+                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -236,7 +236,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Type``` *.update now* ```For Update The Bot.```\n\n' + degisiklikler + '```', MessageType.text
+                            'Type *.update now* For Update The Bot.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -282,7 +282,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
+                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
@@ -326,12 +326,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         
                         await conn.sendMessage(
                             conn.user.jid,
-                            '```Type``` *.update now* ```For The Update Bot.```\n\n' + degisiklikler + '```', MessageType.text
+                            'Type *.update now* For The Update Bot.\n\n' + degisiklikler + '```', MessageType.text
                         ); 
                     }
                 }
             }
         }
+
+        // ==================== CONFIG SCANNER ====================
         else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
@@ -408,7 +410,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
 
-        // ==================== CONFIG SCANNER ==================== //
         if (config.LANG == 'TR' && config.LANG == 'AZ' ) {
       
             if (config.SEND_READ == 'true' && config.SEND_READ !== 'false') {
