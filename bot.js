@@ -255,17 +255,16 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
         else {
             await conn.sendMessage(
-                    conn.user.jid,
-                    '_The_ *SEND_READ* _Key You Entered Was Not Found!_ \n_I am setting_ ```true``` _for you._' , MessageType.text
-                );
-                await new Promise(r => setTimeout(r, 800));
+                conn.user.jid,
+                '_The_ *SEND_READ* _Key You Entered Was Not Found!_ \n_I am setting_ ```true``` _for you._' , MessageType.text
+            );
+            await new Promise(r => setTimeout(r, 800));
 
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['SEND_READ']: 'true'
-                    }
-                })
-            }
+            await heroku.patch(baseURI + '/config-vars', {
+                body: {
+                    ['SEND_READ']: 'true'
+                }
+            })
         }
         await new Promise(r => setTimeout(r, 800));
 
