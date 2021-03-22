@@ -153,11 +153,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         await new Promise(r => setTimeout(r, 1100));
         
-        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') return blacklist();
-        if (config.SEND_READ == 'true' || config.SEND_READ == 'false') return blacklist();
-        if (config.DEBUG == 'true' || config.DEBUG == 'false') return blacklist();
-        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') return blacklist();
- 
         if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
             if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
@@ -304,6 +299,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
+
+        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') return blacklist();
+        if (config.SEND_READ == 'true' || config.SEND_READ == 'false') return blacklist();
+        if (config.DEBUG == 'true' || config.DEBUG == 'false') return blacklist();
+        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') return blacklist();
+ 
         await new Promise(r => setTimeout(r, 500));
 
         async function blacklist () {
