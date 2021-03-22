@@ -473,7 +473,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         else {
             if (config.DEBUG == 'true' && config.DEBUG !== 'false') {
                 return;
-             
+            }
             else if (config.DEBUG == 'false' && config.DEBUG !== 'true') {
                 return;
             }
