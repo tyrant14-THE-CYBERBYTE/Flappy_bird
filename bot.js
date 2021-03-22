@@ -184,13 +184,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-                if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') return blacklist();
-            }
-            if (config.SEND_READ !== 'true' && config.SEND_READ !== 'false') {
-
-               if (config.SEND_READ == 'true' || config.SEND_READ == 'false') blacklist();
-
+            
+            if (config.SEND_READ !== 'true' || config.SEND_READ !== 'false') {
+               
                 await conn.sendMessage(
                     conn.user.jid,
                     '_Girdiğin_ *SEND_READ* _Anahtarı Bulunamadı!_ \n_Senin için_ ```true``` _olarak ayarlıyorum._' , MessageType.text
@@ -203,9 +199,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-                if (config.SEND_READ == 'true' || config.SEND_READ == 'false') blacklist();
-            }
+            
             if (config.DEBUG !== 'true' || config.DEBUG !== 'false') {
                 
                 await conn.sendMessage(
@@ -220,9 +214,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-                if (config.DEBUG == 'true' || config.DEBUG == 'false') blacklist();
-            }
+            
             if (config.NO_ONLINE !== 'true' || config.NO_ONLINE !== 'false') {
                 
                 await conn.sendMessage(
@@ -237,9 +229,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-                if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') blacklist();
-            }
+            
         }
         else {
 
@@ -272,10 +262,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-                if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') blacklist();
-            }
-            if (config.SEND_READ !== 'true' && config.SEND_READ !== 'false') {
+            
+            if (config.SEND_READ !== 'true' || config.SEND_READ !== 'false') {
                
                 await conn.sendMessage(
                     conn.user.jid,
@@ -289,10 +277,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-                if (config.SEND_READ == 'true' || config.SEND_READ == 'false') blacklist();
-            }
+            
             if (config.DEBUG !== 'true' || config.DEBUG !== 'false') {
+
                 await conn.sendMessage(
                     conn.user.jid,
                     '_The_ *DEBUG* _Key You Entered Was Not Found!_ \n_I am setting_ ```false``` _for you._' , MessageType.text
@@ -305,10 +292,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-                if (config.DEBUG == 'true' || config.DEBUG == 'false') blacklist();
-            }
-            if (config.NO_ONLINE !== 'true' && config.NO_ONLINE !== 'false') {
+            
+            if (config.NO_ONLINE !== 'true' || config.NO_ONLINE !== 'false') {
                 
                 await conn.sendMessage(
                     conn.user.jid,
@@ -322,9 +307,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-               if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') blacklist();
-            }
+            
         }
         await new Promise(r => setTimeout(r, 500));
 
