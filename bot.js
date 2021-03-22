@@ -153,10 +153,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         await new Promise(r => setTimeout(r, 1100));
         
-        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') return;
-        if (config.SEND_READ == 'true' || config.SEND_READ == 'false') return;
-        if (config.DEBUG == 'true' || config.DEBUG == 'false') return;
-        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') return;
+        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') blacklist();
+        if (config.SEND_READ == 'true' || config.SEND_READ == 'false') blacklist();
+        if (config.DEBUG == 'true' || config.DEBUG == 'false') blacklist();
+        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') blacklist();
 
         if (config.WORKTYPE !== 'private' && config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
 
@@ -338,187 +338,187 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
+        async function blacklist () {
+            if (config.WORKTYPE == 'public') {
+                if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-        if (config.WORKTYPE == 'public') {
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+                    if (conn.user.jid === '@s.whatsapp.net') {
 
-                if (conn.user.jid === '@s.whatsapp.net') {
+                        await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Tespit Edildi!``` \n```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Tespit Edildi!``` \n```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
+                        await new Promise(r => setTimeout(r, 1700));
 
-                    await new Promise(r => setTimeout(r, 1700));
+                        console.log('🛡️ Blacklist Detected 🛡️')
 
-                    console.log('🛡️ Blacklist Detected 🛡️')
-
-                    await heroku.get(baseURI + '/formation').then(async (formation) => {
-                        forID = formation[0].id;
-                        await heroku.patch(baseURI + '/formation/' + forID, {
-                            body: {
-                                quantity: 0
-                            }
-                        });
-                    })
-                }
-                else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “private” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
-
-                    await git.fetch();
-                    var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                    if (commits.total === 0) {
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            Lang.UPDATE, MessageType.text
-                        );    
-                    } else {
-                        var degisiklikler = Lang.NEW_UPDATE;
-                        commits['all'].map(
-                            (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                            }
-                        );
-        
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
-                        ); 
+                        await heroku.get(baseURI + '/formation').then(async (formation) => {
+                            forID = formation[0].id;
+                            await heroku.patch(baseURI + '/formation/' + forID, {
+                                body: {
+                                    quantity: 0
+                                }
+                            });
+                        })
                     }
-                    
-                }
-            }
-            else {
+                    else {
+                        await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “private” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
 
-                if (conn.user.jid === '@s.whatsapp.net') {
-
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
-
-                    await new Promise(r => setTimeout(r, 1800));
-
-                    console.log('🛡️ Blacklist Detected 🛡️')
-                    await heroku.get(baseURI + '/formation').then(async (formation) => {
-                        forID = formation[0].id;
-                        await heroku.patch(baseURI + '/formation/' + forID, {
-                            body: {
-                                quantity: 0
-                            }
-                        });
-                    })
-                }
-                else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, make the “WORK_TYPE” switch “private” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
-
-                    await git.fetch();
-                    var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                    if (commits.total === 0) {
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            Lang.UPDATE, MessageType.text
-                        );    
-                    } else {
-                        var degisiklikler = Lang.NEW_UPDATE;
-                        commits['all'].map(
-                            (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                            }
-                        );
+                        await git.fetch();
+                        var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+                        if (commits.total === 0) {
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                Lang.UPDATE, MessageType.text
+                            );    
+                        } else {
+                            var degisiklikler = Lang.NEW_UPDATE;
+                            commits['all'].map(
+                                (commit) => {
+                                    degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                }
+                            );
         
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            'Type *.update now* For Update The Bot.\n\n' + degisiklikler + '```', MessageType.text
-                        ); 
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
+                            ); 
+                        }               
                     }
-                }
-            }
-        }
-        else if (config.WORKTYPE == 'private') {
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
-
-                if (conn.user.jid === '@s.whatsapp.net') {
-
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n ```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
-
-                    await new Promise(r => setTimeout(r, 1800));
-
-                    console.log('🛡️ Blacklist Detected 🛡️')
-                    await heroku.get(baseURI + '/formation').then(async (formation) => {
-                        forID = formation[0].id;
-                        await heroku.patch(baseURI + '/formation/' + forID, {
-                            body: {
-                                quantity: 0
-                            }
-                        });
-                    })
                 }
                 else {
 
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Private Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “public” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await git.fetch();
-                    var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                    if (commits.total === 0) {
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            Lang.UPDATE, MessageType.text
-                        );    
-                    } else {
-                        var degisiklikler = Lang.NEW_UPDATE;
-                        commits['all'].map(
-                            (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                            }
-                        );
+                        await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
+
+                        await new Promise(r => setTimeout(r, 1800));
+
+                        console.log('🛡️ Blacklist Detected 🛡️')
+                        await heroku.get(baseURI + '/formation').then(async (formation) => {
+                            forID = formation[0].id;
+                            await heroku.patch(baseURI + '/formation/' + forID, {
+                                body: {
+                                    quantity: 0
+                                }
+                            });
+                        })
+                    }
+                    else {
+                        await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, make the “WORK_TYPE” switch “private” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+
+                        await git.fetch();
+                        var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+                        if (commits.total === 0) {
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                Lang.UPDATE, MessageType.text
+                            );    
+                        } else {
+                            var degisiklikler = Lang.NEW_UPDATE;
+                            commits['all'].map(
+                                (commit) => {
+                                    degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                }
+                            );
         
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
-                        ); 
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                'Type *.update now* For Update The Bot.\n\n' + degisiklikler + '```', MessageType.text
+                            ); 
+                        }
                     }
                 }
             }
-            else {
+            else if (config.WORKTYPE == 'private') {
+                if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid === '@s.whatsapp.net') {
+                    if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
+                        await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n ```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
+
+                        await new Promise(r => setTimeout(r, 1800));
+
+                        console.log('🛡️ Blacklist Detected 🛡️')
+                        await heroku.get(baseURI + '/formation').then(async (formation) => {
+                            forID = formation[0].id;
+                            await heroku.patch(baseURI + '/formation/' + forID, {
+                                body: {
+                                    quantity: 0
+                                }
+                            });
+                        })
+                    }
+                    else {
+  
+                        await conn.sendMessage(conn.user.jid, '*WhatsAsena Private Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “public” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+
+                        await git.fetch();
+                        var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+                        if (commits.total === 0) {
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                Lang.UPDATE, MessageType.text
+                            );    
+                        } else {
+                            var degisiklikler = Lang.NEW_UPDATE;
+                            commits['all'].map(
+                                (commit) => {
+                                    degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                }
+                            );
+        
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                'Güncellemek İçin *.update now* Yazın.\n\n' + degisiklikler + '```', MessageType.text
+                            ); 
+                        }
+                    }
+                }
+                else {
+
+                    if (conn.user.jid === '@s.whatsapp.net') {
+
+                        await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
    
-                    await new Promise(r => setTimeout(r, 1800));
+                        await new Promise(r => setTimeout(r, 1800));
 
-                    console.log('🛡️ Blacklist Detected 🛡️')
-                    await heroku.get(baseURI + '/formation').then(async (formation) => {
-                        forID = formation[0].id;
-                        await heroku.patch(baseURI + '/formation/' + forID, {
-                            body: {
-                                quantity: 0
-                            }
-                        });
-                    })
-                }
-                else {
+                        console.log('🛡️ Blacklist Detected 🛡️')
+                        await heroku.get(baseURI + '/formation').then(async (formation) => {
+                            forID = formation[0].id;
+                            await heroku.patch(baseURI + '/formation/' + forID, {
+                                body: {
+                                    quantity: 0
+                                }
+                            });
+                        })
+                    }
+                    else {
 
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Private! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, make the “WORK_TYPE” switch “public” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                        await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Private! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, make the “WORK_TYPE” switch “public” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
 
-                    await git.fetch();
-                    var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                    if (commits.total === 0) {
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            Lang.UPDATE, MessageType.text
-                        );    
-                    } else {
-                        var degisiklikler = Lang.NEW_UPDATE;
-                        commits['all'].map(
-                            (commit) => {
-                                degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                            }
-                        );
+                        await git.fetch();
+                        var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+                        if (commits.total === 0) {
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                Lang.UPDATE, MessageType.text
+                            );    
+                        } else {
+                            var degisiklikler = Lang.NEW_UPDATE;
+                            commits['all'].map(
+                                (commit) => {
+                                    degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                                }
+                            );
         
-                        await conn.sendMessage(
-                            conn.user.jid,
-                            'Type *.update now* For The Update Bot.\n\n' + degisiklikler + '```', MessageType.text
-                        ); 
+                            await conn.sendMessage(
+                                conn.user.jid,
+                                'Type *.update now* For The Update Bot.\n\n' + degisiklikler + '```', MessageType.text
+                            ); 
+                        }
                     }
                 }
             }
-        }
+        )
     });
     
     conn.on('message-new', async msg => {
