@@ -518,7 +518,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 }
             }
-        )
+        }
     });
     
     conn.on('message-new', async msg => {
