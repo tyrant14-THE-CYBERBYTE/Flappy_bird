@@ -153,12 +153,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         await new Promise(r => setTimeout(r, 1100));
         
-        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') blacklist();
-        if (config.SEND_READ == 'true' || config.SEND_READ == 'false') blacklist();
-        if (config.DEBUG == 'true' || config.DEBUG == 'false') blacklist();
-        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') blacklist();
-
-        if (config.WORKTYPE !== 'private' && config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
+        if (config.WORKTYPE == 'private' || config.WORKTYPE == 'public') return blacklist();
+        if (config.SEND_READ == 'true' || config.SEND_READ == 'false') return blacklist();
+        if (config.DEBUG == 'true' || config.DEBUG == 'false') return blacklist();
+        if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') return blacklist();
+ 
+        if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
@@ -190,7 +190,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
-        else if (config.WORKTYPE !== 'public' && config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
+        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
