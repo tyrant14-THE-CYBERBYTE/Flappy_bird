@@ -158,9 +158,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         if (config.DEBUG == 'true' || config.DEBUG == 'false') return blacklist();
         if (config.NO_ONLİNE == 'true' || config.NO_ONLİNE == 'false') return blacklist();
  
-        if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
+        if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+            if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
 
                 await conn.sendMessage(
                     conn.user.jid,
@@ -175,24 +175,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
-                );
-                await new Promise(r => setTimeout(r, 800));
-
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'private'
-                    }
-                })
-            }
-        }
-        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
-
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+            if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
 
                 await conn.sendMessage(
                     conn.user.jid,
@@ -206,43 +189,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-            else {
-
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
-                );
-                await new Promise(r => setTimeout(r, 800));
-
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'public'
-                    }
-                })
-            }
-        }
-        else {
-
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
-
-                return await conn.sendMessage(
-                    conn.user.jid,
-                    '_Girdiğin_ *WORK_TYPE* _Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar WORK_TYPE:private``` _Yada_ ```.setvar WORK_TYPE:public``` _Komutunu Kullanın!_', MessageType.text
-                );
-            }
-            else {
-
-                return await conn.sendMessage(
-                    conn.user.jid,
-                    '_The_ *WORK_TYPE* _Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
-                );
-            }
-        }
-
-        await new Promise(r => setTimeout(r, 800));
-
-        if (config.LANG == 'TR' || config.LANG == 'AZ' ) {
-      
             if (config.SEND_READ !== 'true' && config.SEND_READ !== 'false') {
                
                 await conn.sendMessage(
@@ -257,24 +203,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-        }
-        else {
-            await conn.sendMessage(
-                conn.user.jid,
-                '_The_ *SEND_READ* _Key You Entered Was Not Found!_ \n_I am setting_ ```true``` _for you._' , MessageType.text
-            );
-            await new Promise(r => setTimeout(r, 800));
-
-            await heroku.patch(baseURI + '/config-vars', {
-                body: {
-                    ['SEND_READ']: 'true'
-                }
-            })
-        }
-        await new Promise(r => setTimeout(r, 800));
-
-        if (config.LANG == 'TR' || config.LANG == 'AZ' ) {
-      
             if (config.DEBUG !== 'true' || config.DEBUG !== 'false') {
                 await conn.sendMessage(
                     conn.user.jid,
@@ -288,25 +216,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     }
                 })
             }
-        }
-        else {
-            if (config.DEBUG !== 'true' || config.DEBUG !== 'false') {
-                await conn.sendMessage(
-                    conn.user.jid,
-                    '_The_ *DEBUG* _Key You Entered Was Not Found!_ \n_I am setting_ ```false``` _for you.' , MessageType.text
-                );
-                await new Promise(r => setTimeout(r, 800));
-
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['DEBUG']: 'false'
-                    }
-                })
-            }
-        }
-        
-        if (config.LANG == 'TR' || config.LANG == 'AZ' ) {
-      
             if (config.NO_ONLINE !== 'true' && config.NO_ONLINE !== 'false') {
                 
                 await conn.sendMessage(
@@ -323,6 +232,63 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
         else {
+
+            if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
+                );
+
+                await new Promise(r => setTimeout(r, 800));
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['WORK_TYPE']: 'private'
+                    }
+                })
+            }
+            if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! Im Trying To Find The Right One For You.._', MessageType.text
+                );
+                await new Promise(r => setTimeout(r, 800));
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['WORK_TYPE']: 'public'
+                    }
+                })
+            }
+            if (config.SEND_READ !== 'true' && config.SEND_READ !== 'false') {
+               
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_The_ *SEND_READ* _Key You Entered Was Not Found!_ \n_I am setting_ ```true``` _for you._' , MessageType.text
+                );
+                await new Promise(r => setTimeout(r, 800));
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['SEND_READ']: 'true'
+                    }
+                })
+            }
+            if (config.DEBUG !== 'true' || config.DEBUG !== 'false') {
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_The_ *DEBUG* _Key You Entered Was Not Found!_ \n_I am setting_ ```false``` _for you._' , MessageType.text
+                );
+                await new Promise(r => setTimeout(r, 800));
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        ['DEBUG']: 'false'
+                    }
+                })
+            }
             if (config.NO_ONLINE !== 'true' && config.NO_ONLINE !== 'false') {
                 
                 await conn.sendMessage(
@@ -338,6 +304,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
+        await new Promise(r => setTimeout(r, 500));
+
         async function blacklist () {
             if (config.WORKTYPE == 'public') {
                 if (config.LANG == 'TR' || config.LANG == 'AZ') {
