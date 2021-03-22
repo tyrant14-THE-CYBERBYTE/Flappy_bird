@@ -214,10 +214,10 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType = 'arraybuffer'})
+            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType : 'arraybuffer'})
 
             await message.client.sendMessage(
-                messagy.jid,
+                message.jid,
                 '```İşte Mağazaya Yüklenen Son Pluginler:``` \n\n *==============================* \n\n' +
                 `${store.plug1tr} \n\n *==============================* \n\n` +
                 `${store.plug2tr} \n\n *==============================* \n\n` +
@@ -244,10 +244,10 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType = 'arraybuffer'})
+            var store = plugin.get('https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json', {responseType ; 'arraybuffer'})
 
             await message.client.sendMessage(
-                messagy.jid,
+                message.jid,
                 '```Here are the Latest Plugins Uploaded to the Store:``` \n\n *==============================* \n\n' +
                 `${store.plug1en} \n\n *==============================* \n\n` +
                 `${store.plug2en} \n\n *==============================* \n\n` +
