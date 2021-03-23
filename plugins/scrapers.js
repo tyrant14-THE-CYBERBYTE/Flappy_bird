@@ -10,7 +10,7 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
-const StoreDB = require("got");
+const StoreDB = require("axios");
 //============================== CURRENCY =============================================
 const { exchangeRates } = require('exchange-rates-api');
 const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
@@ -200,9 +200,9 @@ Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (asy
         message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
     });
 }));
-const stor = "Plugin mağazasında arama yapar."
+const deda = "Plugin mağazasında arama yapar."
 
-Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (message, match) => { 
+Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (message, match) => { 
 
     if (config.LANG == 'TR' || config.LANG == 'AZ') {
         if (match[1] === '') {
@@ -214,18 +214,16 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            const respo = await StoreDB("https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/6ed9f7dc8b80f17d7b10ec07c8a22f9fe585f6ca/Store.json").then(async ok => {
-                const store = JSON.parse(ok.body);
-            
-                await message.client.sendMessage(
-                    message.jid,
-                    '```İşte Mağazaya Yüklenen Son Pluginler:``` \n\n *==============================* \n\n' +
-                    `${store.plug1tr} \n\n *==============================* \n\n` +
-                    `${store.plug2tr} \n\n *==============================* \n\n` +
-                    `${store.plug3tr} \n\n *==============================* \n\n`,
-                    MessageType.text
-                );
-            });
+            var store = StoreDB.get('https://gist.githubusercontent.com/Xenon67/9ec219d6ef8a7c7f04cea4fd7cc46e17/raw/5b18ab1d6c46bd79f7489b0cc32fad7fa51b7d2d', {responseType : 'json'});
+
+            await message.client.sendMessage(
+                message.jid,
+                '```İşte Mağazaya Yüklenen Son Pluginler:``` \n\n *==============================* \n\n' +
+                `${store.plug1tr} \n\n *==============================* \n\n` +
+                `${store.plug2tr} \n\n *==============================* \n\n` +
+                `${store.plug3tr} \n\n *==============================* \n\n`,
+                MessageType.text
+            );
         }
         else {
             await message.client.sendMessage(
@@ -245,18 +243,16 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            const respo = await StoreDB("https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/6ed9f7dc8b80f17d7b10ec07c8a22f9fe585f6ca/Store.json").then(async ok => {
-                const store = JSON.parse(ok.body);
-            
-                await message.client.sendMessage(
-                    message.jid,
-                    '```Here are the Latest Plugins Uploaded to the Store:``` \n\n *==============================* \n\n' +
-                    `${store.plug1en} \n\n *==============================* \n\n` +
-                    `${store.plug2en} \n\n *==============================* \n\n` +
-                    `${store.plug3en} \n\n *==============================*`,
-                    MessageType.text
-                );
-            });
+            var store = StoreDB.get('https://gist.githubusercontent.com/Xenon67/9ec219d6ef8a7c7f04cea4fd7cc46e17/raw/5b18ab1d6c46bd79f7489b0cc32fad7fa51b7d2d', {responseType : 'json'});
+
+            await message.client.sendMessage(
+                message.jid,
+                '```Here are the Latest Plugins Uploaded to the Store:``` \n\n *==============================* \n\n' +
+                `${store.plug1en} \n\n *==============================* \n\n` +
+                `${store.plug2en} \n\n *==============================* \n\n` +
+                `${store.plug3en} \n\n *==============================*`,
+                MessageType.text
+            );
         }
         else {
             await message.client.sendMessage(
