@@ -95,6 +95,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
         }).then(async (app) => {
             await message.client.sendMessage(message.jid,Lang.SET_SUCCESS.format(varKey, varValue), MessageType.text);
         });
+    }
     else {
         await message.client.sendMessage(
             message.jid,
