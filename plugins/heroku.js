@@ -81,8 +81,9 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
 
-    if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
-        if ((varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' true' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' True' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' TRUE' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'True' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'TRUE' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'ture' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' ture' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'ttue') {
+    if (match[1] == 'SEND_READ: true' || match[1] == 'SEND_READ: True' || match[1] == 'SEND_READ: TRUE' || match[1] == 'SEND_READ:True' || match[1] == 'SEND_READ:TRUE' || match[1] == 'SEND_READ:ture' || match[1] == 'SEND_READ: ture' || match[1] == 'SEND_READ:ttue') {
+
+        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
                 message.jid,
                 '_Görünüşe göre_ *SEND_READ* _anahtarını true yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
@@ -96,13 +97,13 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
                 return await message.client.sendMessage(message.jid,Lang.SET_SUCCESS.format(varKey, varValue), MessageType.text);
             });
         }
-    }
-    else {
-        await message.client.sendMessage(
-            message.jid,
-            'Test',
-            MessageType.text
-        );
+        else {
+            await message.client.sendMessage(
+                message.jid,
+                'Test',
+                MessageType.text
+            );
+        }
     }
     if ((varKey = match[1].split(':')[0]) && (varValue = match[1].split(':')[1])) {
         await heroku.patch(baseURI + '/config-vars', {
