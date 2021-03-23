@@ -214,7 +214,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            await StoreDB.get('https://gist.githubusercontent.com/Xenon67/9ec219d6ef8a7c7f04cea4fd7cc46e17/raw/5b18ab1d6c46bd79f7489b0cc32fad7fa51b7d2d').then(store (async) => {
+            await StoreDB.get('https://gist.githubusercontent.com/Xenon67/9ec219d6ef8a7c7f04cea4fd7cc46e17/raw/5b18ab1d6c46bd79f7489b0cc32fad7fa51b7d2d').then(async (store) => {
 
                 const { plug1tr, plug2tr, plug3tr, plug1en, plug2en, plug3en } = store.data
 
