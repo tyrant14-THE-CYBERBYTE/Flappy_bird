@@ -89,12 +89,10 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
                 '_Görünüşe göre_ *SEND_READ* _anahtarını true yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
                 MessageType.text
             );
-            await heroku.patch(baseURI + '/config-vars', {
+            return await heroku.patch(baseURI + '/config-vars', {
                 body: {
                     ['SEND_READ']: 'true'
                 }
-            }).then(async (app) => {
-                return await message.client.sendMessage(message.jid,Lang.SET_SUCCESS.format(varKey, varValue), MessageType.text);
             });
         }
         else {
