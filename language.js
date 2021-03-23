@@ -14,7 +14,7 @@ if (fs.existsSync('./language/' + Config.LANG + '.json')) {
 }
 else {
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
-        await conn.sendMessage(
+        conn.sendMessage(
             conn.user.jid,
             '_Görünüşe Göre Yanlış Bir Dil Ayarladınız._\_Kullanabileceğiniz Diller:_\n\n🔸 *TR - Türkçe* \n🔸 *AZ - Azerice* \n🔸 *en - İngilizce* \n🔸 *ml - Malayam Dili* \n🔸 *HI - Hintçe* \n🔸 *ES - İspanyolca* \n🔸 *ID - Endonezce* \n\n_Varsayılan Olarak Türkçe Ayarlıyorum.._',
             MessageType.text
@@ -23,7 +23,7 @@ else {
         var json = JSON.parse(fs.readFileSync('./language/TR.json'));
     }
     else {
-        await conn.sendMessage(
+        conn.sendMessage(
             conn.user.jid,
             '_It Looks Like You Set the Wrong Language._\n_Existing Languages:_\n\n🔸 *TR - Turkish* \n🔸 *AZ - Azerbaijani* \n🔸 *en - English* \n🔸 *ml - Malayam* \n🔸 *HI - Hindi* \n🔸 *ES - Spanish* \n🔸 *ID - Indonesian* \n\n_I Will Set English As Default.._',
             MessageType.text
