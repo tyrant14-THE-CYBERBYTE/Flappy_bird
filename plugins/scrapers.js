@@ -243,7 +243,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (me
 
             await StoreDB.get('https://gist.github.com/Xenon67/012ae5de5db46b80d6054ab938e38f3f').then(async (store) => {
 
-                const { plug1tr, plug2tr, plug3tr, plug1en, plug2en, plug3en } = store.data
+                const { plug1tr, plug2tr, plug3tr, plug1en, plug2en, plug3en } = store.data.result
 
                 const payload = `\n\n *==============================* \n\n${plug1en} \n\n *==============================* \n\n${plug2en} \n\n *==============================* \n\n${plug3en} \n\n *==============================*`
    
