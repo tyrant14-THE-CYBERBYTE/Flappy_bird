@@ -214,9 +214,9 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            await StoreDB.get('https://gist.github.com/Xenon67/012ae5de5db46b80d6054ab938e38f3f').then(async (store) => {
+            await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
 
-                const { plug1tr, plug2tr, plug3tr, plug1en, plug2en, plug3en } = store.data.result
+                const { plug1tr, plug2tr, plug3tr } = store.data.result
 
                 const payload = `\n\n *==============================* \n\n${plug1tr} \n\n *==============================* \n\n${plug2tr} \n\n *==============================* \n\n${plug3tr} \n\n *==============================*`
    
@@ -241,9 +241,9 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            await StoreDB.get('https://gist.github.com/Xenon67/012ae5de5db46b80d6054ab938e38f3f').then(async (store) => {
+            await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
 
-                const { plug1tr, plug2tr, plug3tr, plug1en, plug2en, plug3en } = store.data.result
+                const { plug1en, plug2en, plug3en } = store.data.result
 
                 const payload = `\n\n *==============================* \n\n${plug1en} \n\n *==============================* \n\n${plug2en} \n\n *==============================* \n\n${plug3en} \n\n *==============================*`
    
