@@ -216,9 +216,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (me
 
             await StoreDB.get('https://gist.githubusercontent.com/Xenon67/9ec219d6ef8a7c7f04cea4fd7cc46e17/raw/5b18ab1d6c46bd79f7489b0cc32fad7fa51b7d2d').then(async (store) => {
 
-                await message.client.sendMessage(
-                    message.jid,'```İşte Mağazaya Yüklenen Son Pluginler:``` \n\n *==============================* \n\n' + store.plug1tr + '\n\n *==============================* \n\n' + store.plug2tr '\n\n *==============================* \n\n' + store.plug3tr '\n\n *==============================* \n\n', MessageType.text
-                );
+                await message.client.sendMessage(message.jid,'```İşte Mağazaya Yüklenen Son Pluginler:``` \n\n *==============================* \n\n' + store.plug1tr + '\n\n *==============================* \n\n' + store.plug2tr + '\n\n *==============================* \n\n' + store.plug3tr + '\n\n *==============================* \n\n', MessageType.text);
             });
         }
         else {
@@ -241,9 +239,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (me
 
             await StoreDB.get('https://gist.githubusercontent.com/Xenon67/9ec219d6ef8a7c7f04cea4fd7cc46e17/raw/5b18ab1d6c46bd79f7489b0cc32fad7fa51b7d2d').then(async (store) => {
 
-                await message.client.sendMessage(
-                    message.jid,'```Here are the Latest Plugins Uploaded to the Store:``` \n\n *==============================* \n\n' + store.plug1en + '\n\n *==============================* \n\n' + store.plug2en '\n\n *==============================* \n\n' + store.plug3en '\n\n *==============================*', MessageType.text
-                );
+                await message.client.sendMessage(message.jid,'```Here are the Latest Plugins Uploaded to the Store:``` \n\n *==============================* \n\n' + store.plug1en + '\n\n *==============================* \n\n' + store.plug2en + '\n\n *==============================* \n\n' + store.plug3en + '\n\n *==============================*', MessageType.text);
             });
         }
         else {
