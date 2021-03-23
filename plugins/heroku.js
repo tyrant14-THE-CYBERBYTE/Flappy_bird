@@ -83,18 +83,19 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
 
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         if ((varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' true' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' True' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' TRUE' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'True' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'TRUE' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'ture' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == ' ture' || (varKey = match[1].split(':')[0]) == 'SEND_READ' && (varValue = match[1].split(':')[1]) == 'ttue') {
-        await message.client.sendMessage(
-            message.jid,
-            '_Görünüşe göre_ *SEND_READ* _anahtarını true yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
-            MessageType.text
-        );
-        await heroku.patch(baseURI + '/config-vars', {
-            body: {
-                ['SEND_READ']: 'true'
-            }
-        }).then(async (app) => {
-            await message.client.sendMessage(message.jid,Lang.SET_SUCCESS.format(varKey, varValue), MessageType.text);
-        });
+            await message.client.sendMessage(
+                message.jid,
+                '_Görünüşe göre_ *SEND_READ* _anahtarını true yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
+                MessageType.text
+            );
+            await heroku.patch(baseURI + '/config-vars', {
+                body: {
+                    ['SEND_READ']: 'true'
+                }
+            }).then(async (app) => {
+                await message.client.sendMessage(message.jid,Lang.SET_SUCCESS.format(varKey, varValue), MessageType.text);
+            });
+        }
     }
     else {
         await message.client.sendMessage(
