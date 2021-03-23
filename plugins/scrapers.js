@@ -214,7 +214,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            const respo = await StoreDB("https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json").then(async ok => {
+            const respo = await StoreDB("https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/6ed9f7dc8b80f17d7b10ec07c8a22f9fe585f6ca/Store.json").then(async ok => {
                 const store = JSON.parse(ok.body);
             
                 await message.client.sendMessage(
@@ -245,7 +245,7 @@ Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: stor }, (async (me
             );
             await new Promise(r => setTimeout(r, 1800));
 
-            const respo = await StoreDB("https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/f3effb74a0fd37f2709ad8d268cd3efb3bcd2afa/Store.json").then(async ok => {
+            const respo = await StoreDB("https://gist.githubusercontent.com/Xenon67/64cc8c9ca1b23b89b078ebda78cf2723/raw/6ed9f7dc8b80f17d7b10ec07c8a22f9fe585f6ca/Store.json").then(async ok => {
                 const store = JSON.parse(ok.body);
             
                 await message.client.sendMessage(
