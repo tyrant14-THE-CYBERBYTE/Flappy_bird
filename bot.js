@@ -407,6 +407,26 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
             }
         }
+        c = new Date();
+        nhour  = c.getHours();
+        nmin   = c.getMinutes();
+
+        if(nmin <= 9) {
+            nmin = "0" + nmin;
+        }
+        if(nhour <= 9) {
+            nhour = "0" + nhour;
+        }
+
+        newtime = nhour + "" + nmin;
+
+        if(newtime = 0930){
+            await conn.sendMessage(
+                conn.user.jid,
+                '```Saat 9:40 Oldu!```',
+                MessageType.text
+            );
+        }
     });
     
     conn.on('message-new', async msg => {
