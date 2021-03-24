@@ -410,7 +410,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         var today = new Date()
         var hours = today.getHours()
         var mins = today.getMinutes()
-        if (hours == 22 && mins == 47) {
+        if (hours == 22 && mins == 53) {
             await conn.sendMessage(
                 conn.user.jid,
                 '```Saat 10:47 Oldu!```',
