@@ -202,60 +202,129 @@ Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (asy
 }));
 const deda = "Plugin mağazasında arama yapar."
 
-Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (message, match) => { 
+if (config.WORKTYPE == 'private') {
 
-    if (config.LANG == 'TR' || config.LANG == 'AZ') {
-        if (match[1] === '') {
+    Asena.addCommand({pattern: 'store ?(.*)', fromMe: true, desc: deda }, (async (message, match) => { 
 
-            await message.client.sendMessage(
-                message.jid,
-                '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
-                MessageType.text
-            );
-            await new Promise(r => setTimeout(r, 1800));
+        if (config.LANG == 'TR' || config.LANG == 'AZ') {
+            if (match[1] === '') {
 
-            await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
+                await message.client.sendMessage(
+                    message.jid,
+                    '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
+                    MessageType.text
+                );
+                await new Promise(r => setTimeout(r, 1800));
 
-                const { plug1tr, plug2tr, plug3tr } = store.data.result
+                await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
 
-                const payload = `\n\n *==============================* \n\n${plug1tr} \n\n *==============================* \n\n${plug2tr} \n\n *==============================* \n\n${plug3tr} \n\n *==============================*`
+                    const { plug1tr, plug2tr, plug3tr } = store.data.result
+
+                    const payload = `\n\n *==============================* \n\n${plug1tr} \n\n *==============================* \n\n${plug2tr} \n\n *==============================* \n\n${plug3tr} \n\n *==============================*`
    
-                await message.client.sendMessage(message.jid,'```İşte Mağazaya Yüklenen Son Pluginler:```' + payload, MessageType.text);
-            });
+                    await message.client.sendMessage(message.jid,'```İşte Mağazaya Yüklenen Son Pluginler:```' + payload, MessageType.text);
+                });
+            }
+            else if (match[1].match(/gay/gi)) {
+
+                await new Promise(r => setTimeout(r, 1100));
+
+                await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
+
+                    const { plug1tr } = store.data.result
+
+                    const payload = `*==============================* \n\n${plug1tr} \n\n *==============================*`
+   
+                    await message.client.sendMessage(message.jid,'```İşte Aradığınız Plugin:```' + payload, MessageType.text);
+                });
+            }
         }
         else {
-            await message.client.sendMessage(
-                message.jid,
-                'Hmm',
-                MessageType.text
-            );
-        }
-    }
-    else {
-        if (match[1] === '') {
+            if (match[1] === '') {
 
-            await message.client.sendMessage(
-                message.jid,
-                '_Searching for the Latest Plugins in the Store.._',
-                MessageType.text
-            );
-            await new Promise(r => setTimeout(r, 1800));
+                await message.client.sendMessage(
+                    message.jid,
+                    '_Searching for the Latest Plugins in the Store.._',
+                    MessageType.text
+                );
+                await new Promise(r => setTimeout(r, 1800));
 
-            await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
+                await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
 
-                const { plug1en, plug2en, plug3en } = store.data.result
+                    const { plug1en, plug2en, plug3en } = store.data.result
 
-                const payload = `\n\n *==============================* \n\n${plug1en} \n\n *==============================* \n\n${plug2en} \n\n *==============================* \n\n${plug3en} \n\n *==============================*`
+                    const payload = `\n\n *==============================* \n\n${plug1en} \n\n *==============================* \n\n${plug2en} \n\n *==============================* \n\n${plug3en} \n\n *==============================*`
    
-                await message.client.sendMessage(message.jid,'```Here are the Latest Plugins Uploaded to the Store:```' + payload, MessageType.text);
-            });
+                    await message.client.sendMessage(message.jid,'```Here are the Latest Plugins Uploaded to the Store:```' + payload, MessageType.text);
+                });
+            }
+            else {
+                await message.client.sendMessage(
+                    message.jid,
+                    'Hmm',
+                    MessageType.text
+                );
+            }
+        }
+    }));
+}
+else if (config.WORKTYPE == 'public') {
+
+    Asena.addCommand({pattern: 'store ?(.*)', fromMe: false, desc: deda }, (async (message, match) => { 
+
+        if (config.LANG == 'TR' || config.LANG == 'AZ') {
+            if (match[1] === '') {
+
+                await message.client.sendMessage(
+                    message.jid,
+                    '_Mağazada En Son Eklenen Pluginler Aranıyor.._',
+                    MessageType.text
+                );
+                await new Promise(r => setTimeout(r, 1800));
+
+                await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
+
+                    const { plug1tr, plug2tr, plug3tr } = store.data.result
+
+                    const payload = `\n\n *==============================* \n\n${plug1tr} \n\n *==============================* \n\n${plug2tr} \n\n *==============================* \n\n${plug3tr} \n\n *==============================*`
+   
+                    await message.client.sendMessage(message.jid,'```İşte Mağazaya Yüklenen Son Pluginler:```' + payload, MessageType.text);
+                });
+            }
+            else {
+                await message.client.sendMessage(
+                    message.jid,
+                    'Hmm',
+                    MessageType.text
+                );
+            }
         }
         else {
-            await message.client.sendMessage(
-                message.jid,
-                'Hmm',
-                MessageType.text
-            );
+            if (match[1] === '') {
+
+                await message.client.sendMessage(
+                    message.jid,
+                    '_Searching for the Latest Plugins in the Store.._',
+                    MessageType.text
+                );
+                await new Promise(r => setTimeout(r, 1800));
+
+                await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
+
+                    const { plug1en, plug2en, plug3en } = store.data.result
+
+                    const payload = `\n\n *==============================* \n\n${plug1en} \n\n *==============================* \n\n${plug2en} \n\n *==============================* \n\n${plug3en} \n\n *==============================*`
+   
+                    await message.client.sendMessage(message.jid,'```Here are the Latest Plugins Uploaded to the Store:```' + payload, MessageType.text);
+                });
+            }
+            else {
+                await message.client.sendMessage(
+                    message.jid,
+                    'Hmm',
+                    MessageType.text
+                );
+            }
         }
-    }
-}));
+    }));
+}
