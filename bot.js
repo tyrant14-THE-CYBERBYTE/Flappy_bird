@@ -68,7 +68,7 @@ if (!Date.now) {
                 conn.user.jid,
                 '```Saat 10:47 Oldu!```',
                 MessageType.text
-            )
+            );
         }
     }
 }
