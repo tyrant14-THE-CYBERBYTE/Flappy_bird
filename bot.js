@@ -63,7 +63,7 @@ if (!Date.now) {
     
         var hours = Date.getHours()
         var mins = Date.getMinutes
-        if (hours == 00 && mins == 10) {
+        if (hours == 00 && mins == 16) {
             conn.sendMessage(
                 conn.user.jid,
                 '```Saat 10:47 Oldu!```',
