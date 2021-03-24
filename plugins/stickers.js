@@ -73,7 +73,7 @@ Asena.addCommand({pattern: 'colorvideo', fromMe: true, desc: lip}, (async (messa
     execFile('source_url = ' + "'" + match[1] + "'" + '#@param {type:"string"}')
     execFile('render_factor = 20  #@param {type: "slider", min: 5, max: 40}')
     execFile('watermarked = False #@param {type:"boolean"}')
-    execFile('video_path = colorizer.colorize_from_url(source_url, 'video.mp4', render_factor, watermarked=watermarked)')
+    execFile("video_path = colorizer.colorize_from_url(source_url, 'video.mp4', render_factor, watermarked=watermarked)")
 
     await message.sendMessage(fs.readFileSync('/DeOldify/result/video.mp4'), MessageType.video);
 }));
