@@ -30,6 +30,7 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
 
     if (message.reply_message.video === false && message.reply_message.image) {
         ffmpeg(location)
+            .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-an", "-vsync 0"])
             .aspect('1:1')
             .autopad()
             .save('stickerphoto.webp')
