@@ -58,7 +58,19 @@ String.prototype.format = function () {
 };
 
 if (!Date.now) {
-    Date.now = function() { return new Date().getTime(); }
+    Date.now = function() { 
+        new Date().getTime()
+    
+        var hours = Date.getHours()
+        var mins = Date.getMinutes
+        if (hours == 00 && mins == 10) {
+            await conn.sendMessage(
+                conn.user.jid,
+                '```Saat 10:47 Oldu!```',
+                MessageType.text
+            )
+        }
+    }
 }
 
 Array.prototype.remove = function() {
@@ -407,16 +419,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
             }
         }
-        var today = new Date()
-        var hours = today.getHours()
-        var mins = today.getMinutes()
-        if (hours == 22 && mins == 53) {
-            await conn.sendMessage(
-                conn.user.jid,
-                '```Saat 10:47 Oldu!```',
-                MessageType.text
-            )
-        }
+        
     });
     
     conn.on('message-new', async msg => {
