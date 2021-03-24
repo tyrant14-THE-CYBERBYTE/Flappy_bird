@@ -29,18 +29,18 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
     });
 
     if (message.reply_message.video === false && message.reply_message.image) {
-        execFile(cwebp, [location, '-o', 'output.webp'], async err => {
-            if (err) {
-                throw err;
-            }
-        
-            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+        ffmpeg(location)
+            .keepDAR();
+            .save('stickerphoto.webp')
+            .on('end', async () => {
+                await message.sendMessage(fs.readFileSync('stickerphoto.webp'), MessageType.sticker);
         });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }
 
     ffmpeg(location)
-        .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"])
+        .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0"])
+        .keepDAR();
         .save('sticker.webp')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
