@@ -51,7 +51,7 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
 const li = "Renklendirilecek YouTube Linki Girin!"
-cosnt lip = "Videoları Renklendirir."
+const lip = "Videoları Renklendirir."
 
 Asena.addCommand({pattern: 'colorvideo', fromMe: true, desc: lip}, (async (message, match) => {    
 
