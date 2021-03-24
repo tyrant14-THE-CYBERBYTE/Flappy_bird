@@ -30,7 +30,8 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
 
     if (message.reply_message.video === false && message.reply_message.image) {
         ffmpeg(location)
-            .keepDAR()
+            .aspect('1:1')
+            .autopad()
             .save('stickerphoto.webp')
             .on('end', async () => {
                 await message.sendMessage(fs.readFileSync('stickerphoto.webp'), MessageType.sticker);
@@ -40,7 +41,8 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
 
     ffmpeg(location)
         .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0"])
-        .keepDAR()
+        .aspect('1:1')
+        .autopad()
         .save('sticker.webp')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
