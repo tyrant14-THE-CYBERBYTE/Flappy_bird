@@ -58,21 +58,37 @@ Asena.addCommand({pattern: 'colorvideo', fromMe: true, desc: lip}, (async (messa
     if (match[1] == '') return await message.client.sendMessage(message.jid,li , MessageType.text);
 
     execFile('git clone https://github.com/jantic/DeOldify.git DeOldify')
+
     execFile('cd DeOldify')
+
     execFile('import fastai')
+
     execFile('from deoldify.visualize import *')
+
     execFile('torch.backends.cudnn.benchmark=True')
+
     execFile('from pathlib import Path')
+
     execFile('torch.backends.cudnn.benchmark=True')
+
     execFile('import warnings')
+
     execFile('warnings.filterwarnings("ignore", category=UserWarning, message=".*?Your .*? set is empty.*?")')
+
     execFile("mkdir 'models'")
+
     execFile('wget https://data.deepai.org/deoldify/ColorizeVideo_gen.pth -O ./models/ColorizeVideo_gen.pth')
+
     execFile('apt install ffmpeg')
+
     execFile('colorizer = get_video_colorizer()')
+
     execFile('source_url = ' + "'" + match[1] + "'" + '#@param {type:"string"}')
+
     execFile('render_factor = 20  #@param {type: "slider", min: 5, max: 40}')
+
     execFile('watermarked = False #@param {type:"boolean"}')
+
     execFile("video_path = colorizer.colorize_from_url(source_url, 'video.mp4', render_factor, watermarked=watermarked)")
 
     await message.sendMessage(fs.readFileSync('/DeOldify/result/video.mp4'), MessageType.video);
