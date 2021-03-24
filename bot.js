@@ -58,19 +58,7 @@ String.prototype.format = function () {
 };
 
 if (!Date.now) {
-    Date.now = function() { 
-        new Date().getTime()
-    
-        var hours = Date.getHours()
-        var mins = Date.getMinutes
-        if (hours == 00 && mins == 16) {
-            conn.sendMessage(
-                conn.user.jid,
-                '```Saat 10:47 Oldu!```',
-                MessageType.text
-            );
-        }
-    }
+    Date.now = function() { return new Date().getTime(); }
 }
 
 Array.prototype.remove = function() {
@@ -344,7 +332,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
             }
         }
-        else if (config.WORKTYPE.match(/private/gi)) {
+        else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye' || config.WORKTYPE == ' prigate' || config.WORKTYPE == 'prigate' || config.WORKTYPE == 'priavte' || config.WORKTYPE == ' priavte' || config.WORKTYPE == 'PRİVATE' || config.WORKTYPE == ' PRİVATE' || config.WORKTYPE == 'PRIVATE' || config.WORKTYPE == ' PRIVATE') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
@@ -373,7 +361,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
-        else if (config.WORKTYPE.match(/public/gi)) {
+        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc' || config.WORKTYPE == 'pubcli' || config.WORKTYPE == ' pubcli' || config.WORKTYPE == 'PUBLİC' || config.WORKTYPE == ' PUBLİC' || config.WORKTYPE == 'PUBLIC' || config.WORKTYPE == ' PUBLIC' || config.WORKTYPE == 'puvlic' || config.WORKTYPE == ' puvlic' || config.WORKTYPE == 'Puvlic' || config.WORKTYPE == ' Puvlic') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
@@ -419,7 +407,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
             }
         }
-        
     });
     
     conn.on('message-new', async msg => {
