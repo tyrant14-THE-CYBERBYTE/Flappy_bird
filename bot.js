@@ -420,10 +420,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
         newtime = nhour + "" + nmin;
 
-        if(newtime = 0930){
+        if(newtime = 1000){
             await conn.sendMessage(
                 conn.user.jid,
-                '```Saat 9:40 Oldu!```',
+                '```Saat 10 Oldu!```',
                 MessageType.text
             );
         }
