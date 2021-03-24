@@ -407,17 +407,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 );
             }
         }
-        Dater = new Date();
-        nhour  = Dater.getHours();
-
-        Clock = nhour;
-
-        if(Clock = 1016){
+        var today = new Date()
+        var hours = today.getHours()
+        var mins = today.getMinutes()
+        if (hours = 22 && mins = 47) {
             await conn.sendMessage(
                 conn.user.jid,
-                '```Saat 10 Oldu!```',
+                '```Saat 10:47 Oldu!```',
                 MessageType.text
-            );
+            )
         }
     });
     
