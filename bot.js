@@ -411,7 +411,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
     
     conn.on('message-new', async msg => {
 
-
+        if (conn.jid == config.BLOCKCHAT) {
+            return;
+        }
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
 
         if (config.NO_ONLINE) {
@@ -468,9 +470,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if (conn.jid == config.BLOCKCHAT) {
-                        return;
-                    }
+                    
                     if (sendMsg) {
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
