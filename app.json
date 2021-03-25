@@ -36,6 +36,10 @@
             "required": true,
             "value": "true"
         },
+        "BLOCK_CHAT": {
+            "description": "Choose in which chat the bot won't work there.",
+            "required": false,
+        },
         "HEROKU_API_KEY": {
             "description": "Herokuda API Keyiniz. Heroku API Key.",
             "required": true
