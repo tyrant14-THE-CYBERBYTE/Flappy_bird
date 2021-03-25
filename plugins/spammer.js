@@ -2574,3 +2574,4547 @@ Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, 
 
     });
 }));
+
+const atxh = "Sticker Spam Yapar."
+
+Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: atxh}, (async (message, match) => {    
+
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
+
+    var locspam = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+
+    if (message.reply_message.video === false && message.reply_message.image) {
+        execFile(cwebp, [locspam, '-o', 'output.webp'], async err => {
+            if (err) {
+                throw err;
+            }
+        
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+ 
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+
+        });
+    }
+
+    ffmpeg(locspam)
+        .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"])
+        .save('sticker.webp')
+        .on('end', async () => {
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+
+        });
+}));
