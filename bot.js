@@ -433,6 +433,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             return;
         }
+        if (message.id.startsWith('$asena')) {
+            await conn.sendMessage(conn.jid,'Selam, Ben Asena!', MessageType.text);
+        }
 
         if (config.BLOCKCHAT !== false && !msg.fromeMe && !((config.BLOCKCHAT !== false && msg.key.fromMe === false && (msg.participant && config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.BLOCKCHAT || config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.BLOCKCHAT)))) return;
 
