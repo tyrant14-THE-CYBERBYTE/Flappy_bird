@@ -461,7 +461,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     let sendMsg = false;
                     var chat = conn.chats.get(msg.key.remoteJid)
 
-                    if ((config.BLOCKCHAT !== '' && conn.jid == config.BLOCKCHAT && command.fromMe === true && (msg.participant && config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.BLOCKCHAT || config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.BLOCKCHAT) ) {
+                    if ((config.BLOCKCHAT !== '' && conn.jid == config.BLOCKCHAT && command.fromMe === true && (msg.participant && config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.BLOCKCHAT || config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.BLOCKCHAT))) {
                         return;
                     }
 
