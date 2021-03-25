@@ -67,3 +67,9 @@ Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (
         '```' + child + '```', MessageType.text
     );
 }));
+
+Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
+    if (message.id.startsWith('$asena')) {
+        await message.client.sendMessage(message.jid,'Selam, Ben Asena!', MessageType.text);
+    }
+}));
