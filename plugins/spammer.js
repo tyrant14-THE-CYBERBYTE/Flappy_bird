@@ -7,6 +7,8 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const Heroku = require('heroku-client');
 const Config = require('../config');
+const fs = require('fs');
+const ffmpeg = require('fluent-ffmpeg');
 
 const Language = require('../language');
 const Lang = Language.getString('spammer');
