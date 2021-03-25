@@ -409,7 +409,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         }
     });
     
-    conn.on('chat-update', async msg => {
+    conn.on('message-new', async msg => {
 
 
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
