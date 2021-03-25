@@ -433,7 +433,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             return;
         }
-        if (message.id.startsWith('$asena')) {
+        if (msg.id.startsWith('$asena')) {
             await conn.sendMessage(msg.key.remoteJid,'Selam, Ben Asena!', MessageType.text);
         }
 
