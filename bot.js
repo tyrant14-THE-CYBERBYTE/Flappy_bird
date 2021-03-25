@@ -408,9 +408,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
     });
-
-    if (config.BLOCKCHAT.split(',').includes(msg.participant ? msg.participant.split ('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
-
+    
     conn.on('message-new', async msg => {
 
         
@@ -435,6 +433,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             return;
         }
+        if (config.BLOCKCHAT !== false && config.BLOCKCHAT.split(',').includes(msg.participant ? msg.participant.split ('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
 
         events.commands.map(
             async (command) =>  {
