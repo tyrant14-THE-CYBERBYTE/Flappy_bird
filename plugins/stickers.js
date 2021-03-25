@@ -97,5 +97,4 @@ Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: atxh}, (async (m
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
 
         });
-    }
 }));
