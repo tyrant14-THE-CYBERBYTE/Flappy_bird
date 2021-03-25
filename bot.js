@@ -433,7 +433,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             return;
         }
-        if (config.BLOCKCHAT !== false && config.BLOCKCHAT.split(',').includes(msg.participant ? msg.participant.split ('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+
+        if (config.BLOCKCHAT !== false && !msg.fromeMe && !((config.BLOCKCHAT !== false && msg.key.fromMe === false && (msg.participant && config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.BLOCKCHAT || config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.BLOCKCHAT)))) return;
 
         events.commands.map(
             async (command) =>  {
