@@ -468,7 +468,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if (conn.jid == config.BLOCKCHAT)
+                    if (conn.jid == config.BLOCKCHAT) {
                         return;
                     }
                     if (sendMsg) {
