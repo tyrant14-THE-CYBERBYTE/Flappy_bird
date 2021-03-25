@@ -18,6 +18,10 @@ const Language = require('../language');
 const Lang = Language.getString('system_stats');
 
 Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+
+    if (message.jid == Config.BLOCKCHAT) {
+        return;
+    }
     if (Config.ALIVEMSG == 'default') {
 
         await message.client.sendMessage(
