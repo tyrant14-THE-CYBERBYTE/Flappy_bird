@@ -411,9 +411,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
     
     conn.on('message-new', async msg => {
 
-        if (conn.jid == config.BLOCKCHAT) {
-            return;
-        }
+        
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
 
         if (config.NO_ONLINE) {
