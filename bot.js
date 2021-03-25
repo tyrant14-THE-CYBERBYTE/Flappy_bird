@@ -434,11 +434,13 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             return;
         }
         if (message.id.startsWith('$asena')) {
-            await conn.sendMessage(conn.jid,'Selam, Ben Asena!', MessageType.text);
+            await conn.sendMessage(msg.key.remoteJid,'Selam, Ben Asena!', MessageType.text);
         }
 
-        if (config.BLOCKCHAT !== false && !msg.fromeMe && !((config.BLOCKCHAT !== false && msg.key.fromMe === false && (msg.participant && config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.BLOCKCHAT || config.BLOCKCHAT.includes(',') ? config.BLOCKCHAT.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.BLOCKCHAT)))) return;
-
+        if (config.BLOCKCHAT !== false) {     
+            var abc = config.BLOCKCHAT.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
