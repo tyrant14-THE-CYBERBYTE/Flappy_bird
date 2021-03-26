@@ -12978,8 +12978,8 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: asf}, (async (messa
             await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
     });
 }));
-const llk = "Yanıtlanan fotoğrafı spam olarak gönderir."
-Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: llk}, (async (message, match) => {
+const llk = "Yanıtlanan videoyu spam olarak gönderir."
+Asena.addCommand({pattern: 'video spam$', fromMe: true, desc: llk}, (async (message, match) => {
 
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
