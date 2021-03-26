@@ -27,7 +27,7 @@ Asena.addCommand({pattern: 'sticker$', fromMe: true, desc: Lang.STICKER_DESC}, (
             .videoFilters('chromakey=black')
             .save('st.webp')
             .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+            await message.sendMessage(fs.readFileSync('st.webp'), MessageType.sticker);
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 
