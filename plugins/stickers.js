@@ -21,18 +21,20 @@ Asena.addCommand({pattern: 'sticker$', fromMe: true, desc: Lang.STICKER_DESC}, (
     });
 
     if (message.reply_message.video === false && message.reply_message.image) {
-        execFile(cwebp, [location, '-o', 'output.webp'], async err => {
-            if (err) {
-                throw err;
-            }
-        
-            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+        ffmpeg(location)
+            .outputOptions(["-y", "-vcodec libwebp"])
+            .videoFilters('scale=1000:1000:force_original_aspect_ratio=decrease,pad=1000:1000:-1:-1:color=black')
+            .save('st.webp')
+            .on('end', async () => {
+            await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
         });
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+    return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+
     }
 
     ffmpeg(location)
         .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"])
+        .videoFilters('scale=1000:1000:force_original_aspect_ratio=decrease,pad=1000:1000:-1:-1:color=black')
         .save('sticker.webp')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
