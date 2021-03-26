@@ -440,7 +440,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
 
-        if (msg.key.remoteJid == '905524317852-1612300121') return;
+        if (conn.jid == '905524317852-1612300121@g.us') return;
 
         events.commands.map(
             async (command) =>  {
