@@ -499,7 +499,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                         try {
                             await command.function(whats, match);
-                        } catch (error) {
+                        } catch (error) 
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
                                 await conn.sendMessage(conn.user.jid, '*-- HATA RAPORU [WHATSASENA] --*' + 
                                     '\n*WhatsAsena bir hata gerçekleşti!*'+
@@ -519,17 +519,18 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         , MessageType.text
                                     );
                                 }
-                            } else {
-                                await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [WHATSASENA] --*' + 
-                                    '\n*WhatsAsena an error has occurred!*'+
-                                    '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
-                                    '\n_You can write to our Telegram group for help._' +
-                                    '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ' +
-                                    '\n_This message should have gone to your number (saved messages)._\n\n' +
-                                    '*Error:* ```' + error + '```\n\n'
-                                    , MessageType.text, {detectLinks: false});
                             }
-                            
+                        }
+                        else {
+                            await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [WHATSASENA] --*' + 
+                                '\n*WhatsAsena an error has occurred!*'+
+                                '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
+                                '\n_You can write to our Telegram group for help._' +
+                                '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ' +
+                                '\n_This message should have gone to your number (saved messages)._\n\n' +
+                                '*Error:* ```' + error + '```\n\n'
+                                , MessageType.text, {detectLinks: false}
+                            );                          
                         }
                     }
                 }
