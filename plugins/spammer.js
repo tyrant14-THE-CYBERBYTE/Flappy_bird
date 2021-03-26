@@ -9942,13 +9942,7 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: Lang.FOTO_DESC (asy
     
     if (message.reply_message.image === false) return await message.client.sendMessage(message.jid, Lang.FOTO_FOT, MessageType.text);
 
-    var location = await message.client.downloadAndSaveMediaMessage({
-        key: {
-            remoteJid: message.reply_message.jid,
-            id: message.reply_message.id
-        },
-        message: message.reply_message.data.quotedMessage
-    });
+    var location = await message.client.downloadAndSaveMediaMessage({ key: { remoteJid: message.reply_message.jid, id: message.reply_message.id }, message: message.reply_message.data.quotedMessage });
 
     ffmpeg(location)
         .save('output.jpg')
@@ -12977,8 +12971,8 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: Lang.FOTO_DESC (asy
 
             await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
 
-        });
-}));
+        })
+});
     
 
 Asena.addCommand({pattern: 'vid spam$', fromMe: true, desc: Lang.VİD_DESC }, (async (message, match) => {
