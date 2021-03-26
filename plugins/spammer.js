@@ -10,6 +10,7 @@ const Config = require('../config');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
+const cwebp = require('cwebp-bin');
 
 const Language = require('../language');
 const Lang = Language.getString('spammer');
@@ -2573,11 +2574,10 @@ Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, 
     });
 }));
 
-const atxh = "Sticker Spam Yapar."
+Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: Lang.ST_DESC }, (async (message, match) => {    
 
-Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: atxh}, (async (message, match) => {    
-
-    if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
+    if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.ST_NEED, MessageType.text);
+    if (message.reply_message.sticker) return await message.client.sendMessage(message.jid, Lang.ST_ST, MessageType.text);
 
     var locspam = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -7117,9 +7117,9 @@ Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: atxh}, (async (m
         });
 }));
 
-const ssp = "Ses dosyasını spam olarak atar."
-
-Asena.addCommand({pattern: 'audio spam$', fromMe: true, desc: ssp}, (async (message, match) => {
+Asena.addCommand({pattern: 'audio spam$', fromMe: true, desc: Lang.AU_DESC}, (async (message, match) => {
+    
+    if (message.reply_message.audio === false || message.reply_message.video === false) return await message.client.sendMessage(message.jid, Lang.AU_REP, MessageType.text);
 
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -9938,9 +9938,10 @@ Asena.addCommand({pattern: 'audio spam$', fromMe: true, desc: ssp}, (async (mess
         });
 }));
 
-const asf = "Yanıtlanan fotoğrafı spam olarak gönderir."
 
-Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: asf}, (async (message, match) => {
+Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: Lang.FOTO_DESC (async (message, match) => {
+    
+    if (message.reply_message.image === false) return await message.client.sendMessage(message.jid, Lang.FOTO_FOT, MessageType.text);
 
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -12978,8 +12979,10 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: asf}, (async (messa
             await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
     });
 }));
-const llk = "Yanıtlanan videoyu spam olarak gönderir."
-Asena.addCommand({pattern: 'video spam$', fromMe: true, desc: llk}, (async (message, match) => {
+
+Asena.addCommand({pattern: 'vid spam$', fromMe: true, desc: Lang.VİD_DESC }, (async (message, match) => {
+    
+    if (message.reply_message.video === false) return await message.client.sendMessage(message.jid, Lang.VİD_NEED, MessageType.text);
 
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
