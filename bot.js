@@ -509,6 +509,16 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '\n_Hatayı https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ bu gruba iletebilirsiniz._\n\n' +
                                     '*Gerçekleşen Hata:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false});
+
+                                if (error.includes('URLs') {
+                                    await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n\n```Ana Hata:``` _Only Absolutely URLs Supported_' +
+                                        '\n```Nedeni:``` _Medya araçlarının (xmedia, sticker..) LOG numarasında kullanılması._' +
+                                        '\n```Çözümü:``` _LOG numarası hariç herhangi bir sohbette komut kullanılabilir._'
+                                        , MessageType.text
+                                    );
+                                }
                             } else {
                                 await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [WHATSASENA] --*' + 
                                     '\n*WhatsAsena an error has occurred!*'+
