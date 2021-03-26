@@ -439,7 +439,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             var abc = config.BLOCKCHAT.split(',');                            
             if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
-        
+        if (msg.match(/URLs/g)) {
+            await conn.sendMessage(conn.user.jid, '*-- ERROR DEFİNİTİON [WHATSASENA] --*' + 
+                '\n======== ```LOG SCANNER``` ========' +
+                '\n\n*Main Error:* ```Only Absolutely URLs Supported```' +
+                '\n*Caption:* _Bu hata pluginleri LOG numaranızda denemenizden kaynaklanır. LOG numarası hariç herhangi bir sohbette deneyin!_'
+                , MessageType.text
+            );
+        }
         events.commands.map(
             async (command) =>  {
                 if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
@@ -519,14 +526,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '*Error:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false});
                             }
-                            if (error.match(/URLs/gi)) {
-                                await conn.sendMessage(conn.user.jid, '*-- ERROR DEFİNİTİON [WHATSASENA] --*' + 
-                                    '\n======== ```LOG SCANNER``` ========' +
-                                    '\n\n*Main Error:* ```Only Absolutely URLs Supported```' +
-                                    '\n*Caption:* _Bu hata pluginleri LOG numaranızda denemenizden kaynaklanır. LOG numarası hariç herhangi bir sohbette deneyin!_'
-                                    , MessageType.text
-                                );
-                            }
+                            
                         }
                     }
                 }
