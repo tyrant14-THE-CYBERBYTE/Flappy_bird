@@ -12976,7 +12976,7 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: asf}, (async (messa
             await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
 
             await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
-
+    });
 }));
 const llk = "Yanıtlanan fotoğrafı spam olarak gönderir."
 Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: llk}, (async (message, match) => {
@@ -16015,5 +16015,5 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: llk}, (async (messa
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
-
-
+    });
+}));
