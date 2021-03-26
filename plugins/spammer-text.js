@@ -1,0 +1,2550 @@
+const Asena = require('../events');
+const {MessageType, Mimetype} = require('@adiwajshing/baileys');
+const fs = require('fs');
+const ffmpeg = require('fluent-ffmpeg');
+const {execFile} = require('child_process');
+const cwebp = require('cwebp-bin');
+
+const Language = require('../language');
+const Lang = Language.getString('spammer');
+
+Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
+
+
+    if (match[1] === '') {
+
+        return await message.client.sendMessage(message.jid, Lang.NEED_WORD);
+
+    }
+
+    var spam = `${match[1]}`
+    var fin = spam.replace(/#/g, "\n");
+
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+}));
