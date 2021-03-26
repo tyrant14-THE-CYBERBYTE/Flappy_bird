@@ -9935,10 +9935,8 @@ Asena.addCommand({pattern: 'audio spam$', fromMe: true, desc: Lang.AU_DESC}, (as
 
             await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio});
 
-
         });
 }));
-
 
 Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: Lang.FOTO_DESC (async (message, match) => {
     
@@ -12980,7 +12978,7 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: Lang.FOTO_DESC (asy
             await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
 
         });
-});
+}));
     
 
 Asena.addCommand({pattern: 'vid spam$', fromMe: true, desc: Lang.VİD_DESC }, (async (message, match) => {
