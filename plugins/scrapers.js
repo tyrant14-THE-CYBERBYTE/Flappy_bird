@@ -134,7 +134,7 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (a
         });
 }));
 
-Asena.addCommand({pattern: 'video ?(.*)$', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'video$ ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
     try {
