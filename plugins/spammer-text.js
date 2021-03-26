@@ -8,6 +8,17 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('spammer');
 
+Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
+
+    await message.client.sendMessage(message.jid, Lang.STOP_SPAM, MessageType.text);
+
+    console.log(baseURI);
+    await heroku.delete(baseURI + '/dynos').catch(async (error) => {
+        await message.client.sendMessage(message.jid, error.message, MessageType.text);
+
+    });
+}));
+
 Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
 
 
