@@ -501,6 +501,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             await command.function(whats, match);
                         }
                         catch (error) {
+                            var error = LASG
+
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
                                 await conn.sendMessage(conn.user.jid, '*-- HATA RAPORU [WHATSASENA] --*' + 
                                     '\n*WhatsAsena bir hata gerçekleşti!*'+
@@ -508,10 +510,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
                                     '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._' +
                                     '\n_Hatayı https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ bu gruba iletebilirsiniz._\n\n' +
-                                    '*Gerçekleşen Hata:* ```' + error + '```\n\n'
+                                    '*Gerçekleşen Hata:* ```' + LASG + '```\n\n'
                                     , MessageType.text, {detectLinks: false});
 
-                                if (error.includes('URLs')) {
+                                if (LASG.includes('URLs')) {
                                     await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
                                         '\n\n```Ana Hata:``` _Only Absolutely URLs Supported_' +
@@ -528,7 +530,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '\n_You can write to our Telegram group for help._' +
                                     '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/JjvOISnxu4z6sv4hx3FBNQ' +
                                     '\n_This message should have gone to your number (saved messages)._\n\n' +
-                                    '*Error:* ```' + error + '```\n\n'
+                                    '*Error:* ```' + LASG + '```\n\n'
                                     , MessageType.text, {detectLinks: false}
                                 );    
                             }                      
