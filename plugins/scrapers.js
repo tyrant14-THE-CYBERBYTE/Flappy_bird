@@ -334,6 +334,7 @@ Asena.addCommand({pattern: 'shazam ?(.*)', fromMe: true, desc: sh }, (async (mes
         },
         message: message.reply_message.data.quotedMessage
     });
+
     ffmpeg(location)
         .format('mp3')
         .save('lyr.mp3')
@@ -341,7 +342,7 @@ Asena.addCommand({pattern: 'shazam ?(.*)', fromMe: true, desc: sh }, (async (mes
 
             var data = {
                 'api_token': '6a03ebccfc18bb19e3fb7bb5280a51ab',
-                'file': 'https://audd.tech/example1.mp3',
+                'file': fs.createReadStream('lyr.mp3'),
                 'return': 'apple_music,spotify',
             };
             req({
@@ -350,6 +351,6 @@ Asena.addCommand({pattern: 'shazam ?(.*)', fromMe: true, desc: sh }, (async (mes
                 method: 'POST'
               }, async (err, res, body) {
               return await message.client.sendMessage(message.jid, body, MessageType.text);
-            });
+            })
         });
 }));
