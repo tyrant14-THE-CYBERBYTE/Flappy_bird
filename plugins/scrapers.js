@@ -215,28 +215,19 @@ if (config.WORKTYPE == 'private') {
                     MessageType.text
                 );
                 await new Promise(r => setTimeout(r, 1800));
-
-                await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
-
-                    const { plug1tr, plug2tr, plug3tr } = store.data.result
-
-                    const payload = `\n\n *==============================* \n\n${plug1tr} \n\n *==============================* \n\n${plug2tr} \n\n *==============================* \n\n${plug3tr} \n\n *==============================*`
-   
-                    await message.client.sendMessage(message.jid,'```İşte Mağazaya Yüklenen Son Pluginler:```' + payload, MessageType.text);
-                });
+           
+                const messages = await message.client.loadConversation('905511384572-1616840790', 3)
+                const message = messages[0]
+                await message.forwardMessage('905511384572-1616840790', message)
             }
-            else if (match[1].match(/gay/gi)) {
+            else if (match[1] !== '') {
 
                 await new Promise(r => setTimeout(r, 1100));
 
-                await StoreDB.get('https://gist.githubusercontent.com/Xenon67/ff744e3713004fbaf48fcc97ec24b5cb/raw/2c023a649ac9b4fc7cc88d59ff3e58270578b365/Store.json').then(async (store) => {
+                const messages = await message.client.loadConversation('905511384572-1616840790', 1,)
+                const message = messages[0].includes(`${match[1]}`)
+                await message.forwardMessage('905511384572-1616840790', message)
 
-                    const { plug1tr } = store.data.result
-
-                    const payload = `*==============================* \n\n${plug1tr} \n\n *==============================*`
-   
-                    await message.client.sendMessage(message.jid,'```İşte Aradığınız Plugin:```' + payload, MessageType.text);
-                });
             }
         }
         else {
