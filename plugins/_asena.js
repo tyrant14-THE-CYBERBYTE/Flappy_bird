@@ -49,7 +49,7 @@ Asena.addCommand({pattern: 'asena ?(.*)', fromMe: true, dontAddCommandList: true
             async (command) =>  {
                 if (command.dontAddCommandList || command.pattern === undefined) return;
                 try {
-                    var cmatch = command.pattern.toString().match(/(\W*)([A-Za-züşği öç1234567890]*)/);
+                    var cmatch = command.pattern.toString().match(/(\W*)([A-Za-züşğiöç1234567890]*)/);
                 } catch {
                     var cmatch = [command.pattern];
                 }
