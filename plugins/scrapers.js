@@ -340,17 +340,9 @@ Asena.addCommand({pattern: 'shazam ?(.*)', fromMe: true, desc: sh }, (async (mes
         .save('lyr.mp3')
         .on('end', async () => {
 
-            var data = {
-                'api_token': '6a03ebccfc18bb19e3fb7bb5280a51ab',
-                'file': fs.createReadStream('lyr.mp3'),
-                'return': 'apple_music,spotify',
-            };
-            req({
-                uri: 'https://api.audd.io/,
-                form: data,
-                method: 'POST'
-              }, async (err, res, body) {
-              return await message.client.sendMessage(message.jid, body, MessageType.text);
+            var data = { 'api_token': '6a03ebccfc18bb19e3fb7bb5280a51ab', 'file': fs.createReadStream('lyr.mp3'), 'return': 'apple_music,spotify' };
+            req({ uri: 'https://api.audd.io/, form: data, method: 'POST' }, async (err, res, body) => {
+                return await message.client.sendMessage(message.jid, body, MessageType.text);
             })
-        });
+        })
 }));
