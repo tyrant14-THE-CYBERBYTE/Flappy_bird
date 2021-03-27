@@ -12,7 +12,7 @@ const Lang = Language.getString('spammer');
 
 Asena.addCommand({pattern: 'audio spam$', fromMe: true, desc: Lang.AU_DESC}, (async (message, match) => {
     
-    if (message.reply_message.audio === false || message.reply_message.video === false) return await message.client.sendMessage(message.jid, Lang.AU_REP, MessageType.text);
+    if (!message.reply_message.audio) return await message.client.sendMessage(message.jid, Lang.AU_REP, MessageType.text);
 
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
