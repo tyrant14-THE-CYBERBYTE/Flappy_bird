@@ -13,7 +13,7 @@ const Config = require('../config');
 
 const Language = require('../language');
 const Lang = Language.getString('admin');
-const mux = Language.getString('mute');
+const mut = Language.getString('mute');
 
 async function checkImAdmin(message, user = message.client.user.jid) {
     var grup = await message.client.groupMetadata(message.jid);
