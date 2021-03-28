@@ -379,7 +379,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ONYEDİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1200000));
+            await new Promise(r => setTimeout(r, 1020000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -388,7 +388,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ONSEKİZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1260000));
+            await new Promise(r => setTimeout(r, 1080000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -397,7 +397,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ONDOKUZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1320000));
+            await new Promise(r => setTimeout(r, 1140000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -406,7 +406,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1380000));
+            await new Promise(r => setTimeout(r, 1200000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -415,7 +415,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİBİRMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1440000));
+            await new Promise(r => setTimeout(r, 1260000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -424,7 +424,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİİKİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1500000));
+            await new Promise(r => setTimeout(r, 1320000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -433,7 +433,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİÜÇMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1560000));
+            await new Promise(r => setTimeout(r, 1380000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -442,7 +442,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİDÖRTMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1620000));
+            await new Promise(r => setTimeout(r, 1440000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -451,7 +451,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİBEŞMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1680000));
+            await new Promise(r => setTimeout(r, 1500000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -460,7 +460,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİALTIMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1740000));
+            await new Promise(r => setTimeout(r, 1560000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -469,7 +469,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİYEDİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1800000));
+            await new Promise(r => setTimeout(r, 1620000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -478,7 +478,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİSEKİZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1860000));
+            await new Promise(r => setTimeout(r, 1680000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -487,7 +487,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.YİRMİDOKUZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1920000));
+            await new Promise(r => setTimeout(r, 1740000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -496,7 +496,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 1980000));
+            await new Promise(r => setTimeout(r, 1800000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -505,7 +505,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZBİRMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2040000));
+            await new Promise(r => setTimeout(r, 1860000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -514,7 +514,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZİKİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2100000));
+            await new Promise(r => setTimeout(r, 1920000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -523,7 +523,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZÜÇMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2160000));
+            await new Promise(r => setTimeout(r, 1980000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -532,7 +532,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZDÖRTMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2220000));
+            await new Promise(r => setTimeout(r, 2040000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -541,7 +541,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZBEŞMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2280000));
+            await new Promise(r => setTimeout(r, 2100000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -550,7 +550,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZALTIMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2340000));
+            await new Promise(r => setTimeout(r, 2160000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -559,7 +559,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZYEDİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2400000));
+            await new Promise(r => setTimeout(r, 2220000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -568,7 +568,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZSEKİZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2460000));
+            await new Promise(r => setTimeout(r, 2280000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -577,7 +577,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.OTUZDOKUZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2520000));
+            await new Promise(r => setTimeout(r, 2340000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -586,7 +586,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2580000));
+            await new Promise(r => setTimeout(r, 2400000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -595,7 +595,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKBİRMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2640000));
+            await new Promise(r => setTimeout(r, 2460000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -604,7 +604,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKİKİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2700000));
+            await new Promise(r => setTimeout(r, 2520000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -613,7 +613,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKÜÇMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2760000));
+            await new Promise(r => setTimeout(r, 2580000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -622,7 +622,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKDÖRTMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2820000));
+            await new Promise(r => setTimeout(r, 2640000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -631,7 +631,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKBEŞMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2880000));
+            await new Promise(r => setTimeout(r, 2700000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -640,7 +640,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKALTIMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 2940000));
+            await new Promise(r => setTimeout(r, 2760000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -649,7 +649,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKYEDİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3000000));
+            await new Promise(r => setTimeout(r, 2820000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -658,7 +658,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKSEKİZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3060000));
+            await new Promise(r => setTimeout(r, 2880000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -667,7 +667,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.KIRKDOKUZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3120000));
+            await new Promise(r => setTimeout(r, 2940000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -676,7 +676,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3180000));
+            await new Promise(r => setTimeout(r, 3000000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -685,7 +685,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİBİRMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3240000));
+            await new Promise(r => setTimeout(r, 3060000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -694,7 +694,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİİKİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3300000));
+            await new Promise(r => setTimeout(r, 3120000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -703,7 +703,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİÜÇMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3360000));
+            await new Promise(r => setTimeout(r, 3180000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -712,7 +712,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİDÖRTMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3420000));
+            await new Promise(r => setTimeout(r, 3240000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -721,7 +721,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİBEŞMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3480000));
+            await new Promise(r => setTimeout(r, 3300000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -730,7 +730,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİALTIMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3540000));
+            await new Promise(r => setTimeout(r, 3360000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -739,7 +739,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİYEDİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3600000));
+            await new Promise(r => setTimeout(r, 3420000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -748,7 +748,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİSEKİZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3660000));
+            await new Promise(r => setTimeout(r, 3480000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -757,7 +757,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.ELLİDOKUZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3420000));
+            await new Promise(r => setTimeout(r, 3540000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -766,7 +766,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATBİRMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3480000));
+            await new Promise(r => setTimeout(r, 3600000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -775,7 +775,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATİKİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3540000));
+            await new Promise(r => setTimeout(r, 7200000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -784,7 +784,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATÜÇMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3600000));
+            await new Promise(r => setTimeout(r, 10800000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -793,7 +793,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATDÖRTMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3660000));
+            await new Promise(r => setTimeout(r, 14400000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -802,7 +802,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATBEŞMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3720000));
+            await new Promise(r => setTimeout(r, 18000000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -811,7 +811,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATALTIMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3780000));
+            await new Promise(r => setTimeout(r, 21600000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -820,7 +820,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATYEDİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3840000));
+            await new Promise(r => setTimeout(r, 25200000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -829,7 +829,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATSEKİZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3900000));
+            await new Promise(r => setTimeout(r, 28800000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -838,7 +838,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATDOKUZMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 3960000));
+            await new Promise(r => setTimeout(r, 32400000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -847,7 +847,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATONMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 4020000));
+            await new Promise(r => setTimeout(r, 36000000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -856,7 +856,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATONBİRMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 4080000));
+            await new Promise(r => setTimeout(r, 39600000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -865,7 +865,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.SAATONİKİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 4140000));
+            await new Promise(r => setTimeout(r, 43200000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -874,7 +874,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.GÜNBİRMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 4200000));
+            await new Promise(r => setTimeout(r, 86400000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -883,7 +883,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.GÜNİKİMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 4260000));
+            await new Promise(r => setTimeout(r, 172800000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
@@ -892,7 +892,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.GÜNÜÇMUTE,MessageType.text);
 
-            await new Promise(r => setTimeout(r, 4320000));
+            await new Promise(r => setTimeout(r, 259200000));
     
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
             await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
