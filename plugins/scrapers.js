@@ -138,7 +138,7 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (a
         });
 }));
 
-Asena.addCommand({pattern: 'video$ ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
     try {
@@ -228,9 +228,9 @@ if (config.WORKTYPE == 'private') {
 
                 await new Promise(r => setTimeout(r, 1100));
 
-                const messages = await message.client.loadConversation('905511384572-1616840790', 1,)
+                const messages = await message.client.loadConversation('905511384572-1616840790@g.us', 1)
                 const message = messages[0].includes(`${match[1]}`)
-                await message.forwardMessage('905511384572-1616840790', message)
+                await message.forwardMessage('905511384572-1616840790@g.us', message)
 
             }
         }
