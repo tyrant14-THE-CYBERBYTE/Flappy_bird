@@ -220,11 +220,11 @@ if (config.WORKTYPE == 'private') {
                 );
                 await new Promise(r => setTimeout(r, 1800));
            
-                const messages = await message.client.loadConversation('905511384572-1616840790', 3)
+                const messages = await message.client.loadConversation('905511384572-1616840790@g.us', 3)
                 const message = messages[0]
-                await message.forwardMessage('905511384572-1616840790', message)
+                await message.forwardMessage('905511384572-1616840790@g.us', message)
             }
-            else if (match[1] !== '') {
+            else {
 
                 await new Promise(r => setTimeout(r, 1100));
 
