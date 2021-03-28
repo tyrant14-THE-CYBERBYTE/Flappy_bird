@@ -20,7 +20,7 @@ var AFK = {
     lastseen: 0
 };
 
-var GANE = {
+var GAME = {
     inGame: false
 };
 
