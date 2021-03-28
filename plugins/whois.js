@@ -1,5 +1,5 @@
 const Asena = require('../events');
-const { MessageType, Mimetype, } = require('@adiwajshing/baileys');
+const { MessageType, Mimetype, GroupSettingChange, MessageOptions } = require('@adiwajshing/baileys');
 const dil = require('axios');
 
 const das = "Grup metada verisini çeker."
