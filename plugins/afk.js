@@ -122,8 +122,8 @@ const bas = "Yeni Bir Oyun Başlattın!\nAmacın oyunun içindeki bulmacayı ç�
 const bas1 = "Dikkatli ol! Seçimlerin hikayeyi değiştirebilir. Akıllıca seçimler yapmalısın!"
 const bas2 = "Ve Unutma.. Yanlış seçim seni ölüme götürebilir!"
 
-Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (GAME.inGame && message.id.startsWith('#baslat')) {
+Asena.addCommand({on: '#baslat', fromMe: true, deleteCommand: false}, (async (message, match) => {
+    if (GAME.inGame) {
         await new Promise(r => setTimeout(r, 600));
 
         await message.client.sendMessage(message.jid,bas,MessageType.text);
@@ -135,8 +135,8 @@ Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (messa
     }
 }));
 const bit = "Oyun Bitti!"
-Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (GAME.inGame && message.id.startsWith('#bitir')) {
+Asena.addCommand({on: '#bitir', fromMe: true, deleteCommand: false}, (async (message, match) => {
+    if (GAME.inGame) {
         GAME.inGAME = false
         await message.client.sendMessage(message.jid,bit,MessageType.text);
     }
