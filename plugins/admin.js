@@ -19,7 +19,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     var grup = await message.client.groupMetadata(message.jid);
     var sonuc = grup['participants'].map((member) => {
         
-        if (member.id.split("@") === user.split("@") && member.isAdmin) return true; else; return false;
+        if (member.id.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
     });
     return sonuc.includes(true);
 }
@@ -36,12 +36,12 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "Founder Tarafından Banlandın!" }
             )
-            await message.client.sendMessage(message.jid,'```Haha Loser``` ' +'@' + message.reply_message.data.participant.split("@") + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'```Haha Loser``` ' +'@' + message.reply_message.data.participant.split("@")[0] + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
             message.mention.map(async (user) => {
-                etiketler += '@' + user.split("@");
+                etiketler += '@' + user.split("@")[0];
             });
             await message.client.sendMessage(
                 message.jid, 
@@ -57,12 +57,12 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
     }
     else {
         if (message.reply_message !== false) {
-            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split("@") + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split("@")[0] + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupRemove(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
             message.mention.map(async (user) => {
-                etiketler += '@' + user.split("@") + ',';
+                etiketler += '@' + user.split("@")[0] + ',';
             });
             
             await message.client.sendMessage(message.jid,etiketler + Config.BANMSG, MessageType.text, {contextInfo: {mentionedJid: message.mention}});
@@ -102,7 +102,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Founder Tarafından Admin Yapıldın!```" }
             )
-            await message.client.sendMessage(message.jid,'```Buna Sevinmelisin``` ' + '@' + message.reply_message.data.participant.split("@") + ' 🎉', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'```Buna Sevinmelisin``` ' + '@' + message.reply_message.data.participant.split("@")[0] + ' 🎉', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupMakeAdmin(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
@@ -112,7 +112,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
                     return await message.client.sendMessage(message.jid,Lang.ALREADY_PROMOTED, MessageType.text);
                 }
 
-                etiketler += '@' + user.split("@");
+                etiketler += '@' + user.split("@")[0];
             });
 
             await message.client.sendMessage(
@@ -134,7 +134,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
                 return await message.client.sendMessage(message.jid,Lang.ALREADY_PROMOTED, MessageType.text);
             }
 
-            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split("@") + Config.PROMOTEMSG, MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'@' + message.reply_message.data.participant.split("@")[0] + Config.PROMOTEMSG, MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupMakeAdmin(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
@@ -144,7 +144,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
                     return await message.client.sendMessage(message.jid,Lang.ALREADY_PROMOTED, MessageType.text);
                 }
 
-                etiketler += '@' + user.split("@") + ',';
+                etiketler += '@' + user.split("@")[0] + ',';
             });
 
             await message.client.sendMessage(message.jid,etiketler + Config.PROMOTEMSG, MessageType.text, {contextInfo: {mentionedJid: message.mention}});
@@ -161,7 +161,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
 
     if (Config.DEMOTEMSG == 'default') {
         if (message.reply_message !== false) {
-            var checkAlready = await checkImAdmin(message, message.reply_message.data.participant.split("@"));
+            var checkAlready = await checkImAdmin(message, message.reply_message.data.participant.split("@")[0]);
             if (!checkAlready) {
                 return await message.client.sendMessage(message.jid,Lang.ALREADY_NOT_ADMIN, MessageType.text);
             }
@@ -171,7 +171,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Founder Tarafından Yetkin Düşürüldü!```" }
             )
-            await message.client.sendMessage(message.jid,'```Bol Şans``` ' + '@' + message.reply_message.data.participant.split("@") + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
+            await message.client.sendMessage(message.jid,'```Bol Şans``` ' + '@' + message.reply_message.data.participant.split("@")[0] + ' 😈', MessageType.text, {contextInfo: {mentionedJid: [message.reply_message.data.participant]}});
             await message.client.groupDemoteAdmin(message.jid, [message.reply_message.data.participant]);
         } else if (message.reply_message === false && message.mention !== false) {
             var etiketler = '';
@@ -181,7 +181,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
                     return await message.client.sendMessage(message.jid,Lang.ALREADY_NOT_ADMIN, MessageType.text);
                 }
             
-                etiketler += '@' + user.split("@");
+                etiketler += '@' + user.split("@")[0];
             });
             await message.client.sendMessage(
                 message.jid, 
@@ -197,7 +197,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
     }
     else {
         if (message.reply_message !== false) {
-            var checkAlready = await checkImAdmin(message, message.reply_message.data.participant.split('@'));
+            var checkAlready = await checkImAdmin(message, message.reply_message.data.participant.split('@')[0]);
             if (!checkAlready) {
                 return await message.client.sendMessage(message.jid,Lang.ALREADY_NOT_ADMIN, MessageType.text);
             }
@@ -212,7 +212,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
                     return await message.client.sendMessage(message.jid,Lang.ALREADY_NOT_ADMIN, MessageType.text);
                 }
             
-                etiketler += '@' + user.split('@') + ',';
+                etiketler += '@' + user.split('@')[0] + ',';
             });
 
             await message.client.sendMessage(message.jid,etiketler + Config.DEMOTEMSG, MessageType.text, {contextInfo: {mentionedJid: message.mention}});
