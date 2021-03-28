@@ -110,7 +110,7 @@ Asena.addCommand({pattern: 'afk ?(.*)', fromMe: true, deleteCommand: false, desc
 }));
 const ds = "Oyun Başlatır."
 
-Asena.addCommand({pattern: 'newgame ?(.*)', fromMe: true, desc: ds}, (async (message, match) => {     
+Asena.addCommand({pattern: 'newgame', fromMe: true, desc: ds}, (async (message, match) => {     
     if (!GAME.inGame) {
         GAME.inGame = true;
 
