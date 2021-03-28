@@ -114,7 +114,7 @@ Asena.addCommand({pattern: 'newgame', fromMe: true, desc: ds}, (async (message, 
     if (!GAME.inGame) {
         GAME.inGame = true;
 
-        await message.client.sendMessage(message.jid,'```Oyuna Girildi!```\n```Başlamak için #baslat yaz!```'),MessageType.text);
+        await message.client.sendMessage(message.jid,'```Oyuna Girildi!```\n```Başlamak için #baslat yaz!```',MessageType.text);
     }
 }));
 
