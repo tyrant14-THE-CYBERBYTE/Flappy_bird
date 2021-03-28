@@ -123,7 +123,7 @@ const bas1 = "Dikkatli ol! Seçimlerin hikayeyi değiştirebilir. Akıllıca se�
 const bas2 = "Ve Unutma.. Yanlış seçim seni ölüme götürebilir!"
 
 Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (GAME.inGame && text.includes('#baslat')) {
+    if (GAME.inGame && message.id.startsWith('#baslat')) {
         await new Promise(r => setTimeout(r, 600));
 
         await message.client.sendMessage(message.jid,bas,MessageType.text);
@@ -136,7 +136,7 @@ Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (messa
 }));
 const bit = "Oyun Bitti!"
 Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (GAME.inGame && text.includes('#bitir')) {
+    if (GAME.inGame && message.id.startsWith('#bitir')) {
         GAME.inGAME = false
         await message.client.sendMessage(message.jid,bit,MessageType.text);
     }
