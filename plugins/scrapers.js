@@ -102,10 +102,10 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (asyn
         voice: LANG
     });
     ffmpeg(buffer) 
-        .format('waw')
-        .save('tts.waw')
+        .format('wav')
+        .save('tts.wav')
         .on('end', async () => {
-            await message.client.sendMessage(message.jid,fs.readFileSync('tts.waw'), MessageType.audio, {ptt: true});
+            await message.client.sendMessage(message.jid,fs.readFileSync('tts.wav'), MessageType.audio, {ptt: true});
         });
 }));
 
