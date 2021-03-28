@@ -101,12 +101,9 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (asyn
         text: ttsMessage,
         voice: LANG
     });
-    ffmpeg(buffer) 
-        .format('wav')
-        .save('tts.wav')
-        .on('end', async () => {
-            await message.client.sendMessage(message.jid,fs.readFileSync('tts.wav'), MessageType.audio, {ptt: true});
-        });
+    
+    await message.client.sendMessage(message.jid,fs.readFileSync('tts.wav'), MessageType.audio, {ptt: true});
+       
 }));
 
 Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
