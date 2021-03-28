@@ -110,7 +110,7 @@ Asena.addCommand({pattern: 'afk ?(.*)', fromMe: true, deleteCommand: false, desc
 }));
 const ds = "Oyun Başlatır."
 
-Asena.addCommand({pattern: 'newgame', fromMe: true, desc: ds}, (async (message, match) => {     
+Asena.addCommand({pattern: 'newgame ?(.*)', fromMe: true, desc: ds}, (async (message, match) => {     
     if (!GAME.inGame) {
         GAME.inGame = true;
 
@@ -123,7 +123,7 @@ const bas1 = "Dikkatli ol! Seçimlerin hikayeyi değiştirebilir. Akıllıca se�
 const bas2 = "Ve Unutma.. Yanlış seçim seni ölüme götürebilir!"
 
 Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (GAME.inGame && message.includes('#baslat')) {
+    if (GAME.inGame && text.includes('#baslat')) {
         await new Promise(r => setTimeout(r, 600));
 
         await message.client.sendMessage(message.jid,bas,MessageType.text);
@@ -136,7 +136,7 @@ Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (messa
 }));
 const bit = "Oyun Bitti!"
 Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (GAME.inGame && message.includes('#bitir')) {
+    if (GAME.inGame && text.includes('#bitir')) {
         GAME.inGAME = false
         await message.client.sendMessage(message.jid,bit,MessageType.text);
     }
