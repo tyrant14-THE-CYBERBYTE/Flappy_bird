@@ -8,7 +8,7 @@ Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, 
 
     const ppUrl = await message.client.getProfilePicture(message.jid) 
 
-    await message.client.groupMetadata(message.jid) 
+    const json await message.client.groupMetadata(message.jid) 
 
     const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
 
