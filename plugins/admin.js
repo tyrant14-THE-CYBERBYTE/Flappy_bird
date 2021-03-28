@@ -15,11 +15,11 @@ const Language = require('../language');
 const Lang = Language.getString('admin');
 const mut = Language.getString('mute');
 
-async function checkImAdmin(message, user = message.client.user.jid) {
+async function checkImAdmin(message, message.client.user.jid) {
     var grup = await message.client.groupMetadata(message.jid);
     var sonuc = grup['participants'].map((member) => {
         
-        if (member.id.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+        if (member.id.split("@")[0] == message.client.user.jid.split("@")[0] && member.isAdmin) return true; else; return false;
     });
     return sonuc.includes(true);
 }
