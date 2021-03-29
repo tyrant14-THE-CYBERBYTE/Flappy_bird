@@ -43,6 +43,7 @@ Asena.addCommand({pattern: 'search ?(.*)', fromMe: true, desc: Sr}, (async (mess
     if (match[1] === '') return await message.client.sendMessage(message.jid,'```Aranacak Kelime Girmelisin!```', MessageType.text);
  
     Sea.google(`${match[1]}`).then(async(result) => {
-        await message.client.sendMessage(message.jid,result.split[0], MessageType.text);
+        
+        await message.client.sendMessage(message.jid,result[0], MessageType.text);
     });
 }));
