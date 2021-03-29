@@ -4,9 +4,16 @@ const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
+const Config = require('../config');
+
+const heroku = new Heroku({
+    token: Config.HEROKU.API_KEY
+});
 
 const Language = require('../language');
 const Lang = Language.getString('spammer');
+
+let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
 Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
 
