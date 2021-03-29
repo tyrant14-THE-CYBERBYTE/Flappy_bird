@@ -59,7 +59,7 @@ if (Config.LANGUAGE == 'TR' || Config.LANGUAGE == 'AZ') {
 }
 else {
     
-    Asena.addCommand({pattern: 'help ?(.*)', fromMe: true, desc: h_DesEN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'help ?(.*)', fromMe: true, desc: h_DedEN}, (async (message, match) => {
 
         if (match[1] === '') {
             return await message.client.sendMessage(
