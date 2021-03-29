@@ -3,7 +3,7 @@ const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
 const solenolyrics= require("solenolyrics"); 
- 
+const Sea = require('search-engine-client');
 const TinyURL = require('tinyurl');
 
 const De = "Uzun linkleri kısaltır."
@@ -36,4 +36,13 @@ Asena.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: del}, (async (mess
 
     await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: '*Aratılan Şarkı:* ' + '```' + `${match[1]}` + '```\n*Bulunan Şarkı:* ```' + tit + '```\n*Şarkı Sahibi:* ```' + son + '```\n*Şarkı Sözleri:*\n\n' + aut });
 
+}));
+const Sr = "Googlede arama yapar."
+Asena.addCommand({pattern: 'search ?(.*)', fromMe: true, desc: Sr}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,'```Aranacak Kelime Girmelisin!```', MessageType.text);
+ 
+    Sea.google(`${match[1]}`).then(async(result) => {
+        await message.client.sendMessage(message.jid,result.split[0], MessageType.text);
+    });
 }));
