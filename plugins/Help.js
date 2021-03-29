@@ -23,7 +23,7 @@ const privTR = "Botunuzu private yapmak komutları sadece size özel yapar. Baş
 const privEN = "Making your bot private makes commands private only for you. Anyone cannot use.\nTo make your bot private, type *.setvar WORK_TYPE:private*"
 
 
-if (Config.LANGUAGE == 'TR' || Config.LANGUAGE == 'AZ') {
+if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
     
     Asena.addCommand({pattern: 'help ?(.*)', fromMe: true, desc: h_Des}, (async (message, match) => {
 
@@ -68,14 +68,14 @@ else {
                 MessageType.text
             );
         }
-        else if ( (match[1].includes('public') && match[1].includes('nasıl')) || (match[1].includes('public') && match[1].includes('yapimi')) || (match[1].includes('public') && match[1].includes('yapımı')) ) {
+        else if ( (match[1].includes('public') && match[1].includes('how')) || (match[1].includes('public') && match[1].includes('set')) || (match[1].includes('public') && match[1].includes('setting')) ) {
             return await message.client.sendMessage(
                 message.jid,
                 pubEN,
                 MessageType.text
             );
         }
-        else if ( (match[1].includes('private') && match[1].includes('nasıl')) || (match[1].includes('private') && match[1].includes('yapimi')) || (match[1].includes('private') && match[1].includes('yapımı')) ) {
+        else if ( (match[1].includes('private') && match[1].includes('how')) || (match[1].includes('private') && match[1].includes('set')) || (match[1].includes('private') && match[1].includes('setting')) ) {
             return await message.client.sendMessage(
                 message.jid,
                 privEN,
