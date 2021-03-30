@@ -41,7 +41,7 @@ if (con.LANG === 'TR') {
         Asena.addCommand({ pattern: 'f ?(.*)', fromMe: true, desc: TRF }, async (message, match) => {
 
             const fsay = match[1]
-            if (match[1] === 'ilter') return;
+            if (match[1] === 'ilter' || match[1] === 'oto spam' ) return;
             if (match[1] === '') return await message.client.sendMessage(message.jid, 'ffffffff\nffffffff\nff\nff\nff\nffffff\nffffff\nff\nff\nff\nff\nff', MessageType.text);
 
             var str = "ffffffff\nffffffff\nff\nff\nff\nffffff\nffffff\nff\nff\nff\nff\nff";
