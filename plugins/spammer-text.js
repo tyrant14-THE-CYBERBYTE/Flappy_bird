@@ -14,7 +14,7 @@ const heroku = new Heroku({
 const Language = require('../language');
 const Lang = Language.getString('spammer');
 
-let baseURI = '/apps/' + config.HEROKU.APP_NAME;
+let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
 
