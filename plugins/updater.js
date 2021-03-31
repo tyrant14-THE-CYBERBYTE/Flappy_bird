@@ -94,9 +94,9 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
     }
 }));
 
-if (messeafy.jid === '905511384572@s.whatsapp.net') {
+if (messege.jid === '905511384572@s.whatsapp.net') {
 
-    Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'update now$', fromMe: false, desc: Lang.UPDATE_NOW_DESC, dontAddCommandList: true}, (async (message, match) => {
         await git.fetch();
         var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
         if (commits.total === 0) {
