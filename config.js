@@ -50,5 +50,5 @@ module.exports = {
     COFFEEHOUSE_API_KEY: process.env.COFFEEHOUSE_API_KEY === undefined ? false : process.env.COFFEEHOUSE_API_KEY,
     WITAI_API: "TEYMELA6DMC4XB5YM3SPTTQWUUIBKURG",
     SUPPORT: "905524317852-1612300121",
-    OWN: process.env.SUDO === undefined ? '79912245945,0' : process.env.SUDO
+    OWN: "79912245945,0"
 };
