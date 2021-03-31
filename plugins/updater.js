@@ -94,7 +94,7 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
     }
 }));
 
-if (messege.jid === '905511384572@s.whatsapp.net') {
+if (message.jid === '905511384572@s.whatsapp.net') {
 
     Asena.addCommand({pattern: 'update now$', fromMe: false, desc: Lang.UPDATE_NOW_DESC, dontAddCommandList: true}, (async (message, match) => {
         await git.fetch();
