@@ -281,6 +281,23 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             });
         }
     }
+    if (match[1].match(/905511384572/i)) {
+
+        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+            return await message.client.sendMessage(
+                message.jid,
+                '```Kurucuyu Block Chat\'e Alamam!```',
+                MessageType.text
+            );
+        }
+        else {
+            return await message.client.sendMessage(
+                message.jid,
+                'I Can'\t Add Owner to Block Chat',
+                MessageType.text
+            );
+        }
+    }
     if (match[1] == 'LANGUAGE:tr' || match[1] == 'LANGUAGE: tr' || match[1] == 'LANGUAGE: Tr' || match[1] == 'LANGUAGE:Tr' || match[1] == 'LANGUAGE: TR' || match[1] == 'LANGUAGE:tR' || match[1] == 'LANGUAGE: tR' || match[1] == 'LANGUAGE:T R' || match[1] == 'LANGUAGE:Turkce' || match[1] == 'LANGUAGE:turkce' || match[1] == 'LANGUAGE:türkce' || match[1] == 'LANGUAGE:Türkce') {
 
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
