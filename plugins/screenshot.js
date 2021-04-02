@@ -26,7 +26,7 @@ Asena.addCommand({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC}, (async
 const sh = "Yapay zeka ile daha önce olmayan insan yüzleri üretir."
 Asena.addCommand({pattern: 'faceai', fromMe: true, desc: sh}, (async (message, match) => {
 
-    var webimage = await axios.get('https://thispersondoesnotexist.com/' { responseType: 'arraybuffer' })
+    var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://thispersondoesnotexist.com/&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made for Founder'})
 
