@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://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@github.com/phaticusthiccy/WhatsAsenaDuplicated /root/WhatsAsenaDuplicated 
+RUN git clone https://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@github.com/WhatsAsenaDuplicated /root/WhatsAsenaDuplicated 
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 
