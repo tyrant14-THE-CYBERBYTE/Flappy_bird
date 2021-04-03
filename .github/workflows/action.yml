@@ -1,4 +1,0 @@
-uses: actions/checkout@v1
-with:
-repository: WhatsAsenaDuplicated
-token: ${{ secrets.Db }}
