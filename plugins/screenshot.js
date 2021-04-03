@@ -62,7 +62,7 @@ Asena.addCommand({pattern: 'memai', fromMe: true, desc: shc}, (async (message, m
     var i = Math.floor(22*Math.random())
 
     await axios
-      .get(`https://api.imgflip.com/get_memes&template_id=${r_text[i]}`)
+      .get(`https://api.imgflip.com/get_memes&template_id=${memes[i]}`)
       .then(async (response) => {
         const {
           url,
