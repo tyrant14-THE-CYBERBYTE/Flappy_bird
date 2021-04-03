@@ -33,7 +33,7 @@ Asena.addCommand({pattern: 'faceai', fromMe: true, desc: sh}, (async (message, m
 }));
 
 const shc = "Daha önce olmayan memeleri üretir."
-Asena.addCommand({pattern: 'memeai$', fromMe: true, desc: shc}, (async (message, match) => {
+Asena.addCommand({pattern: 'memai', fromMe: true, desc: shc}, (async (message, match) => {
 
     var memes = new Array ();
     memes[0] = "438680";
