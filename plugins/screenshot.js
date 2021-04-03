@@ -67,6 +67,7 @@ Asena.addCommand({pattern: 'memeai$', fromMe: true, desc: shc}, (async (message,
         const {
           url,
         } = response.data
+    })
 
     var webimage = await axios.get(url, { responseType: 'arraybuffer' })
 
