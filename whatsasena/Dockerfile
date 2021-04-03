@@ -1,6 +1,5 @@
 FROM fusuf/whatsasena:latest
 
-CMD ["python", "run.py"]
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 
