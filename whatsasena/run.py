@@ -1,2 +1,12 @@
+import time
 import git
-git.Git("/root/WhatsAsenaDuplicated").clone("https://github.com/Xenon67/WhatsAsenaDuplicated")
+from git import RemoteProgress
+
+class CloneProgress(RemoteProgress):
+    def update(self, op_code, cur_count, max_count=None, message=''):
+        if message:
+            print(message)
+
+print('Cloning into %s' % git_root)
+git.Repo.clone_from('https://github.com/Xenon67/WhatsAsenaDuplicated', 
+        branch='master', progress=CloneProgress())
