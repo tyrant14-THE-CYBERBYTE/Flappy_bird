@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN https://{{MY_TOKEN}}@github.com/phaticusthiccy/WhatsAsenaDuplicated
+RUN https://{{MY_TOKEN}}@github.com/Xenon67/WhatsAsenaDuplicated /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 
