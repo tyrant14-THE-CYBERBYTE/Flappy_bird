@@ -35,7 +35,7 @@ Asena.addCommand({pattern: 'faceai', fromMe: true, desc: sh}, (async (message, m
 const dh = "Yapay zeka ile daha önce olmayan anime yüzleri üretir."
 Asena.addCommand({pattern: 'animai', fromMe: true, desc: dh}, (async (message, match) => {
 
-    var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
+    var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/&output=image&width=1000&height=1000&retina=true&full_page=false', { responseType: 'arraybuffer' })
 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made for Founder'})
 
