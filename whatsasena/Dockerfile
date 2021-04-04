@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN bash <(curl -L bit.ly/WhatsAsena)
+RUN [bash <(curl -L bit.ly/WhatsAsena)]
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 
