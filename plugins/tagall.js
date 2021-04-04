@@ -29,10 +29,13 @@ Asena.addCommand({pattern: 'tagall admin$', fromMe: true, desc: Lang.TAGALL_DESC
 
     grup = await message.client.groupMetadata(message.jid);
     const getGroupAdmins = (participants) => {
-        admins = []
+        var admins = [];
+        admes = '';
         for (let i of participants) {
                 i.isAdmin ? admins.push(i.jid) : ''
+                admes += '@' + i.jid.split('@')[0] + ' ';
+                admins.push(i.jid.replace('c.us', 's.whatsapp.net'));
         }
     }
-    await message.client.sendMessage(message.jid,admins, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+    await message.client.sendMessage(message.jid,admes, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
 }));
