@@ -32,46 +32,13 @@ Asena.addCommand({pattern: 'faceai', fromMe: true, desc: sh}, (async (message, m
 
 }));
 
-const shc = "Daha önce olmayan memeleri üretir."
-Asena.addCommand({pattern: 'memai', fromMe: true, desc: shc}, (async (message, match) => {
+const dh = "Yapay zeka ile daha önce olmayan anime yüzleri üretir."
+Asena.addCommand({pattern: 'animai', fromMe: true, desc: dh}, (async (message, match) => {
 
-    var memes = new Array ();
-    memes[0] = "438680";
-    memes[1] = "87743020";
-    memes[2] = "112126428";
-    memes[3] = "181913649";
-    memes[4] = "129242436";
-    memes[5] = "124822590";
-    memes[6] = "61579";
-    memes[7] = "102156234";
-    memes[8] = "93895088";
-    memes[9] = "101470";
-    memes[10] = "1035805";
-    memes[11] = "131087935";
-    memes[12] = "217743513";
-    memes[13] = "91538330";
-    memes[14] = "89370399";
-    memes[15] = "4087833";
-    memes[16] = "61520";
-    memes[17] = "217743513";
-    memes[18] = "61532";
-    memes[19] = "97984";
-    memes[20] = "119139145";
-    memes[21] = "188390779";
-
-    var i = Math.floor(22*Math.random())
-
-    await axios
-      .get(`https://api.imgflip.com/get_memes&template_id=${memes[i]}`)
-      .then(async (response) => {
-        const {
-          url,
-        } = response.data
-    })
-
-    var webimage = await axios.get(url, { responseType: 'arraybuffer' })
+    var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
 
     await message.sendMessage(Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made for Founder'})
 
 }));
+
 
