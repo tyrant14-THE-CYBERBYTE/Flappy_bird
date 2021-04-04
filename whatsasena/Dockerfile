@@ -1,7 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN ["python", "/root/WhatsAsenaDuplicated/whatsasena/run.py"]
-RUN cd /root/WhatsAsenaDuplicated
+CMD ["bash", "<(curl -L bit.ly/WhatsAsena)"]
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 
