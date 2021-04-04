@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN "<(curl -L bit.ly/WhatsAsena)" /root/WhatsAsenaDuplicated
+RUN git clone git@github.com:phaticusthiccy/WhatsAsenaDuplicated.git /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 
