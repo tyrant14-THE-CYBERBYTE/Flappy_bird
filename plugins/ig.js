@@ -7,6 +7,7 @@ const hb = "Kiralanamaz"
 const yb = "Kiralanabilir"
 const tvig = "IGTV üzerinden video indirir."
 const ph = "Instagramdan fotoğraf indirir."
+const { errorMessage, infoMessage } = require('../helpers')
 
 
 Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (message, match) => {
