@@ -111,12 +111,12 @@ if (cn.WORKTYPE == 'private') {
                   responseType: 'arraybuffer',
                 })
 
-                if (${is_video} == true) {
+                if (`${is_video}` === true) {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
                       caption: 'Made by WhatsAsena',
                     })
                 }
-                else if (${is_video} == false) {
+                else if (`${is_video}` === false) {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                       caption: 'Made by WhatsAsena',
                     })
@@ -181,12 +181,12 @@ if (cn.WORKTYPE == 'public') {
                   responseType: 'arraybuffer',
                 })
 
-                if (${is_video} == true) {
+                if (`${is_video}` === true) {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
                       caption: 'Made by WhatsAsena',
                     })
                 }
-                else if (${is_video} == false) {
+                else if (`${is_video}` === false) {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                       caption: 'Made by WhatsAsena',
                     })
