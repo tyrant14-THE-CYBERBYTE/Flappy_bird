@@ -8,6 +8,8 @@ const yb = "Kiralanabilir"
 const tvig = "IGTV üzerinden video indirir."
 const ph = "Instagramdan fotoğraf indirir."
 const { errorMessage, infoMessage } = require('../helpers')
+const Language = require('../language');
+const Lang = Language.getString('instagram')
 
 
 Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (message, match) => {
