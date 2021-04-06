@@ -22,10 +22,10 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
 
         const profileBuffer = await axios.get(url[0], { responseType: 'arraybuffer' })
 
-        if (`${is_video}` === "true") {
+        if (`${is_video}` == "true") {
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, { caption: 'Made by WhatsAsena' })
         }
-        else if (`${is_video}` === "false") {
+        else if (`${is_video}` == "false") {
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: 'Made by WhatsAsena' })
         }
     }).catch(async (err) => {
