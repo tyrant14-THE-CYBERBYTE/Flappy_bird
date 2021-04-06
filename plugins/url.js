@@ -88,7 +88,7 @@ if (cn.WORKTYPE == 'private') {
                   responseType: 'arraybuffer',
                 })
 
-                const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? === true Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? === true vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? === true bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
+                const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? === "true" Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? === "true" vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? === "true" bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
 
                 await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                   caption: msg,
@@ -111,12 +111,12 @@ if (cn.WORKTYPE == 'private') {
                   responseType: 'arraybuffer',
                 })
 
-                if (`${is_video}` === true) {
+                if (`${is_video}` === "true") {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
                       caption: 'Made by WhatsAsena',
                     })
                 }
-                else if (`${is_video}` === false) {
+                else if (`${is_video}` === "false") {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                       caption: 'Made by WhatsAsena',
                     })
@@ -158,7 +158,7 @@ if (cn.WORKTYPE == 'public') {
                   responseType: 'arraybuffer',
                 })
 
-                const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? === true Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? === true vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? === true bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
+                const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? === "true" Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? === "true" vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? === "true" bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
 
                 await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                   caption: msg,
@@ -181,12 +181,12 @@ if (cn.WORKTYPE == 'public') {
                   responseType: 'arraybuffer',
                 })
 
-                if (`${is_video}` === true) {
+                if (`${is_video}` === "true") {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
                       caption: 'Made by WhatsAsena',
                     })
                 }
-                else if (`${is_video}` === false) {
+                else if (`${is_video}` === "false") {
                     await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                       caption: 'Made by WhatsAsena',
                     })
