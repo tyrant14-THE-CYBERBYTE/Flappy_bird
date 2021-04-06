@@ -8,34 +8,8 @@ const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
 
-Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
 
-    const userName = match[1]
 
-    if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
-
-    await message.sendMessage(infoMessage(Lang.LOADING))
-
-    const respo = await got(`https://api.xteam.xyz/dl/igstalk?nama=${userName}&APIKEY=e67bd1bafe81b611`).then(async ok => {
-
-        headers = {
-            "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
-        }
-        const resp = JSON.parse(ok.body);
-        
-        const profileBuffer = await axios.get(resp.result.user.profile_pic_url.url, { responseType: 'arraybuffer'})
-
-        const msg = `*${Lang.NAME}*: ${resp.result.user.full_name} \n*${Lang.USERNAME}*: ${resp.result.user.username} \n*${Lang.BIO}*: ${resp.result.user.biography} \n*${Lang.FOLLOWERS}*: ${resp.result.user.follower_count} \n*${Lang.FOLLOWS}*: ${resp.result.user.following_count} \n*Takip Edilen Tag Sayısı:* ${resp.result.user.following_tag_count} \n*Doğrulanmış Hesap mı?:* ${resp.result.user.is_verified} \n*${Lang.ACCOUNT}*: ${resp.result.user.is_private} \n*Post Sayısı:* ${resp.result.user.media_count} \n*IGTV Video Sayısı:* ${resp.result.user.total_igtv_videos} \n*İşletme Hesabı mı?:* ${resp.result.user.is_business} \n*Kategori:* ${resp.result.user.category} \n*Aramalara Açık mı?:* ${resp.result.user.is_call_to_action_enabled} \n*Telefon Numarası:* ${resp.result.user.contact_phone_number} \n*Mail Adresi:* ${resp.result.user.public_email} `
-
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-          caption: msg,
-        })
-      })
-      .catch(
-        async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
-      )
-  },
-)
 
 const ttom = "Tiktokdan video indirir."
 
