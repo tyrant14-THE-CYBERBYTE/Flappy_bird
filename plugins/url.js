@@ -94,7 +94,7 @@ if (cn.WORKTYPE == 'private') {
                   caption: msg,
                 })
               }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))}
-            )
+            })
         }
         else if (userName.length >= 31) {
             await message.sendMessage(infoMessage(Lang.LOADING))
@@ -122,7 +122,7 @@ if (cn.WORKTYPE == 'private') {
                     })
                 }
               }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))}
-            )
+            })
         }
     }));
 }
@@ -164,7 +164,7 @@ if (cn.WORKTYPE == 'public') {
                   caption: msg,
                 })
               }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))}
-            )
+            })
         }
         else if (userName.length >= 31) {
             await message.sendMessage(infoMessage(Lang.LOADING))
@@ -192,7 +192,7 @@ if (cn.WORKTYPE == 'public') {
                     })
                 }
               }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))}
-            )
+            })
         }
     }));
 }
