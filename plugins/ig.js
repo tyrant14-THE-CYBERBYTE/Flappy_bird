@@ -15,34 +15,22 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
 
     if (userName === '') return await message.client.sendMessage(message.jid, '```URL Gir!```')
 
-    await axios
-      .get(`https://videfikri.com/api/igdl/?url=${userName}`)
-      .then(async (response) => {
+    await axios.get(`https://docs-jojo.herokuapp.com/api/insta?url=${userName}`).then(async (response) => {
 
-        const {
-          like, 
-          comment, 
-          full_name, 
-          video, 
-          duration,
-        } = response.data.result
+        const {is_video, url } = response.data.resource
 
-        const igdat = await axios.get(video, 
-          {responseType: 'arraybuffer',
-        })
+        const profileBuffer = await axios.get(url[0], { responseType: 'arraybuffer' }
 
-        const msg = `*İsmi:* ${full_name} \n*Beğeni:* ${like} \n*Yorum:* ${comment} \n*Uzunluk:* ${duration}`
-
-        await message.sendMessage(Buffer.from(igdat.data), MessageType.video, { 
-          caption: msg,
-        })
-      })
-      .catch(
-        async (err) => await message.client.sendMessage(message.jid, 'Bulunamadı'),
-      )
-  },
-)
-
+        if (`${is_video}` === "true") {
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, { caption: 'Made by WhatsAsena' })
+        }
+        else if (`${is_video}` === "false") {
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+        }
+    }).catch(async (err) => {
+        await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
+    })
+}):
 Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (message, match) => {
 
     const userName = match[1]
