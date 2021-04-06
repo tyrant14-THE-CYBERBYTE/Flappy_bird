@@ -6,6 +6,7 @@ const solenolyrics= require("solenolyrics");
 const Sea = require('search-engine-client');
 const TinyURL = require('tinyurl');
 const fs = require('fs');
+const Lang = Language.getString('instagram')
 
 const De = "Uzun linkleri kısaltır."
 
@@ -57,7 +58,7 @@ const nobs = "Hayır"
 
 if (cn.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, async (message, match) => {
 
         const userName = match[1]
 
@@ -87,7 +88,7 @@ if (cn.WORKTYPE == 'private') {
                   responseType: 'arraybuffer',
                 })
 
-                const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? true Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? true vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? true bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
+                const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? == true Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? == true vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? == true bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
 
                 await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                   caption: msg,
@@ -125,3 +126,74 @@ if (cn.WORKTYPE == 'private') {
         }
     }));
 }
+if (cn.WORKTYPE == 'private') {
+
+    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, async (message, match) => {
+
+        const userName = match[1]
+
+        if (userName === '') return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+        if (userName.length <= 30) {
+
+            await message.sendMessage(infoMessage(Lang.LOADING))
+
+            await axios
+              .get(`https://docs-jojo.herokuapp.com/api/stalk?username=${userName}`)
+              .then(async (response) => {
+                const {
+                  biography,
+                  username,
+                  edge_follow,
+                  edge_followed_by,
+                  category_name,
+                  is_verified,
+                  is_private,
+                  edge_owner_to_timeline_media,
+                  profile_pic_url_hd,
+                  full_name,
+                  is_business_account,
+                } = response.data.result.graphql.user
+
+                const profileBuffer = await axios.get(profile_pic_url_hd, {
+                  responseType: 'arraybuffer',
+                })
+
+                const msg = `*${Lang.NAME}*: ${full_name} \n*${Lang.USERNAME}*: ${username} \n*${Lang.BIO}*: ${biography} \n*${Lang.FOLLOWERS}*: ${edge_followed_by.count} \n*${Lang.FOLLOWS}*: ${edge_follow.count} \n*${Lang.ACCOUNT}*: ${is_private ? == true Lang.HIDDEN : Lang.PUBLIC} \n*Hesap Türü:* ${is_verified ? == true vf : novf} \n*İşletme Hesabı mı?:* ${is_business_account ? == true bs : nobs} \n*Kategori:* ${category_name} \n*Post Sayısı:* ${edge_owner_to_timeline_media.count}`
+
+                await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+                  caption: msg,
+                })
+              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))},
+            )
+        }
+        else if (userName.length >= 31) {
+            await message.sendMessage(infoMessage(Lang.LOADING))
+
+            await axios
+              .get(`https://docs-jojo.herokuapp.com/api/insta?url=${userName}`)
+              .then(async (response) => {
+                const {
+                  is_video,
+                  url,
+                } = response.data.resource
+
+                const profileBuffer = await axios.get(url[0], {
+                  responseType: 'arraybuffer',
+                })
+
+                if (${is_video} == true) {
+                    await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+                      caption: 'Made by WhatsAsena',
+                    })
+                }
+                else if (${is_video} == false) {
+                    await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
+                      caption: 'Made by WhatsAsena',
+                    })
+                }
+              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))},
+            )
+        }
+    }));
+}
+
