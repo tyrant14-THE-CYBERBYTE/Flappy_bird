@@ -30,7 +30,7 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
     }).catch(async (err) => {
         await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
     })
-}):
+});
 Asena.addCommand({ pattern: 'igphoto ?(.*)', fromMe: true, desc: ph }, async (message, match) => {
 
     const userName = match[1]
