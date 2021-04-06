@@ -93,7 +93,7 @@ if (cn.WORKTYPE == 'private') {
                 await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                   caption: msg,
                 })
-              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))},
+              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))}
             )
         }
         else if (userName.length >= 31) {
@@ -163,7 +163,7 @@ if (cn.WORKTYPE == 'public') {
                 await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
                   caption: msg,
                 })
-              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))},
+              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))}
             )
         }
         else if (userName.length >= 31) {
