@@ -101,7 +101,7 @@ if (cn.WORKTYPE == 'private') {
                 await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
             })
         }
-    }));
+    });
 }
 if (cn.WORKTYPE == 'public') {
 
@@ -148,5 +148,5 @@ if (cn.WORKTYPE == 'public') {
                 await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName))
             })
         }
-    }));
+    });
 }
