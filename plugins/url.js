@@ -6,6 +6,7 @@ const solenolyrics= require("solenolyrics");
 const Sea = require('search-engine-client');
 const TinyURL = require('tinyurl');
 const fs = require('fs');
+const Language = require('../language');
 const Lang = Language.getString('instagram')
 
 const De = "Uzun linkleri kısaltır."
