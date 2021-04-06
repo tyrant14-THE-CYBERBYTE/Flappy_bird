@@ -8,6 +8,7 @@ const TinyURL = require('tinyurl');
 const fs = require('fs');
 const Language = require('../language');
 const Lang = Language.getString('instagram')
+const { errorMessage, infoMessage } = require('../helpers')
 
 const De = "Uzun linkleri kısaltır."
 
