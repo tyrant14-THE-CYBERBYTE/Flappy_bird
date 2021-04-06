@@ -19,7 +19,7 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
 
         const {is_video, url } = response.data.resource
 
-        const profileBuffer = await axios.get(url[0], { responseType: 'arraybuffer' }
+        const profileBuffer = await axios.get(url[0], { responseType: 'arraybuffer' })
 
         if (`${is_video}` === "true") {
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, { caption: 'Made by WhatsAsena' })
