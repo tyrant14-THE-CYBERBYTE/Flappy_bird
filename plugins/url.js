@@ -120,7 +120,7 @@ if (cn.WORKTYPE == 'private') {
                       caption: 'Made by WhatsAsena',
                     })
                 }
-              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),)},
+              }).catch(async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)))},
             )
         }
     }));
