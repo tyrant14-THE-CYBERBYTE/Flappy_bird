@@ -20,14 +20,14 @@ Asena.addCommand({ pattern: 'igvideo ?(.*)', fromMe: true, desc: sd }, async (me
 
     await axios.get(`https://docs-jojo.herokuapp.com/api/insta?url=${userName}`).then(async (response) => {
 
-        const {is_video, url } = response.data.resource
+        const { resource } = response.data
 
-        const profileBuffer = await axios.get(url[0], { responseType: 'arraybuffer' })
+        const profileBuffer = await axios.get(resource.url[0], { responseType: 'arraybuffer' })
 
-        if (`${is_video}` == "true") {
+        if (resource.url == true) {
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, { caption: 'Made by WhatsAsena' })
         }
-        else if (`${is_video}` == "false") {
+        else if (resource.url == false) {
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: 'Made by WhatsAsena' })
         }
     }).catch(async (err) => {
