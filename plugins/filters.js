@@ -55,7 +55,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if (!filtreler) return; 
     filtreler.map(
         async (filter) => {
-            pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
+            pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'i');
             if (pattern.test(message.message)) {
                 await message.client.sendMessage(message.jid,filter.dataValues.text, MessageType.text, {quoted: message.data});
             }
