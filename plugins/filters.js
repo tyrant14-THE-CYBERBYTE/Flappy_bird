@@ -84,7 +84,7 @@ Asena.addCommand({pattern: 'snip ?(.*)', fromMe: true, desc: snipds}, (async (me
             MessageType.text
         )
     }
-    await SnipDB.saveSnip(message.reply_message.text, text : match[1])
+    await SnipDB.saveSnip(message.reply_message.text)
     return await message.client.sendMessage(
         message.jid,
         '```' + mat + '``` ' + scc,
