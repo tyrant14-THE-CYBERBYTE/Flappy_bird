@@ -69,23 +69,22 @@ const scc = "Adlı Snip Ayarlandı!"
 const xsbl = "Lütfen snip ismi gir! Örnek: ```.snip test```"
 
 Asena.addCommand({pattern: 'snip ?(.*)', fromMe: true, desc: snipds}, (async (message, match) => {
-    
-    const mat = match[1] 
-    if (!message.reply_message.text && mat.length < 2 ) {
+
+    if (!message.reply_message.text && match[1].length < 2 ) {
         return await message.client.sendMessage(
             message.jid,
             dbsl,
             MessageType.text
         )
     }
-    if (message.reply_message.text && mat.length < 2) {
+    if (message.reply_message.text && match[1].length < 2) {
         return await message.client.sendMessage(
             message.jid,
             xsbl,
             MessageType.text
         )
     }
-    await SnipDB.saveSnip(message.reply_message.text, mat)
+    await SnipDB.saveSnip(message.reply_message.text, text : match[1])
     return await message.client.sendMessage(
         message.jid,
         '```' + mat + '``` ' + scc,
@@ -100,7 +99,7 @@ Asena.addCommand({pattern: 'getsnip', fromMe: true, desc: gtsn}, (async (message
     const _snips = await SnipDB.getSnip()
     const snips = []
     _snips.map(snip => {
-        snip.push('🔸' + snip.snip)
+        snip.push('$' + snip.snip)
     })
     if (snips.length < 2) {
         return await message.client.sendMessage(
@@ -135,7 +134,7 @@ Asena.addCommand({ pattern: 'delsnip ?(.*)', fromMe: true, desc: flsh }, (async 
     }
 }));
     
-Asena.addCommand({pattern: '$ ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({pattern: '- ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
     const mat = match[1]
 
     var snip = await SnipDB.getSnip();
