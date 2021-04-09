@@ -71,7 +71,7 @@ Asena.addCommand({pattern: 'colorvideoai', fromMe: true, deleteCommand: false, d
         .save('output.mp4')
         .on('end', async () => {
             var resp = await deepai.callStandardApi("colorizer", {
-                image: fs.createReadStream("./output.mp4"),
+                video: fs.createReadStream("./output.mp4"),
 
             });
 
