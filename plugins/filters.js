@@ -136,9 +136,10 @@ Asena.addCommand({ pattern: 'delsnip ?(.*)', fromMe: true, desc: flsh }, (async 
 }));
     
 Asena.addCommand({pattern: '$ ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
-    
-    var snip = await SnipDB.getSnip(match[1]);
-    if (!snip) return; 
+    const mat = match[1]
+
+    var snip = await SnipDB.getSnip();
+    if (snip !== match[1]) return await message.sendMessage(dlsnp); 
     snip.map(
         async (snip) => {
             pattern = new RegExp(snip.dataValues.regex ? snip.dataValues.pattern : ('\\b(' + snip.dataValues.pattern + ')\\b'), 'i');
