@@ -11,10 +11,6 @@ const SnipDB = config.DATABASE.define('snip', {
         type: DataTypes.TEXT,
         allowNull: false
     },
-    pattern: {
-        type: DataTypes.TEXT,
-        allowNull: false
-    },
     regex: {
         type: DataTypes.BOOLEAN, allowNull: false, defaultValue: false
     }
