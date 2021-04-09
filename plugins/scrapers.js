@@ -102,7 +102,7 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (asyn
         voice: LANG
     });
     
-    await message.client.sendMessage(message.jid, buffer, MessageType.audio, {ptt: true});
+    await message.client.sendMessage(message.jid, buffer, MessageType.audio, {mimetype: Mimetype.ogg, ptt: true});
        
 }));
 
