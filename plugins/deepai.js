@@ -75,7 +75,7 @@ Asena.addCommand({pattern: 'colorvideoai', fromMe: true, deleteCommand: false, d
 
             });
 
-            var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
+            var respoimage = await axios.get(`${resp.results_url}`, { responseType: 'arraybuffer' })
 
             await message.sendMessage(Buffer.from(respoimage.data), MessageType.video, {caption: 'Made for Founder'})
 
