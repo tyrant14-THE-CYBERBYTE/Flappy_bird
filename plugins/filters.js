@@ -9,6 +9,7 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const FilterDb = require('./sql/filters');
+const SnipDB = require('./sql/usersnip');
 
 const Language = require('../language');
 const Lang = Language.getString('filters');
