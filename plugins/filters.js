@@ -94,7 +94,7 @@ Asena.addCommand({pattern: 'snip ?(.*)', fromMe: true, desc: snipds}, (async (me
 const gtsn = "Kayıtlı snip'leri gösterir."
 const hatc = "Hiç Snip Kaydedilmemiş!"
 
-Asena.addCommand({pattern: 'getsnip', fromMe: true, desc: gtns}, (async (message, match) => {
+Asena.addCommand({pattern: 'getsnip', fromMe: true, desc: gtsn}, (async (message, match) => {
 
     const _snips = await SnipDB.getSnip()
     const snips = []
