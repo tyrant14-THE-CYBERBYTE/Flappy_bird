@@ -3,47 +3,77 @@ const { MessageType } = require('@adiwajshing/baileys')
 const axios = require('axios')
 const got = require("got");
 const Heroku = require('heroku-client');
+const TikTokScraper = require('tiktok-scraper');
+
 
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
 
+const ttom = "Tiktokdan video indirir, profil bulur."
+const usf = "```Kullanıcı Aranıyor!```"
+const gzh = "Gizli Hesap"
+const nghs = "Açık Hesap"
+const evt = "Onaylanmış Hesap"
+const hyr = "Onaylanmamış Hesap"
 
-
-
-const ttom = "Tiktokdan video indirir."
-
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, async (message, match) => {
+Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (message, match) => {
 
     const userName = match[1]
 
-    if (!userName) return await message.sendMessage('Link Girmelisin!')
+    const options = {
+        noWaterMark: true,
+        hdVideo: true
+    }
 
-    await axios
-      .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=e67bd1bafe81b611`)
-      .then(async (response) => {
-        const {
-          uploaded_at,
-          caption,
-          url_nwm,
-          created_at,
-          user,
-          stats,
-          music,
-        } = response.data.result
+    if (userName.length < 20) {
+        await message.client.sendMessage(
+            message.jid,
+            usf,
+            MessageType.text
+        )
+        try {
+            const info = await TikTokScraper.getUserProfileInfo(`${userName}`, options);
+            const buff = await axios.get(`${info.user.avatarLarger}`, { responseType: 'arraybuffer' })
+            const capt = `*Kullanıcı Adı:* ${info.user.uniqueId} \n*Hesap İsmi:* ${info.user.nickname} \n*Takipçi Sayısı:* ${info.stats.followerCount} \n*Takip Edilen:* ${info.stats.followingCount} \n*Toplam Beğeni:* ${info.stats.heartCount} \n*Toplam Video Sayısı:* ${info.stats.videoCount} \n*Biyografi:* ${info.user.signature} \n*Onaylanmış Hesap mı?:* ${info.user.verified ? evt : hyr} \n*Hesap Türü:* ${user.privateAccount: ? ghz : nghs}`    
 
-        const profileBuffer = await axios.get(url_nwm, {
-          responseType: 'arraybuffer',
-        })
+            return await message.sendMessage(
+                Buffer.from(buff.data),
+                MessageType.image,
+                { caption: capt }
+            )
+        }
+        catch (error) {
+            return await message.client.sendMessage(
+                message.jid,
+                error,
+                MessageType.text
+            );
+        }
+    }
+    else {
+        await message.client.sendMessage(
+            message.jid,
+            usf,
+            MessageType.text
+        )
+        try {
+            const vid = await TikTokScraper.getVideoMeta(`${userName}`, options);
+            const buffv = await axios.get(`${vid.collector.videoUrlNoWaterMark}`, { responseType: 'arraybuffer' })
+            const captv = `*Kullanıcı Adı:* ${vid.collector.authorMeta} \n*Açıklama:* ${vid.collector.text} \n*Beğeni Sayısı:* ${vid.collector.diggCount} \n*Yorum Sayısı:* ${vid.collector.commentCount} \n*İzlenme Sayısı:* ${vid.collector.playCount} \n*Paylaşım Sayısı:* ${vid.collector.shareCount} \n*Video Uzunluğu:* ${vid.collector.videoMeta.duration} Saniye \n*Müzik İsmi:* ${vid.collector.musicMeta.musicName} \n*Müzik Sahibi:* ${vid.collector.musicMeta.musicAuthor}* \n*Kullanıcı Linki:* https://tiktok.com/@${vid.collector.authorMeta}`  
 
-        const msg = `*Açıklama:* ${caption} \n*Kullanıcı Adı:* https://www.tiktok.com/@${user.username} \n*İsim:* ${user.name} \n*Beğeni:* ${stats.likes} \n*Yorum:* ${stats.comments} \n*İzlenmeler:* ${stats.play} \n*Paylaşımlar:* ${stats.shares} \n*Müzik:* ${music.title} \n*Müzik Sahibi:* ${music.author} `
-
-        await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-          caption: msg,
-        })
-      })
-      .catch(
-        async (err) => await message.sendMessage('Yüklenemedi! ' + userName),
-      )
-  },
-)
+            return await message.sendMessage(
+                Buffer.from(buffv.data),
+                MessageType.video,
+                { caption: captv }
+            )
+        }
+        catch (error) {
+            return await message.client.sendMessage(
+                message.jid,
+                error,
+                MessageType.text
+            );
+        }
+    }
+}));
