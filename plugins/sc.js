@@ -12,6 +12,7 @@ const Lang = Language.getString('instagram')
 
 const ttom = "Tiktokdan video indirir, profil bulur."
 const usf = "```Kullanıcı Aranıyor!```"
+const vsf = "```Video İndiriliyor...```"
 const gzh = "Gizli Hesap"
 const nghs = "Açık Hesap"
 const evt = "Onaylanmış Hesap"
@@ -54,7 +55,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
     else {
         await message.client.sendMessage(
             message.jid,
-            usf,
+            vsf,
             MessageType.text
         )
         try {
