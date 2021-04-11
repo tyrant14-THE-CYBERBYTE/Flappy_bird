@@ -1,8 +1,6 @@
 const Asena = require('../events')
-const { MessageType } = require('@adiwajshing/baileys')
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys')
 const axios = require('axios')
-const got = require("got");
-const Heroku = require('heroku-client');
 const TikTokScraper = require('tiktok-scraper')
 
 const ttom = "Tiktokdan video indirir, profil bulur."
