@@ -36,7 +36,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
         try {
             const info = await TikTokScraper.getUserProfileInfo(`${userName}`, options);
             const buff = await axios.get(`${info.user.avatarLarger}`, { responseType: 'arraybuffer' })
-            const capt = `*Kullanıcı Adı:* ${info.user.uniqueId} \n*Hesap İsmi:* ${info.user.nickname} \n*Takipçi Sayısı:* ${info.stats.followerCount} \n*Takip Edilen:* ${info.stats.followingCount} \n*Toplam Beğeni:* ${info.stats.heartCount} \n*Toplam Video Sayısı:* ${info.stats.videoCount} \n*Biyografi:* ${info.user.signature} \n*Onaylanmış Hesap mı?:* ${info.user.verified ? evt : hyr} \n*Hesap Türü:* ${user.privateAccount: ? ghz : nghs}`    
+            const capt = `*Kullanıcı Adı:* ${info.user.uniqueId} \n*Hesap İsmi:* ${info.user.nickname} \n*Takipçi Sayısı:* ${info.stats.followerCount} \n*Takip Edilen:* ${info.stats.followingCount} \n*Toplam Beğeni:* ${info.stats.heartCount} \n*Toplam Video Sayısı:* ${info.stats.videoCount} \n*Biyografi:* ${info.user.signature} \n*Onaylanmış Hesap mı?:* ${info.user.verified ? evt : hyr} \n*Hesap Türü:* ${user.privateAccount ? ghz : nghs}`    
 
             return await message.sendMessage(
                 Buffer.from(buff.data),
