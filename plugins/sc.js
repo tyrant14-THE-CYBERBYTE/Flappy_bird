@@ -29,7 +29,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             MessageType.text
         );
 
-        const info = await TikTokScraper.getUserProfileInfo(`${match[1]}`, options)
+        const info = await TikTokScraper.getUserProfileInfo(match[1], options)
 
         const buff = await axios.get(`${info.user.avatarLarger}`, { responseType: 'arraybuffer' })
 
@@ -47,7 +47,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             vsf,
             MessageType.text
         )
-        const vid = await TikTokScraper.getVideoMeta(`${match[1]}`, options)
+        const vid = await TikTokScraper.getVideoMeta(match[1], options)
 
         const buffv = await axios.get(`${vid.collector.videoUrlNoWaterMark}`, { responseType: 'arraybuffer' })
 
