@@ -16,7 +16,10 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
     const options = {
         noWaterMark: true,
         hdVideo: true,
-        proxy: '42.119.139.254:8080'
+        proxy: 'socks5://72.195.34.58:4145',
+        headers: {
+            'user-agent': "Chrome/80.0.3987.149 Mobile Safari/537.36"
+        }
     }
 
     if (match[1].length < 20) {
