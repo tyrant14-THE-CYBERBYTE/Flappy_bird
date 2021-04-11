@@ -40,11 +40,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             )
         }
         catch (error) {
-            return await message.client.sendMessage(
-                message.jid,
-                error,
-                MessageType.text
-            );
+            console.log(error)
         }
     }
     else {
@@ -67,11 +63,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             )
         }
         catch (error) {
-            return await message.client.sendMessage(
-                message.jid,
-                error,
-                MessageType.text
-            );
+            console.log(error)
         }
     }
 }));
