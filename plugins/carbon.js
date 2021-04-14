@@ -21,7 +21,7 @@ Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC,
         await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made for Founder'})
     }
     else if (message.reply_message) {
-        var respoimage = await axios.get(`https://carbonnowsh.herokuapp.com/?code=' + message.reply_message.text + '&theme=blackboard&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&language=auto`, { responseType: 'arraybuffer' })
+        var respoimage = await axios.get('https://carbonnowsh.herokuapp.com/?code=' + message.reply_message.text + '&theme=blackboard&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&language=auto', { responseType: 'arraybuffer' })
 
         await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: 'Made for Founder'})
     }
