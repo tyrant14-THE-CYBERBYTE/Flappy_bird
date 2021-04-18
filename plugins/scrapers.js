@@ -101,8 +101,9 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (asyn
         text: ttsMessage,
         voice: LANG
     });
-    
-    await message.client.sendMessage(message.jid, buffer, MessageType.audio, {mimetype: Mimetype.ogg, ptt: true});
+    fs.writeFileSync('tts.mp3', buffer);
+
+    await message.client.sendMessage(message.jid, fs.readFileSync('tts.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
        
 }));
 
