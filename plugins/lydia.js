@@ -17,7 +17,7 @@ const Lang = Language.getString('lydia');
 
 Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
-    if (!Config.COFFEEHOUSE_API_KEY) return await message.reply(Lang.COFFEEHOUSE);
+    if (Config.COFFEEHOUSE_API_KEY.length < 20) return await message.reply(Lang.COFFEEHOUSE);
     var unix = Date.now() / 1000 | 0;
 
     var veriler = await LydiaDB.findAll();
@@ -40,7 +40,7 @@ Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC},
 
 Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
-    if (!Config.COFFEEHOUSE_API_KEY) return await message.reply(Lang.COFFEEHOUSE);
+    if (Config.COFFEEHOUSE_API_KEY.length < 20) return await message.reply(Lang.COFFEEHOUSE);
     var unix = Date.now() / 1000 | 0;
 
     var veriler = await LydiaDB.findAll();
@@ -67,7 +67,7 @@ Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC}, (
 }));
 
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {   
-    if (Config.COFFEEHOUSE_API_KEY === false) return;
+    if (Config.COFFEEHOUSE_API_KEY.length < 20) return;
     var unix = Date.now() / 1000 | 0;
 
     var fromId;
