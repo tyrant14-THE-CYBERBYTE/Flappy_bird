@@ -13,11 +13,6 @@ const hyr = "Onaylanmamış Hesap"
 
 Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (message, match) => {
 
-    const options = {
-        noWaterMark: true,
-        hdVideo: true,
-    }
-
     if (match[1].length < 20) {
         await message.client.sendMessage(
             message.jid,
@@ -25,9 +20,9 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             MessageType.text
         );
 
-        const info = await TikTokScraper.getUserProfileInfo(match[1], options)
+        var info = await TikTokScraper.getUserProfileInfo(match[1], { hdVideo: true, noWaterMark: true })
 
-        const buff = await axios.get(`${info.user.avatarLarger}`, { responseType: 'arraybuffer' })
+        var buff = await axios.get(`${info.user.avatarLarger}`, { responseType: 'arraybuffer' })
 
         const capt = `*Kullanıcı Adı:* ${info.user.uniqueId} \n*Hesap İsmi:* ${info.user.nickname} \n*Takipçi Sayısı:* ${info.stats.followerCount} \n*Takip Edilen:* ${info.stats.followingCount} \n*Toplam Beğeni:* ${info.stats.heartCount} \n*Toplam Video Sayısı:* ${info.stats.videoCount} \n*Biyografi:* ${info.user.signature} \n*Onaylanmış Hesap mı?:* ${info.user.verified ? evt : hyr} \n*Hesap Türü:* ${user.privateAccount ? ghz : nghs}`    
 
@@ -43,7 +38,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             vsf,
             MessageType.text
         )
-        const vid = await TikTokScraper.getVideoMeta(match[1], options)
+        const vid = await TikTokScraper.getVideoMeta(match[1], { hdVideo: true, noWaterMark: true })
 
         const buffv = await axios.get(`${vid.collector.videoUrlNoWaterMark}`, { responseType: 'arraybuffer' })
 
