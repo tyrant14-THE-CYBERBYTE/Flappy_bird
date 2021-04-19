@@ -4,22 +4,39 @@ const dil = require('axios');
 
 const das = "Grup metada verisini çeker."
 
-Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das, onlyGroup: true }, async (message, match) => { 
+Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, match) => { 
 
-    var json = await message.client.groupMetadataMinimal(message.jid) 
+    if (message.jid.includes('-') {
+        var json = await message.client.groupMetadataMinimal(message.jid) 
 
-    const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Kuruluş Zamanı:* ${json.creation} \n*Kurucu:* ${json.owner} \n*Grup Açıklaması:* \n\n${json.desc}.toString('utf-8')`
+        var code = await message.client.groupInviteCode(message.jid)
 
-    var ppUrl = await message.client.getProfilePicture(message.jid) 
+        var nwjson = await message.client.groupMetadata(message.jid) 
 
-    const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
+        const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${nwjson.subject} \n*Kurucu:* ${json.owner} \n*Grup Kodu:* ${code} \n*Grup Açıklaması:* \n\n${nwjson.desc}`
 
-    await message.sendMessage(
-        Buffer.from(resim.data), 
-        MessageType.image, 
-        { caption: msg }
-    );
+        var ppUrl = await message.client.getProfilePicture(message.jid) 
 
+        const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
+
+        await message.sendMessage(
+            Buffer.from(resim.data), 
+            MessageType.image, 
+            { caption: msg }
+        );
+    }
+    else {
+        var status = await message.client.getStatus(message.jid) 
+        var usppUrl = await message.client.getProfilePicture(message.jid) 
+        var usexists = await message.client.isOnWhatsApp(message.jid)
+        const nwmsg = `*Kişi JID:* ${usexists.jid} \n*Kişi Durumu:* ${status}`
+        const resimnw = await dil.get(usppUrl, {responseType: 'arraybuffer'})
+        await message.sendMessage(
+            Buffer.from(resimnw.data), 
+            MessageType.image, 
+            { caption: nwmsg }
+        );
+    }
 });
 const jod = "Davet linki ile gruplara katılır."
 const noj = "*Lütfen Sadece Grup Linkini Girin!*"
@@ -32,6 +49,7 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
         if (message.reply_message.text) {
             const inr = message.reply_message.text + '.com/'
             await message.client.acceptInvite(inr)
+
             await message.client.sendMessage(
                 message.jid,
                 suc,
@@ -49,6 +67,7 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
     else if (match[1] !== '' && match[1].includes('chat')) {
         const inz = `${match[1]}.com/`
         await message.client.acceptInvite(inz)
+
         await message.client.sendMessage(
             message.jid,
             suc,
