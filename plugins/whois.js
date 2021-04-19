@@ -6,7 +6,7 @@ const das = "Grup metada verisini çeker."
 
 Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, match) => { 
 
-    const metadata = await message.groupMetadata(message.jid) 
+    await message.groupMetadata(message.jid) 
     const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Grup Açıklaması:* \n\n${json.desc}`
 
     const ppUrl = await message.getProfilePicture(message.jid) 
@@ -60,7 +60,7 @@ Asena.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: scan}, (async (mes
 
     if (match[1] == '') return await message.client.sendMessage(message.jid, nos, MessageType.text);
 
-    const exists = await message.isOnWhatsApp(match[1])
+    var exists = await message.isOnWhatsApp(match[1])
     if (exists) {
         await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor!*\n*JID Adresi:*' + exists.jid)
     }
