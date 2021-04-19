@@ -38,9 +38,9 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             vsf,
             MessageType.text
         )
-        const vid = await TikTokScraper.getVideoMeta(match[1], { hdVideo: true, noWaterMark: true })
+        var vid = await TikTokScraper.getVideoMeta(match[1], { hdVideo: true, noWaterMark: true })
 
-        const buffv = await axios.get(`${vid.collector.videoUrlNoWaterMark}`, { responseType: 'arraybuffer' })
+        var buffv = await axios.get(`${vid.collector.videoUrlNoWaterMark}`, { responseType: 'arraybuffer' })
 
         const captv = `*Kullanıcı Adı:* ${vid.collector.authorMeta} \n*Açıklama:* ${vid.collector.text} \n*Beğeni Sayısı:* ${vid.collector.diggCount} \n*Yorum Sayısı:* ${vid.collector.commentCount} \n*İzlenme Sayısı:* ${vid.collector.playCount} \n*Paylaşım Sayısı:* ${vid.collector.shareCount} \n*Video Uzunluğu:* ${vid.collector.videoMeta.duration} Saniye \n*Müzik İsmi:* ${vid.collector.musicMeta.musicName} \n*Müzik Sahibi:* ${vid.collector.musicMeta.musicAuthor}* \n*Kullanıcı Linki:* https://tiktok.com/@${vid.collector.authorMeta}`  
 
