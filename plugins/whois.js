@@ -4,11 +4,11 @@ const dil = require('axios');
 
 const das = "Grup metada verisini çeker."
 
-Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, match) => { 
+Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das, onlyGroup: true }, async (message, match) => { 
 
     var json = await message.client.groupMetadataMinimal(message.jid) 
 
-    const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Kuruluş Zamanı:* ${json.creation} \n*Kurucu:* ${json.owner} \n*Grup Açıklaması:* \n\n${json.desc.toString('utf-8')}`
+    const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Kuruluş Zamanı:* ${json.creation} \n*Kurucu:* ${json.owner} \n*Grup Açıklaması:* \n\n${json.desc}.toString('utf-8')`
 
     var ppUrl = await message.client.getProfilePicture(message.jid) 
 
