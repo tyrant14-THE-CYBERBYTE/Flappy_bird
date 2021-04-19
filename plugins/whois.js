@@ -8,7 +8,7 @@ Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, 
 
     var json = await message.client.groupMetadataMinimal(message.jid) 
 
-    const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Kuruluş Zamanı:* ${json.creation} \n*Kurucu:* ${json.owner} \n*Grup Açıklaması:* \n\n${json.desc}`
+    const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Kuruluş Zamanı:* ${json.creation} \n*Kurucu:* ${json.owner} \n*Grup Açıklaması:* \n\n${json.desc.toString('utf-8')}`
 
     var ppUrl = await message.client.getProfilePicture(message.jid) 
 
@@ -29,9 +29,9 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
 
     if (message.reply_message) {
         
-        if (message.reply_message.includes('chat')) {
-            const tz = message.reply_message.text
-            await message.client.acceptInvite(tz)
+        if (message.reply_message.text) {
+            const inr = message.reply_message.text + '.com/'
+            await message.client.acceptInvite(inr)
             await message.client.sendMessage(
                 message.jid,
                 suc,
@@ -47,7 +47,8 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
         }
     }
     else if (match[1] !== '' && match[1].includes('chat')) {
-        await message.client.acceptInvite(`${match[1]}`)
+        const in = `${match[1]}.com/`
+        await message.client.acceptInvite(in)
         await message.client.sendMessage(
             message.jid,
             suc,
