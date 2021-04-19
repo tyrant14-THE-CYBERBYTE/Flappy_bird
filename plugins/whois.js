@@ -6,7 +6,7 @@ const das = "Grup metada verisini çeker."
 
 Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, match) => { 
 
-    if (message.jid.includes('-') {
+    if (message.jid.includes('-')) {
         var json = await message.client.groupMetadataMinimal(message.jid) 
 
         var code = await message.client.groupInviteCode(message.jid)
