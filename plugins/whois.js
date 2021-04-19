@@ -6,10 +6,11 @@ const das = "Grup metada verisini çeker."
 
 Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, match) => { 
 
-    await message.groupMetadata(message.jid) 
+    var json = await message.client.groupMetadata(message.jid) 
+
     const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Grup Açıklaması:* \n\n${json.desc}`
 
-    const ppUrl = await message.getProfilePicture(message.jid) 
+    var ppUrl = await message.client.getProfilePicture(message.jid) 
 
     const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
 
@@ -27,8 +28,9 @@ const suc = "*Başarıyla Gruba Katıldınız!*"
 Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (message, match) => { 
 
     if (message.reply_message) {
-        if (message.reply_message.text.includes('chat')) {
-            await message.acceptInvite(message.reply_message.text)
+        var ms = message.reply_message.text
+        if (ms.includes('chat')) {
+            await message.client.acceptInvite(message.reply_message.text)
             await message.client.sendMessage(
                 message.jid,
                 suc,
@@ -44,10 +46,17 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
         }
     }
     else if (match[1] !== '' && match[1].includes('chat')) {
-        await message.acceptInvite(match[1])
+        await message.client.acceptInvite(match[1])
         await message.client.sendMessage(
             message.jid,
             suc,
+            MessageType.text
+        );
+    }
+    else if (match[1] == '') {
+        await message.client.sendMessage(
+            message.jid,
+            noj,
             MessageType.text
         );
     }
@@ -60,7 +69,7 @@ Asena.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: scan}, (async (mes
 
     if (match[1] == '') return await message.client.sendMessage(message.jid, nos, MessageType.text);
 
-    var exists = await message.isOnWhatsApp(match[1])
+    var exists = await message.client.isOnWhatsApp(match[1])
     if (exists) {
         await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor!*\n*JID Adresi:*' + exists.jid)
     }
