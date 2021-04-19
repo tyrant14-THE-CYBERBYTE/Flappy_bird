@@ -47,8 +47,8 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
         }
     }
     else if (match[1] !== '' && match[1].includes('chat')) {
-        const in = `${match[1]}.com/`
-        await message.client.acceptInvite(in)
+        const inz = `${match[1]}.com/`
+        await message.client.acceptInvite(inz)
         await message.client.sendMessage(
             message.jid,
             suc,
