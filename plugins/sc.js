@@ -32,6 +32,9 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: ttom}, (async (m
             { caption: capt }
         )  
     }
+    else if (match[1] == '') {
+        return await message.sendMessage('*Kelime Gir!*')
+    }
     else {
         await message.client.sendMessage(
             message.jid,
