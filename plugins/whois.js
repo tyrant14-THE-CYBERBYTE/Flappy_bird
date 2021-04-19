@@ -14,7 +14,7 @@ Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, 
 
     const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
 
-    await message.client.sendMessage(
+    await message.sendMessage(
         Buffer.from(resim.data), 
         MessageType.image, 
         { caption: msg }
@@ -28,7 +28,7 @@ const suc = "*Başarıyla Gruba Katıldınız!*"
 Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (message, match) => { 
 
     if (message.reply_message) {
-        var ms = message.reply_message.text
+        var ms = message.reply_message
         if (ms.includes('chat')) {
             await message.client.acceptInvite(message.reply_message.text)
             await message.client.sendMessage(
@@ -46,7 +46,7 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
         }
     }
     else if (match[1] !== '' && match[1].includes('chat')) {
-        await message.client.acceptInvite(match[1])
+        await message.client.acceptInvite(`${match[1]}`)
         await message.client.sendMessage(
             message.jid,
             suc,
@@ -63,7 +63,7 @@ Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (mess
 }));
 const scan = "Girilen numaranın WhatApp'ta kayıtlı olup olmadığını kontrol eder."
 const nos = "*Lütfen Herhangi Bir Telefon Numarası Gir!*\n*Örnek:* ```.scan 90xxxx```"
-const fin = " *Numaralı Kişi WhatApp Kullanmıyor!*"
+const fin = " *Numaralı Kişi WhatApp Kullanmıyor! ❌*"
 
 Asena.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: scan}, (async (message, match) => { 
 
@@ -71,7 +71,7 @@ Asena.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: scan}, (async (mes
 
     var exists = await message.client.isOnWhatsApp(match[1])
     if (exists) {
-        await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor!*\n*JID Adresi:*' + exists.jid)
+        await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor! ✅*\n*JID Adresi:* ' + match[1] + '@s.whatsapp.net');
     }
     else {
         await message.client.sendMessage(message.jid,match[1] + fin, MessageType.text);
