@@ -29,7 +29,7 @@ Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, 
         var status = await message.client.getStatus(message.jid) 
         var usppUrl = await message.client.getProfilePicture(message.jid) 
         var usexists = await message.client.isOnWhatsApp(message.jid)
-        const nwmsg = `*Kişi JID:* ${usexists.jid} \n*Kişi Durumu:* ${status}`
+        const nwmsg = `*Kişi JID:* ${usexists.jid} \n*Kişi Durumu:* ${status.status}`
         const resimnw = await dil.get(usppUrl, {responseType: 'arraybuffer'})
         await message.sendMessage(
             Buffer.from(resimnw.data), 
@@ -38,63 +38,20 @@ Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, 
         );
     }
 });
-const jod = "Davet linki ile gruplara katılır."
-const noj = "*Lütfen Sadece Grup Linkini Girin!*"
-const suc = "*Başarıyla Gruba Katıldınız!*"
+const tg = "Tag All!"
+const ad = "Sessizce Herkesi Etiketler"
 
-Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (message, match) => { 
+Asena.addCommand({ pattern: 'af', fromMe: true, desc: ad}, (async (message, match) => { 
 
-    if (message.reply_message) {
-        
-        if (message.reply_message.text) {
-            const inr = message.reply_message.text + '.com/'
-            await message.client.acceptInvite(inr)
-
-            await message.client.sendMessage(
-                message.jid,
-                suc,
-                MessageType.text
-            );
+    grup = await message.client.groupMetadata(message.jid);
+    var jids = [];
+    mesaj = '';
+    grup['participants'].map(
+        async (uye) => {
+            mesaj += '@' + uye.id.split('@')[0] + ' ';
+            jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
+            
         }
-        else {
-            return await message.client.sendMessage(
-                message.jid,
-                noj,
-                MessageType.text
-            );
-        }
-    }
-    else if (match[1] !== '' && match[1].includes('chat')) {
-        const inz = `${match[1]}.com/`
-        await message.client.acceptInvite(inz)
-
-        await message.client.sendMessage(
-            message.jid,
-            suc,
-            MessageType.text
-        );
-    }
-    else if (match[1] == '') {
-        await message.client.sendMessage(
-            message.jid,
-            noj,
-            MessageType.text
-        );
-    }
-}));
-const scan = "Girilen numaranın WhatApp'ta kayıtlı olup olmadığını kontrol eder."
-const nos = "*Lütfen Herhangi Bir Telefon Numarası Gir!*\n*Örnek:* ```.scan 90xxxx```"
-const fin = " *Numaralı Kişi WhatApp Kullanmıyor! ❌*"
-
-Asena.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: scan}, (async (message, match) => { 
-
-    if (match[1] == '') return await message.client.sendMessage(message.jid, nos, MessageType.text);
-
-    var exists = await message.client.isOnWhatsApp(match[1])
-    if (exists) {
-        await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor! ✅*\n*JID Adresi:* ' + exists.jid, MessageType.text);
-    }
-    else {
-        await message.client.sendMessage(message.jid,match[1] + fin, MessageType.text);
-    }
+    );
+    await message.client.sendMessage(message.jid,tg, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
 }));
