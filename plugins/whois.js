@@ -6,9 +6,9 @@ const das = "Grup metada verisini çeker."
 
 Asena.addCommand({ pattern: 'whois', fromMe: true, desc: das }, async (message, match) => { 
 
-    var json = await message.client.groupMetadata(message.jid) 
+    var json = await message.client.groupMetadataMinimal(message.jid) 
 
-    const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Grup Açıklaması:* \n\n${json.desc}`
+    const msg = `*Grup ID:* ${json.id} \n*Grup İsmi:* ${json.subject} \n*Kuruluş Zamanı:* ${json.creation} \n*Kurucu:* ${json.owner} \n*Grup Açıklaması:* \n\n${json.desc}`
 
     var ppUrl = await message.client.getProfilePicture(message.jid) 
 
@@ -28,9 +28,10 @@ const suc = "*Başarıyla Gruba Katıldınız!*"
 Asena.addCommand({ pattern: 'join ?(.*)', fromMe: true, desc: jod}, (async (message, match) => { 
 
     if (message.reply_message) {
-        var ms = message.reply_message
-        if (ms.includes('chat')) {
-            await message.client.acceptInvite(message.reply_message.text)
+        
+        if (message.reply_message.includes('chat')) {
+            const tz = message.reply_message.text
+            await message.client.acceptInvite(tz)
             await message.client.sendMessage(
                 message.jid,
                 suc,
@@ -71,7 +72,7 @@ Asena.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: scan}, (async (mes
 
     var exists = await message.client.isOnWhatsApp(match[1])
     if (exists) {
-        await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor! ✅*\n*JID Adresi:* ' + match[1] + '@s.whatsapp.net');
+        await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor! ✅*\n*JID Adresi:* ' + exists.jid, MessageType.text);
     }
     else {
         await message.client.sendMessage(message.jid,match[1] + fin, MessageType.text);
