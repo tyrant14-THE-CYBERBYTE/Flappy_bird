@@ -124,7 +124,7 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
                 );
                 await message.client.sendMessage(
                     message.client.user.jid,
-                    lgg + meta.id + gr + 'wa.me/' + message.reply_message.jid.split('@')[0] + ' ' + ks 
+                    lgg + meta.id + gr + 'wa.me/' + message.reply_message.jid.split('@')[0] + ' ' + ks,
                     MessageType.text
                 );
             });
@@ -224,7 +224,7 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
                 );
                 await message.client.sendMessage(
                     message.client.user.jid,
-                    lgg + 'wa.me/' + message.reply_message.jid.split('@')[0] + ' ' + ks 
+                    lgg + 'wa.me/' + message.reply_message.jid.split('@')[0] + ' ' + ks,
                     MessageType.text
                 );
             });
