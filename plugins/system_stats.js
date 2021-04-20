@@ -13,6 +13,7 @@ const {spawnSync} = require('child_process');
 const Config = require('../config');
 const chalk = require('chalk');
 const fs = require('fs');
+const dil = require('axios');
 
 const Language = require('../language');
 const Lang = Language.getString('system_stats');
@@ -56,8 +57,14 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
     }
     else {
         const payload = Config.ALIVEMSG
-        
-        await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSION), MessageType.text);
+        var status = await message.client.getStatus() // leave empty to get your own status
+
+        await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status}`), MessageType.text);
+        if (payload.includes('{pp}')) {
+            var ppUrl = await message.client.getProfilePicture() // leave empty to get your own
+            const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
+
+            await message.sendMessage(Buffer.from(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status`} });
     }
 }));
 
