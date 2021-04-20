@@ -46,10 +46,10 @@ Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGALL_DESC}, (a
     msg = '';
     grup['participants'].map(
         async (uye) => {
-                uye.isAdmin ? admins.push(uye.jid) : ''
-                msg += '@' + uye.jid.split('@')[0] + ' ';
-                admins.push(uye.jid.replace('c.us', 's.whatsapp.net'));
+            uye.isAdmin ? admins.push(uye.jid) : ''
+            msg += '@' + uye.jid.split('@')[0] + ' ';
+            admins.push(uye.jid.replace('c.us', 's.whatsapp.net'));
         }
-    }
+    );
     await message.client.sendMessage(message.jid,rp, MessageType.extendedText, {contextInfo: {mentionedJid: admins}, previewType: 0})
 }));
