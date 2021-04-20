@@ -80,7 +80,7 @@ Asena.addCommand({pattern: 'report ?(.*)', fromMe: true, desc: tor}, (async (mes
                 jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
             }
         });
-        await message.client.sendMessage(message.jid,rap + '*Kullanıcı:* ' + '@' + message.reply_message.jid.split('@')[0] + `\n*Sebep:* `${match[1]}`, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+        await message.client.sendMessage(message.jid,rap + '*Kullanıcı:* ' + '@' + message.reply_message.jid.split('@')[0] + `\n*Sebep:* ${match[1]}`, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }
     else if (!message.reply_message) {
         return message.client.sendMessage(message.jid,rep, MessageType.text);
