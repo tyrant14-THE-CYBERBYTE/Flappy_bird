@@ -39,7 +39,7 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC}
     }
 }));
 
-Asena.addCommand({pattern: 'tagall admin$', fromMe: true, desc: Lang.TAGALL_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGALL_DESC}, (async (message, match) => {
 
     grup = await message.client.groupMetadata(message.jid);
     var admins = [];
