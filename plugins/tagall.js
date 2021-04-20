@@ -50,5 +50,5 @@ Asena.addCommand({pattern: 'tagall admin$', fromMe: true, desc: Lang.TAGALL_DESC
                 admins.push(i.jid.replace('c.us', 's.whatsapp.net'));
         }
     }
-    await message.client.sendMessage(message.jid,admes, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
+    await message.client.sendMessage(message.jid,admes, MessageType.extendedText, {contextInfo: {mentionedJid: admins}, previewType: 0})
 }));
