@@ -42,7 +42,7 @@ const rp = "*Report!*"
 const ss = "Adminleri Etiketler"
 Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: ss}, (async (message, match) => {
 
-    const getGroupAdmins = (participants) => {
+    const getGroupAdmins = (participants) async => {
         admins = []
         for (let i of participants) {
                 i.isAdmin ? admins.push(i.jid) : ''
