@@ -55,7 +55,9 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
         )
     }
     else {
-        await message.client.sendMessage(message.jid,Config.ALIVEMSG + '\n*Powered by WhatsAsena*', MessageType.text);
+        const payload = Config.ALIVEMSG
+        
+        await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSİON), MessageType.text);
     }
 }));
 
