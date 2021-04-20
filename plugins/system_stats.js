@@ -65,6 +65,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
             const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(Buffer.from(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status}` });
+        }
     }
 }));
 
