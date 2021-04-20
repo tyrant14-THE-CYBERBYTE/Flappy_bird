@@ -142,3 +142,4 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
             );
         });
     }
+}));
