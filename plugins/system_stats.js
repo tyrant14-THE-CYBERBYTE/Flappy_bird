@@ -63,10 +63,10 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
         }
         else if (payload.includes('{pp}')) {
             var ppUrl = await message.client.getProfilePicture() // leave empty to get your own
-            var status = await message.client.getStatus() // leave empty to get your own status
+            var pp = await message.client.getStatus() // leave empty to get your own status
             const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
 
-            await message.sendMessage(Buffer.from(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`) });
+            await message.sendMessage(Buffer.from(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${pp.status}`) });
         }
     }
 }));
