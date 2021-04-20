@@ -43,7 +43,7 @@ const ss = "Adminleri Etiketler"
 Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: ss}, (async (message, match) => {
 
     const getGroupAdmins = async (participants) => {
-        admins = [];
+        var admins = [];
         msg = '';
         for (let i of participants) {
             if (i.isAdmin) {
