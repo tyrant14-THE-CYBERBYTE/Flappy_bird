@@ -43,9 +43,12 @@ const ss = "Adminleri Etiketler"
 Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: ss}, (async (message, match) => {
 
     const getGroupAdmins = async (participants) => {
-        admins = []
+        admins = [];
+        msg = '';
         for (let i of participants) {
-                i.isAdmin ? admins.push(i.jid) : ''
+            if (i.isAdmin) {
+                admins.push(i.id.replace('c.us', 'a.whatsapp.net'));
+            }
         }
         await message.client.sendMessage(message.jid,rp, MessageType.extendedText, {contextInfo: {mentionedJid: admins}, previewType: 0})
     }
