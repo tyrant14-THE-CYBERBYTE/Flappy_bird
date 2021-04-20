@@ -39,17 +39,14 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC}
     }
 }));
 const rp = "*Report!*"
-Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGALL_DESC}, (async (message, match) => {
+const ss = "Adminleri Etiketler"
+Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: ss}, (async (message, match) => {
 
-    grup = await message.client.groupMetadata(message.jid);
-    var admins = [];
-    msg = '';
-    grup['participants'].map(
-        async (uye) => {
-            uye.isAdmin ? admins.push(uye.jid) : ''
-            msg += '@' + uye.jid.split('@')[0] + ' ';
-            admins.push(uye.jid.replace('c.us', 's.whatsapp.net'));
+    const getGroupAdmins = (participants) => {
+        admins = []
+        for (let i of participants) {
+                i.isAdmin ? admins.push(i.jid) : ''
         }
-    );
-    await message.client.sendMessage(message.jid,rp, MessageType.extendedText, {contextInfo: {mentionedJid: admins}, previewType: 0})
+        await message.client.sendMessage(message.jid,rp, MessageType.extendedText, {contextInfo: {mentionedJid: admins}, previewType: 0})
+    }
 }));
