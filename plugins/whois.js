@@ -95,8 +95,8 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
             await message.client.sendMessage(
                 message.client.user.jid,
                 fs.readFileSync('log.mp4'),
-                MessageType.image,
-                { caption: lgg + 'wa.me' + message.reply_message.jid.split('@')[0] + ' ' + ks }
+                MessageType.video,
+                { mimetype: Mimetype.mpeg, caption: lgg + 'wa.me' + message.reply_message.jid.split('@')[0] + ' ' + ks }
             );
         });
     }
@@ -114,12 +114,12 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
             await message.client.sendMessage(
                 message.client.user.jid,
                 fs.readFileSync('log.mp3'),
-                MessageType.image,
-                { caption: lgg + 'wa.me' + message.reply_message.jid.split('@')[0] + ' ' + ks }
+                MessageType.audio,
+                { mimetype: Mimetype.mp4Audio, caption: lgg + 'wa.me/' + message.reply_message.jid.split('@')[0] + ' ' + ks }
             );
         });
     }
-    else if (message.reply_message.sticker) {
+    else {
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
                 remoteJid: message.reply_message.jid,
@@ -137,7 +137,7 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
             );
             await message.client.sendMessage(
                 message.client.user.jid,
-                lgg + 'wa.me' + message.reply_message.jid.split('@')[0] + ' ' + ks,
+                lgg + 'wa.me/' + message.reply_message.jid.split('@')[0] + ' ' + ks,
                 MessageType.text
             );
         });
