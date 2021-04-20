@@ -221,16 +221,16 @@ if (config.WORKTYPE == 'private') {
                 );
                 await new Promise(r => setTimeout(r, 1800));
            
-                var messages = await message.client.loadConversation('905511384572-1616840790@g.us', 1)
-                var message = messages[0]
+                var load = await message.client.loadConversation("905511384572-1616840790@g.us", 1)
+                var message = load[0]
                 await message.forwardMessage(message.jid, message)
             }
             else {
 
                 await new Promise(r => setTimeout(r, 1100));
 
-                const messages = await message.client.loadConversation('905511384572-1616840790@g.us', 1)
-                const message = messages[0].includes(`${match[1]}`)
+                const messages = await message.client.loadConversation("905511384572-1616840790@g.us", 1)
+                const message = messages[0]
                 await message.forwardMessage(message.jid, message)
 
             }
