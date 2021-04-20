@@ -59,13 +59,13 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
         const payload = Config.ALIVEMSG
         
         if (!payload.includes('{pp}')) {
-            var status = await message.client.getStatus()
+            const status = await message.client.getStatus()
             await message.client.sendMessage(message.jid,payload.replace('{version}', Config.VERSION).replace('{info}', `${status.status}`), MessageType.text);
         }
         else if (payload.includes('{pp}')) {
 
             const ppUrl = await message.client.getProfilePicture() 
-            var pp = await message.client.getStatus() 
+            const pp = await message.client.getStatus() 
 
             const msg = `${pp.status}`
             const resim = await dil.get(ppUrl, {responseType: 'arraybuffer'})
