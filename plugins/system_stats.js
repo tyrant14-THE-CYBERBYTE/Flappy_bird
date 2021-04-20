@@ -56,7 +56,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async
         )
     }
     else {
-        const payload = Config.ALIVEMSG
+        var payload = Config.ALIVEMSG
         
         if (!payload.includes('{pp}')) {
             const status = await message.client.getStatus()
