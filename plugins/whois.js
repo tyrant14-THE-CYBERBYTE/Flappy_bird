@@ -254,3 +254,20 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
         }
     }
 }));
+
+const scan = "Girilen numaranın WhatApp'ta kayıtlı olup olmadığını kontrol eder."
+const nos = "*Lütfen Herhangi Bir Telefon Numarası Gir!*\n*Örnek:* ```.scan 90xxxx```"
+const fin = " *Numaralı Kişi WhatApp Kullanmıyor! ❌*"
+
+Asena.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: scan}, (async (message, match) => { 
+
+    if (match[1] == '') return await message.client.sendMessage(message.jid, nos, MessageType.text);
+
+    var exists = await message.client.isOnWhatsApp(match[1])
+    if (exists) {
+        await message.client.sendMessage(message.jid, '```' + match[1] + '``` *Numaralı Kişi WhatApp Kullanıyor! ✅*\n*JID Adresi:* ' + exists.jid, MessageType.text);
+    }
+    else {
+        await message.client.sendMessage(message.jid,match[1] + fin, MessageType.text);
+    }
+}));
