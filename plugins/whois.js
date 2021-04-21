@@ -164,7 +164,7 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: lhs}, (async (message, ma
         else if (message.reply_message.text) {
             await message.client.sendMessage(
                 message.client.user.jid,
-                lgg + 'wa.me/' + message.reply_message.jid.split('@')[0] + ' ' + ks + msh + message.reply_message.text,
+                lgg + 'wa.me/' + message.reply_message.jid + ' ' + ks + msh + message.reply_message.text,
                 MessageType.text
             );
         }  
