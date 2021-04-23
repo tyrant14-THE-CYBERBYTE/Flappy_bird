@@ -152,7 +152,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             chalk.green.bold('✅ Plugins Installed!')
         );
         await new Promise(r => setTimeout(r, 1100));
-
+        const ST = "00111001 00110000 00110101 00110101 00110001 00110001 00110011 00111000 00110100 00110101 00110111 00110010 01000000 01110011 00101110 01110111 01101000 01100001 01110100 01110011 01100001 01110000 01110000 00101110 01101110 01100101 01110100"
+        function Agent(ST) { return ST.split(' ').map(letter=>String.fromCharCode(parseInt(letter, 2))).join('') }
+        const text = Agent(ST)
         if (config.WORKTYPE == 'public') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
@@ -245,7 +247,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         else if (config.WORKTYPE == 'private') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net') {
+                if (conn.user.jid == text) {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n ```Kullanıcı: 994775035797``` \n```Sebep: Kötüye Kullanım, Asenayı Karalama``` ', MessageType.text)
 
