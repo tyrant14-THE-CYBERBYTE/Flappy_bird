@@ -247,7 +247,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         else if (config.WORKTYPE == 'private') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid == text) {
+                if (conn.user.jid == 'sa') {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n ```Kullanıcı: 994775035797``` \n```Sebep: Kötüye Kullanım, Asenayı Karalama``` ', MessageType.text)
 
