@@ -50,14 +50,13 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
             plugin_name = "__" + Math.random().toString(36).substring(8);
         }
 
-        fs.writeFileSync('./plugins/' + plugin_name + '.js', response.body);
         try {
             require('./' + plugin_name);
         } catch (error) {
             fs.unlinkSync('./' + plugin_name);
             return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + e + '```', MessageType.text);
         }
-
+        fs.writeFileSync('./plugins/' + plugin_name + '.js', response.body);
         await Db.installPlugin(url, plugin_name);
         await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
     }
