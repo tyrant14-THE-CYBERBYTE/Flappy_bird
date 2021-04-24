@@ -52,13 +52,13 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
         fs.writeFileSync('./plugins/' + plugin_name + '.js', response.body);
         try {
             require('./' + plugin_name);
-            await Db.installPlugin(url, plugin_name);
-            await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
+            
         } catch (error) {
             fs.unlinkSync('./' + plugin_name);
             return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + error + '```', MessageType.text);
         }
-        
+        await Db.installPlugin(url, plugin_name);
+        await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
     }
 }));
 
