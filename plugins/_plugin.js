@@ -51,10 +51,10 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
         }
         fs.writeFileSync('./plugins/' + plugin_name + '.js', response.body);
         try {
-            require('./plugins/' + plugin_name);
+            require('./' + plugin_name);
         }
         catch (err) {
-            fs.unlinkSync('./plugins' + plugin_name)
+            fs.unlinkSync('./' + plugin_name + '.js')
             return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + err + '```', MessageType.text);
         }
         await new Promise(r => setTimeout(r, 400));
