@@ -54,7 +54,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
             require('./' + plugin_name);
         }
         catch (err) {
-            fs.unlinkSync('./' + plugin_name + '.js')
+            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
             return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + err + '```', MessageType.text);
         }
         await new Promise(r => setTimeout(r, 400));
