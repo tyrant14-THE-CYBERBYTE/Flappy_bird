@@ -56,7 +56,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
             await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
         } catch (error) {
             fs.unlinkSync('./' + plugin_name);
-            return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + e + '```', MessageType.text);
+            return await message.client.sendMessage(message.jid, Lang.INVALID_PLUGIN + ' ```' + error + '```', MessageType.text);
         }
         
     }
