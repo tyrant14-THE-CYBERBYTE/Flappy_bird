@@ -55,8 +55,8 @@ Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: ss}, (async (message,
 
 const tor = "Adminlere rapor gönderir."
 const rep = "*Lütfen Rapor Edilecek Kullanıcının Mesajına Yanıt Verin!*"
-const rap = "=== ```Report``` ===\n\n"
-Asena.addCommand({pattern: 'report ?(.*)', fromMe: true, desc: tor}, (async (message, match) => {
+const rap = "=== ```Ban Sebebi``` ===\n\n"
+Asena.addCommand({pattern: 'bansebebi ?(.*)', fromMe: true, desc: tor}, (async (message, match) => {
     if (match[1] == '' && message.reply_message) {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
