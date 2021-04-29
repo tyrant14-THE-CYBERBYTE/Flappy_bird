@@ -86,10 +86,9 @@ Asena.addCommand({pattern: 'cikarilmasebebi ?(.*)', fromMe: true, deleteCommand:
         return message.client.sendMessage(message.jid,rep, MessageType.text);
     }
 }));
-const tor = "Adminlere rapor gönderir."
 const rep = "*Lütfen Uyarılacak Kullanıcının Mesajına Yanıt Verin!*"
 const rap = "=== ```Uyarı 1``` ===\n\n"
-Asena.addCommand({pattern: 'uyari1 ?(.*)', fromMe: true, deleteCommand: false, desc: tor}, (async (message, match) => {
+Asena.addCommand({pattern: 'uyari1 ?(.*)', fromMe: true, deleteCommand: false}, (async (message, match) => {
     if (match[1] == '' && message.reply_message) {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
@@ -119,10 +118,9 @@ Asena.addCommand({pattern: 'uyari1 ?(.*)', fromMe: true, deleteCommand: false, d
         return message.client.sendMessage(message.jid,rep, MessageType.text);
     }
 }));
-const tor = "Adminlere rapor gönderir."
 const rep = "*Lütfen Uyarılacak Kullanıcının Mesajına Yanıt Verin!*"
 const rap = "=== ```Uyarı 2``` ===\n\n"
-Asena.addCommand({pattern: 'uyari2 ?(.*)', fromMe: true, deleteCommand: false, desc: tor}, (async (message, match) => {
+Asena.addCommand({pattern: 'uyari2 ?(.*)', fromMe: true, deleteCommand: false}, (async (message, match) => {
     if (match[1] == '' && message.reply_message) {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
@@ -152,10 +150,9 @@ Asena.addCommand({pattern: 'uyari2 ?(.*)', fromMe: true, deleteCommand: false, d
         return message.client.sendMessage(message.jid,rep, MessageType.text);
     }
 }));
-const tor = "Adminlere rapor gönderir."
 const rep = "*Lütfen Uyarılacak Kullanıcının Mesajına Yanıt Verin!*"
 const rap = "=== ```Uyarı 3 ve Ban``` ===\n\n"
-Asena.addCommand({pattern: 'uyari3 ?(.*)', fromMe: true, deleteCommand: false, desc: tor}, (async (message, match) => {
+Asena.addCommand({pattern: 'uyari3 ?(.*)', fromMe: true, deleteCommand: false}, (async (message, match) => {
     if (match[1] == '' && message.reply_message) {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
