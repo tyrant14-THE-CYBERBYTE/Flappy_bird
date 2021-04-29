@@ -4,7 +4,7 @@ const{MessageType} = require('@adiwajshing/baileys')
 const tor = "Kullanıcıya Uyarı gönderir."
 const rep = "*Lütfen Son Uyarıyı Vereceğim Kullanıcının Mesajına Yanıt Verin!*"
 const rap = "=== ```3.Uyarı ve Ban Sebebi``` ===\n\n"
-Asena.addCommand({pattern: 'uyari3 ?(.*)', fromMe: true, desc: tor}, (async (message, match) => {
+Asena.addCommand({pattern: 'uyari3 ?(.*)', fromMe: true, deleteCommand: false, desc: tor}, (async (message, match) => {
     if (match[1] == '' && message.reply_message) {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
