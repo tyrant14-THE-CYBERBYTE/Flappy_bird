@@ -2,6 +2,7 @@ const Asena = require('../events');
 const{MessageType} = require('@adiwajshing/baileys')
         
 Asena.addCommand({pattern: 'uyaridefteri', fromMe: true}, (async (message, match) 
+   
    if (match[1] === 'bfe') {
                  
     await message.sendMessage('*+90(534)077-0299 Uyarı Sayısı: 1*');
@@ -22,4 +23,5 @@ Asena.addCommand({pattern: 'uyaridefteri', fromMe: true}, (async (message, match
     await new Promise(r => setTimeout(r, 1000));
     
     await message.sendMessage('Her Gece 00.00 da Güncellenir.')
+
 }));
