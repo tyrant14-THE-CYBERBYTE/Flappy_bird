@@ -5,14 +5,14 @@ const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
 
         if (match[1] === "bfe") {
 
-            await message.sendMessage('Best Friend Environment Uyarı Defteri');
+            await message.sendMessage('●▬▬▬▬๑вғe υyarι deғтerι acιlιyor๑▬▬▬▬●');
             await new Promise(r => setTimeout(r, 1000));
           
             await message.sendMessage('+90(534)077-0299 Uyarı Sayısı:2\nSon Uyarı Ban Yiyeceksin..');
           
         } else if (match[1] === "bg") {
 
-            await message.sendMessage('Bot Gelişim Uyarı Defteri');
+            await message.sendMessage('●▬▬▬▬๑вg υyarι deғтerι acιlιyor๑▬▬▬▬●');
             await new Promise(r => setTimeout(r, 1000));
           
             await message.sendMessage('+90(534)077-0299 Uyarı Sayısı:1');
