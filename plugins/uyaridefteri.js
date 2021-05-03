@@ -8,7 +8,7 @@ const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
             await message.sendMessage('●▬▬▬▬๑вғe υyarι deғтerι acιlιyor๑▬▬▬▬●');
             await new Promise(r => setTimeout(r, 1000));
           
-            await message.sendMessage('+90(534)077-0299 Uyarı Sayısı:2\nSon Uyarı Ban Yiyeceksin..');
+            await message.sendMessage('+996 553 299 979 Uyarı Sayısı : 1');
             await new Promise(r => setTimeout(r, 1000));
             
             await message.sendMessage('●▬▬▬▬๑вғe υyarι deғтerι ĸapanιyor๑▬▬▬▬●');
