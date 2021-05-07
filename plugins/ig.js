@@ -2,6 +2,7 @@ const Asena = require('../events')
 const { MessageType, Mimetype} = require('@adiwajshing/baileys')
 const axios = require('axios')
 const sd = "Instagramdan video indirir."
+const got = require('got');
 const gt = "Github profilini gösterir."
 const hb = "Kiralanamaz"
 const yb = "Kiralanabilir"
@@ -146,3 +147,26 @@ Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: gt }, async (mes
       )
   },
 )
+Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
+	if (match[0].includes('install')) return;
+        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+	
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
+        var response = await got(urls) 
+        const json = JSON.parse(response.body);
+
+        if (json.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
+        
+        if (json.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
+
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
+
+        let url = json.result.data[0].data;
+        let name = json.result.data[0].type;
+        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
+            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*Beğeni Sayısı:* ' + json.result.likes + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '* ' + json.result.username + '\n*' + Tlang.LİNK + '* ' + 'http://instagram.com/' + json.result.username + '\n*Beğeni Sayısı:* ' + json.result.likes + '\n*' + Tlang.CAPTİON + '* ' + json.result.caption });
+            }
+        });
+
+}));
