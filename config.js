@@ -20,6 +20,11 @@ DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBU
 
 module.exports = {
     VERSION: 'v0.15.4 Public Stable',
+    CHANNEL: 'https://t.me/remasterplugin',
+    ANTİİDS: '',
+    ANTİLİNK: process.env.ANTİ_LİNK === undefined ? false : process.env.ANTİ_LİNK,
+    PMPERMİT: process.env.PM_PERMİT === undefined ? false : process.env.PM_PERMİT,
+    PMPERMİTTİME: process.env.PM_PERMİT_TİME === undefined ? '1800' : process.env.PM_PERMİT_TİME,
     SESSION: process.env.ASENA_SESSION === undefined ? '' : process.env.ASENA_SESSION,
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
